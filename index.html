@@ -1,0 +1,2815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seenergy Foods | Premium IQF Beans, Grains, Rice, Lentils & Custom Solutions</title>
+  <meta name="description" content="Seenergy Foods is North America's leading supplier of pre-cooked Individually Quick Frozen (IQF) beans, grains, rice, lentils, and pasta. Supplying industrial CPG, foodservice, and retail across the U.S. and Canada." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="Assets/Image/logo%20colors.svg" />
+
+  <style>
+    /* -------------------------------------------------------------
+       DESIGN SYSTEM & COLOR TOKENS
+       Font: Helvetica, Helvetica Neue, Arial, sans-serif
+       Palette extracted from user image:
+       - #1D3D28 (Forest Green)
+       - #100E59 (Deep Navy)
+       - #364331 (Dark Olive)
+       - #83AE76 (Sage Green)
+       - #789580 (Muted Green)
+       - #4A6FAA (Muted Blue)
+       - #67B3DD (Sky Blue)
+       - #E4DCC6 (Sand Beige)
+       - #F6F2E8 (Warm Cream 80% & 12%)
+       - #FEFAEE (Light Warm Cream)
+       - #FFFDF7 (Off White)
+       - #FFFFFF (Pure White)
+       - #000000 (Black & 10% opacity)
+    ------------------------------------------------------------- */
+    :root {
+      --color-forest: #1D3D28;
+      --color-navy: #100E59;
+      --color-olive: #364331;
+      --color-sage: #83AE76;
+      --color-muted-green: #789580;
+      --color-blue: #4A6FAA;
+      --color-sky: #67B3DD;
+      --color-sand: #E4DCC6;
+      --color-cream: #F6F2E8;
+      --color-cream-80: rgba(246, 242, 232, 0.8);
+      --color-cream-12: rgba(246, 242, 232, 0.12);
+      --color-cream-light: #FEFAEE;
+      --color-offwhite: #FFFDF7;
+      --color-white: #FFFFFF;
+      --color-black: #000000;
+      --color-black-10: rgba(0, 0, 0, 0.1);
+      --color-black-05: rgba(0, 0, 0, 0.05);
+      --color-black-60: rgba(0, 0, 0, 0.6);
+      
+      --font-family: "Helvetica Neue", Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      --container-max: 1320px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-pill: 9999px;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--color-black);
+      background-color: var(--color-offwhite);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      outline: none;
+      border: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* Layout Utility */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .section-padding {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .section-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+    }
+
+    /* Typography Utilities */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-forest { color: var(--color-forest); }
+    .eyebrow-navy { color: var(--color-navy); }
+    .eyebrow-sage { color: var(--color-sage); }
+    .eyebrow-sky { color: var(--color-sky); }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+      font-size: clamp(1rem, 1.3vw, 1.1875rem);
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.6;
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+
+    .text-light {
+      color: var(--color-white);
+    }
+    .text-light-muted {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .btn-primary {
+      background-color: var(--color-forest);
+      color: var(--color-white);
+      border: 1px solid var(--color-forest);
+    }
+    .btn-primary:hover {
+      background-color: var(--color-olive);
+      border-color: var(--color-olive);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(29, 61, 40, 0.25);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--color-forest);
+      border: 1.5px solid var(--color-forest);
+    }
+    .btn-secondary:hover {
+      background-color: var(--color-forest);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .btn-white {
+      background-color: var(--color-white);
+      color: var(--color-forest);
+      border: 1px solid var(--color-white);
+    }
+    .btn-white:hover {
+      background-color: var(--color-cream);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn-outline-white {
+      background-color: transparent;
+      color: var(--color-white);
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+    }
+    .btn-outline-white:hover {
+      background-color: var(--color-white);
+      color: var(--color-forest);
+      border-color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .btn-sky {
+      background-color: var(--color-sky);
+      color: var(--color-navy);
+      border: 1px solid var(--color-sky);
+    }
+    .btn-sky:hover {
+      background-color: #55a2cc;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm {
+      padding: 10px 20px;
+      font-size: 0.84rem;
+    }
+
+    /* -------------------------------------------------------------
+       TOP NAVIGATION BAR (OFI STYLE)
+    ------------------------------------------------------------- */
+    .top-bar {
+      background-color: var(--color-forest);
+      color: var(--color-white);
+      font-size: 0.8125rem;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .top-bar-links a {
+      color: rgba(255, 255, 255, 0.85);
+      transition: color var(--transition-fast);
+    }
+    .top-bar-links a:hover {
+      color: var(--color-sky);
+    }
+    .region-select {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+    }
+
+    header.main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-black-10);
+      transition: all var(--transition-fast);
+    }
+    header.main-header.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo img {
+      height: 38px;
+      width: auto;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 1.8vw, 28px);
+      flex-wrap: nowrap;
+    }
+    .nav-item {
+      position: relative;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .nav-link {
+      font-size: clamp(0.85rem, 0.95vw, 0.9375rem);
+      font-weight: 500;
+      color: var(--color-forest);
+      padding: 12px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      transition: color var(--transition-fast);
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-sky);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .search-btn, .mobile-toggle-btn {
+      background: none;
+      cursor: pointer;
+      color: var(--color-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border-radius: var(--radius-pill);
+      transition: background-color var(--transition-fast);
+    }
+    .search-btn:hover {
+      background-color: var(--color-cream);
+    }
+    .mobile-toggle-btn {
+      display: none;
+    }
+
+    /* Mobile Nav Drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 78px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 78px);
+      background: var(--color-white);
+      padding: 30px 24px;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+      z-index: 999;
+      border-top: 1px solid var(--color-black-10);
+    }
+    .mobile-drawer.open {
+      display: flex;
+    }
+
+    @media (max-width: 1120px) {
+      .nav-menu { display: none; }
+      .mobile-toggle-btn { display: flex; }
+      .header-actions .btn { display: none; }
+    }
+
+    /* -------------------------------------------------------------
+       HERO SECTION
+    ------------------------------------------------------------- */
+    .hero-section {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      color: var(--color-white);
+      overflow: hidden;
+      background-color: #000000;
+    }
+    .hero-video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+      z-index: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      max-width: 900px;
+    }
+    .hero-tag {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--color-sky);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .hero-tag span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-sky);
+      box-shadow: 0 0 10px var(--color-sky);
+    }
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4.25rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .hero-desc {
+      font-size: clamp(1.125rem, 1.6vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--color-cream);
+      max-width: 740px;
+      margin-bottom: 36px;
+      font-weight: 400;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .hero-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      padding-right: 16px;
+    }
+    .stat-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+    .stat-number {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--color-sky);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 0.8125rem;
+      color: var(--color-cream);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 992px) {
+      .hero-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .stat-item:nth-child(2) {
+        border-right: none;
+      }
+    }
+    @media (max-width: 576px) {
+      .hero-stats-bar {
+        grid-template-columns: 1fr;
+      }
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding-bottom: 12px;
+      }
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       IQF SECTION (PORTFOLIO & SPECS)
+    ------------------------------------------------------------- */
+    .iqf-section {
+      background-color: var(--color-cream-light);
+      position: relative;
+    }
+    .iqf-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--color-cream);
+      padding: 6px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--color-sand);
+    }
+    .filter-tab {
+      background: transparent;
+      border: none;
+      padding: 8px 20px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-forest);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-tab.active, .filter-tab:hover {
+      background-color: var(--color-forest);
+      color: var(--color-white);
+    }
+
+    .iqf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .product-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-black-10);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-sage);
+    }
+    .product-media {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background: var(--color-forest);
+    }
+    .product-media img, .product-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .product-card:hover .product-media img {
+      transform: scale(1.06);
+    }
+    .product-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(29, 61, 40, 0.85);
+      backdrop-filter: blur(6px);
+      color: var(--color-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .product-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: 8px;
+    }
+    .product-desc {
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+    .product-meta-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-cream);
+    }
+    .product-meta-tag {
+      font-size: 0.75rem;
+      background-color: var(--color-cream);
+      color: var(--color-olive);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+    }
+    .product-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .product-card-footer a {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .product-card-footer a:hover {
+      color: var(--color-sky);
+    }
+
+    @media (max-width: 992px) {
+      .iqf-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .iqf-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
+       INNOVATION SECTION (OFI CO-CREATION STYLE)
+    ------------------------------------------------------------- */
+    .innovation-section {
+      background-color: var(--color-forest);
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+    }
+    .innovation-bg-glow {
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(103, 179, 221, 0.15) 0%, rgba(29, 61, 40, 0) 70%);
+      pointer-events: none;
+    }
+    .innovation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .innovation-content .section-title {
+      color: var(--color-white);
+    }
+    .innovation-content .section-subtitle {
+      color: var(--color-cream);
+    }
+
+    .innovation-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all var(--transition-fast);
+    }
+    .pillar-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--color-sky);
+      transform: translateY(-3px);
+    }
+    .pillar-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: rgba(103, 179, 221, 0.2);
+      color: var(--color-sky);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .pillar-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--color-white);
+    }
+    .pillar-desc {
+      font-size: 0.85rem;
+      color: var(--color-cream);
+      line-height: 1.45;
+    }
+
+    .innovation-media-box {
+      position: relative;
+    }
+    .innovation-video-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      aspect-ratio: 4/3;
+    }
+    .innovation-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .floating-card-badge {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      background: var(--color-cream-light);
+      color: var(--color-forest);
+      padding: 20px 24px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 320px;
+      border: 1px solid var(--color-sand);
+    }
+    .floating-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .floating-card-text h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .floating-card-text p {
+      font-size: 0.775rem;
+      color: var(--color-olive);
+      line-height: 1.3;
+    }
+
+    @media (max-width: 992px) {
+      .innovation-grid { grid-template-columns: 1fr; }
+      .floating-card-badge { position: static; margin-top: 20px; max-width: 100%; }
+    }
+
+    /* -------------------------------------------------------------
+       SCALE WITH US SECTION (CAPACITY & INFRASTRUCTURE)
+    ------------------------------------------------------------- */
+    .scale-section {
+      background-color: var(--color-offwhite);
+    }
+    .scale-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .scale-media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .scale-media-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      height: 220px;
+      background: var(--color-forest);
+    }
+    .scale-media-card.span-2 {
+      grid-column: span 2;
+      height: 280px;
+    }
+    .scale-media-card img, .scale-media-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .scale-card-label {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      color: var(--color-white);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    .scale-feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 32px 0 40px;
+    }
+    .scale-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .scale-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-sage);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .scale-feature-text h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: 4px;
+    }
+    .scale-feature-text p {
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.45;
+    }
+
+    @media (max-width: 992px) {
+      .scale-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
+       RELIABILITY, SUPPLY CHAIN & RESPONSIBILITY SECTION
+    ------------------------------------------------------------- */
+    .reliability-section {
+      background-color: var(--color-cream);
+      border-top: 1px solid var(--color-sand);
+      border-bottom: 1px solid var(--color-sand);
+    }
+    .reliability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .reliability-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      border: 1px solid var(--color-black-10);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+    .reliability-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-forest);
+    }
+    .reliability-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background-color: var(--color-forest);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .reliability-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: 12px;
+    }
+    .reliability-card p {
+      font-size: 0.8875rem;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .reliability-cert-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .cert-pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: var(--color-cream-light);
+      color: var(--color-olive);
+      border: 1px solid var(--color-sand);
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    .certifications-banner {
+      margin-top: 60px;
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: 30px 40px;
+      border: 1px solid var(--color-sand);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .cert-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .cert-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-forest);
+    }
+    .cert-badge-item svg {
+      color: var(--color-sage);
+    }
+
+    @media (max-width: 992px) {
+      .reliability-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .reliability-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
+       WE SHIP ACROSS THE U.S. (& CANADA) SECTION
+    ------------------------------------------------------------- */
+    .logistics-section {
+      background-color: var(--color-white);
+    }
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .map-container {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 2px solid var(--color-sand);
+      background: #f8fafc;
+    }
+    .map-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .map-overlay-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(29, 61, 40, 0.92);
+      backdrop-filter: blur(8px);
+      color: var(--color-white);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+    .map-hotspot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: var(--color-sky);
+      border: 3px solid var(--color-white);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+    .hotspot-buffalo { top: 38%; left: 74%; }
+    .hotspot-concord { top: 34%; left: 73%; }
+    .hotspot-chicago { top: 42%; left: 63%; }
+    .hotspot-dallas { top: 68%; left: 52%; }
+    .hotspot-california { top: 52%; left: 16%; }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(103, 179, 221, 0.7); }
+      70% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(103, 179, 221, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(103, 179, 221, 0); }
+    }
+
+    .logistics-card-box {
+      background: var(--color-cream-light);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      border: 1px solid var(--color-sand);
+    }
+    .logistics-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .log-metric-card {
+      background: var(--color-white);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-black-10);
+    }
+    .log-metric-card h5 {
+      font-size: 1.5rem;
+      color: var(--color-forest);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .log-metric-card p {
+      font-size: 0.775rem;
+      color: rgba(0, 0, 0, 0.65);
+      font-weight: 600;
+    }
+
+    /* Interactive Shipping Estimator Form */
+    .shipping-estimator {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-sand);
+    }
+    .shipping-estimator h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: 12px;
+    }
+    .estimator-form-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .estimator-input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-black-10);
+      background: var(--color-white);
+      font-size: 0.85rem;
+    }
+    .estimator-btn {
+      padding: 10px 18px;
+      background: var(--color-forest);
+      color: var(--color-white);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background var(--transition-fast);
+    }
+    .estimator-btn:hover {
+      background: var(--color-olive);
+    }
+    .estimator-result {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.8125rem;
+      color: var(--color-forest);
+      font-weight: 600;
+      background: rgba(131, 174, 118, 0.2);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    @media (max-width: 992px) {
+      .logistics-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
+       NEWSLETTER / SUBSCRIBE SECTION (OFI MODERN STYLE)
+    ------------------------------------------------------------- */
+    .newsletter-section {
+      position: relative;
+      background-image: url('Assets/Image/Zooming_in_on_food_details_2K_202609080719.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: var(--color-white);
+      overflow: hidden;
+    }
+    .newsletter-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.72);
+      z-index: 1;
+    }
+    .newsletter-box {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .newsletter-box .section-title {
+      color: var(--color-white);
+      margin-bottom: 14px;
+    }
+    .newsletter-box .section-subtitle {
+      color: var(--color-cream);
+      margin: 0 auto 36px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .newsletter-input-group {
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .newsletter-input {
+      flex: 1;
+      background: transparent;
+      padding: 12px 24px;
+      color: var(--color-white);
+      font-size: 0.95rem;
+    }
+    .newsletter-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .newsletter-submit {
+      background: var(--color-sky);
+      color: var(--color-navy);
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+    .newsletter-submit:hover {
+      background: var(--color-white);
+      transform: scale(1.02);
+    }
+
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .interest-checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8125rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      user-select: none;
+      transition: all var(--transition-fast);
+    }
+    .interest-checkbox-label:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+    .interest-checkbox-label input {
+      accent-color: var(--color-sky);
+    }
+
+    .newsletter-feedback {
+      display: none;
+      margin-top: 16px;
+      background: rgba(103, 179, 221, 0.2);
+      border: 1px solid var(--color-sky);
+      color: var(--color-sky);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .newsletter-input-group {
+        flex-direction: column;
+        border-radius: var(--radius-lg);
+        background: transparent;
+        padding: 0;
+        gap: 12px;
+      }
+      .newsletter-input {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: var(--radius-pill);
+      }
+      .newsletter-submit {
+        border-radius: var(--radius-pill);
+        text-align: center;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       BLOG PREVIEW SECTION
+    ------------------------------------------------------------- */
+    .blog-section {
+      background-color: var(--color-offwhite);
+    }
+    .blog-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .blog-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-black-10);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--color-sage);
+    }
+    .blog-thumb {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+    .blog-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .blog-card:hover .blog-thumb img {
+      transform: scale(1.05);
+    }
+    .blog-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--color-forest);
+      color: var(--color-white);
+      font-size: 0.725rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .blog-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 10px;
+    }
+    .blog-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      line-height: 1.35;
+      margin-bottom: 12px;
+      transition: color var(--transition-fast);
+    }
+    .blog-card:hover .blog-title {
+      color: var(--color-blue);
+    }
+    .blog-excerpt {
+      font-size: 0.875rem;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .blog-read-more {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @media (max-width: 992px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -------------------------------------------------------------
+       FOOTER (OFI CORPORATE STYLE)
+    ------------------------------------------------------------- */
+    footer.site-footer {
+      background-color: var(--color-forest);
+      color: var(--color-white);
+      padding-top: 80px;
+      padding-bottom: 40px;
+      border-top: 4px solid var(--color-sage);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .footer-brand p {
+      color: var(--color-cream);
+      font-size: 0.9rem;
+      margin: 18px 0 24px;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      transition: all var(--transition-fast);
+    }
+    .social-btn:hover {
+      background: var(--color-sky);
+      color: var(--color-navy);
+      transform: translateY(-2px);
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--color-cream);
+      transition: color var(--transition-fast);
+    }
+    .footer-links a:hover {
+      color: var(--color-sky);
+      padding-left: 4px;
+    }
+
+    .footer-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.85rem;
+      color: var(--color-cream);
+    }
+    .contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .contact-item svg {
+      flex-shrink: 0;
+      color: var(--color-sky);
+      margin-top: 3px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 32px;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.6);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-legal-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-legal-links a:hover {
+      color: var(--color-white);
+    }
+
+    @media (max-width: 992px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 576px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* -------------------------------------------------------------
+       MODALS & INTERACTIVE POPUPS
+    ------------------------------------------------------------- */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.open {
+      display: flex;
+    }
+    .modal-window {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      max-width: 840px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px 44px;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.94); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--color-cream);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-forest);
+      font-size: 1.2rem;
+      transition: all var(--transition-fast);
+    }
+    .modal-close-btn:hover {
+      background: var(--color-forest);
+      color: var(--color-white);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 20px;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .form-grid.full {
+      grid-column: span 2;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+      width: 100%;
+    }
+    .form-group label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--color-forest);
+    }
+    .form-control {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 12px 16px;
+      border: 1px solid var(--color-black-10);
+      border-radius: var(--radius-md);
+      background: var(--color-offwhite);
+      font-size: 0.9rem;
+      color: var(--color-black);
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+    select.form-control {
+      cursor: pointer;
+      appearance: auto;
+    }
+    .form-control:focus {
+      border-color: var(--color-forest);
+      background: var(--color-white);
+    }
+
+    @media (max-width: 700px) {
+      .modal-window {
+        padding: 30px 20px;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-grid.full {
+        grid-column: span 1;
+      }
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--color-forest);
+      color: var(--color-white);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      z-index: 900;
+      transition: all var(--transition-fast);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .back-to-top.show {
+      display: flex;
+    }
+    .back-to-top:hover {
+      background: var(--color-olive);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utilities Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="region-select">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>North America (EN-US / CA)</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="#scale">Industrial Scale</a>
+        <a href="#reliability">Quality & GFSI</a>
+        <a href="#logistics">Shipping Lanes</a>
+        <a href="javascript:void(0)" onclick="openModal('sampleModal')">Request Samples</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (OFI Layout) -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="#" class="brand-logo" aria-label="Seenergy Foods Homepage">
+          <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-menu">
+          <div class="nav-item">
+            <a href="#hero" class="nav-link">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="#iqf" class="nav-link">IQF Ingredients</a>
+          </div>
+          <div class="nav-item">
+            <a href="#innovation" class="nav-link">Innovation & R&D</a>
+          </div>
+          <div class="nav-item">
+            <a href="#scale" class="nav-link">Scale With Us</a>
+          </div>
+          <div class="nav-item">
+            <a href="#reliability" class="nav-link">Supply Chain & ESG</a>
+          </div>
+          <div class="nav-item">
+            <a href="#logistics" class="nav-link">U.S. Shipping</a>
+          </div>
+          <div class="nav-item">
+            <a href="#blog" class="nav-link">Insights</a>
+          </div>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <button class="search-btn" onclick="toggleSearch()" title="Search Products" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <a href="javascript:void(0)" onclick="openModal('sampleModal')" class="btn btn-primary btn-sm">Sample Request</a>
+          <button class="mobile-toggle-btn" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#hero" class="nav-link" onclick="toggleMobileMenu()">Home</a>
+    <a href="#iqf" class="nav-link" onclick="toggleMobileMenu()">IQF Ingredients</a>
+    <a href="#innovation" class="nav-link" onclick="toggleMobileMenu()">Innovation & R&D</a>
+    <a href="#scale" class="nav-link" onclick="toggleMobileMenu()">Scale With Us</a>
+    <a href="#reliability" class="nav-link" onclick="toggleMobileMenu()">Supply Chain & ESG</a>
+    <a href="#logistics" class="nav-link" onclick="toggleMobileMenu()">U.S. Shipping</a>
+    <a href="#blog" class="nav-link" onclick="toggleMobileMenu()">Insights</a>
+    <a href="javascript:void(0)" onclick="openModal('sampleModal'); toggleMobileMenu()" class="btn btn-primary" style="margin-top: 10px;">Request Product Samples</a>
+  </div>
+
+  <!-- =============================================================
+       SECTION 1: HERO
+  ============================================================== -->
+  <section class="hero-section" id="hero">
+    <!-- Video Background -->
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg">
+      <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
+      <source src="Assets/Video/Drone_flying_over_rice_sacks_202609071527.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="dot"></span>
+          North America's IQF Ready-To-Eat Partner
+        </div>
+        <h1 class="hero-title">Real Ingredients.<br>Exceptional Scale.</h1>
+        <p class="hero-desc">
+          Seenergy Foods delivers premium pre-cooked, Individually Quick Frozen (IQF) beans, grains, rice, lentils, and pasta. Engineered for industrial food manufacturers, foodservice leaders, and private label innovators.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#iqf" class="btn btn-sky">Explore IQF Portfolio</a>
+          <a href="javascript:void(0)" onclick="openModal('sampleModal')" class="btn btn-outline-white">Request Formulation Samples</a>
+        </div>
+
+        <!-- Metric Ribbon -->
+        <div class="hero-stats-bar">
+          <div class="stat-item">
+            <span class="stat-number">150+</span>
+            <span class="stat-label">Custom Blends & IQF Ingredients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">GFSI Certified Production Facilities</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Non-GMO & Clean-Label Ready</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">48hr</span>
+            <span class="stat-label">Rapid Dispatch Across USA & CA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 2: IQF (INDIVIDUALLY QUICK FROZEN)
+  ============================================================== -->
+  <section class="iqf-section section-padding" id="iqf">
+    <div class="container">
+      <div class="iqf-header-row">
+        <div>
+          <div class="eyebrow eyebrow-forest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            IQF Specialty Portfolio
+          </div>
+          <h2 class="section-title">Pre-Cooked & Flash Frozen at Peak Freshness</h2>
+          <p class="section-subtitle">
+            Our proprietary IQF technology locks in cellular structure, natural moisture, vibrant color, and nutritional density—giving food formulators 100% usable yield with zero cooking preparation.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" onclick="filterIQF('all', this)">All Solutions</button>
+          <button class="filter-tab" onclick="filterIQF('beans', this)">IQF Beans</button>
+          <button class="filter-tab" onclick="filterIQF('grains', this)">Grains & Rice</button>
+          <button class="filter-tab" onclick="filterIQF('lentils', this)">Lentils & Pulses</button>
+          <button class="filter-tab" onclick="filterIQF('pasta', this)">IQF Pasta & Blends</button>
+        </div>
+      </div>
+
+      <!-- IQF Product Grid -->
+      <div class="iqf-grid" id="iqfProductGrid">
+        
+        <!-- Card 1: Beans -->
+        <div class="product-card" data-category="beans">
+          <div class="product-media">
+            <span class="product-badge">IQF Beans</span>
+            <img src="Assets/Image/frijoles%201.jpg" alt="IQF Pre-cooked Black and Kidney Beans" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Black & Red Kidney Beans</h3>
+            <p class="product-desc">
+              Pre-cooked to an optimal al dente texture. Individually frozen so each grain remains free-flowing, preventing clumping in automated batching and meal-kit lines.
+            </p>
+            <div class="product-meta-list">
+              <span class="product-meta-tag">Non-GMO</span>
+              <span class="product-meta-tag">High Protein</span>
+              <span class="product-meta-tag">100% Yield</span>
+              <span class="product-meta-tag">Bulk Totes / 20-40lb</span>
+            </div>
+            <div class="product-card-footer">
+              <a href="javascript:void(0)" onclick="openProductDetail('IQF Black & Red Kidney Beans', 'Pre-cooked black beans, dark red kidney beans, pinto beans, and garbanzos.', '20 lb cartons, 40 lb cases, 1,000 lb poly-lined industrial totes.', 'GFSI, SQF Level 3, Kosher, Halal, USDA Organic options available.')">
+                View Specifications 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Grains & Rice -->
+        <div class="product-card" data-category="grains">
+          <div class="product-media">
+            <span class="product-badge">IQF Grains</span>
+            <img src="Assets/Image/arroz%2001.jpg" alt="IQF Brown and Wild Rice" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Whole Grain Brown & Jasmine Rice</h3>
+            <p class="product-desc">
+              Evenly cooked whole grains with consistent moisture retention. Ideal for frozen skillet meals, plant-based bowls, soup applications, and airline meal trays.
+            </p>
+            <div class="product-meta-list">
+              <span class="product-meta-tag">Gluten-Free</span>
+              <span class="product-meta-tag">Whole Grain</span>
+              <span class="product-meta-tag">Free-Flowing</span>
+              <span class="product-meta-tag">No Preservatives</span>
+            </div>
+            <div class="product-card-footer">
+              <a href="javascript:void(0)" onclick="openProductDetail('IQF Rice & Ancient Grains', 'Whole brown rice, Jasmine rice, Basmati, Wild rice blends, Tri-color quinoa.', 'Pillow packs, 25 lb boxes, 1,500 lb macro totes.', 'GFSI, BRCGS, Kosher, Non-GMO Project Verified.')">
+                View Specifications 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Chickpeas & Pulses -->
+        <div class="product-card" data-category="lentils">
+          <div class="product-media">
+            <span class="product-badge">IQF Pulses</span>
+            <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="IQF Pre-Cooked Chickpeas and Lentils" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Garbanzo Chickpeas & Lentil Blends</h3>
+            <p class="product-desc">
+              Plump, uniform chickpeas and green/brown lentils cooked under strict temperature controls to ensure zero mushiness and excellent skin retention during reheating.
+            </p>
+            <div class="product-meta-list">
+              <span class="product-meta-tag">Clean Label</span>
+              <span class="product-meta-tag">Fiber Rich</span>
+              <span class="product-meta-tag">Uniform Size</span>
+              <span class="product-meta-tag">Custom Blanching</span>
+            </div>
+            <div class="product-card-footer">
+              <a href="javascript:void(0)" onclick="openProductDetail('IQF Chickpeas & Lentils', 'Kabuli chickpeas, Beluga lentils, French green lentils, Brown lentils.', '20 lb boxes, 40 lb cartons, bulk totes.', 'Non-GMO, Organic Certified, GFSI SQF.')">
+                View Specifications 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Ancient Grains & Medleys -->
+        <div class="product-card" data-category="grains">
+          <div class="product-media">
+            <span class="product-badge">Ancient Grains</span>
+            <img src="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg" alt="IQF Ancient Grains and Superfood Bowl" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Ancient Grain & Superfood Medleys</h3>
+            <p class="product-desc">
+              Custom-blended quinoa, farro, barley, and wild rice engineered for health-conscious CPG formulations, power bowls, and fresh retail refrigerated entrees.
+            </p>
+            <div class="product-meta-list">
+              <span class="product-meta-tag">Co-Blended</span>
+              <span class="product-meta-tag">Chef-Formulated</span>
+              <span class="product-meta-tag">Organic Options</span>
+              <span class="product-meta-tag">Custom Ratio</span>
+            </div>
+            <div class="product-card-footer">
+              <a href="javascript:void(0)" onclick="openProductDetail('IQF Ancient Grain Medleys', 'Custom combinations of red & white quinoa, farro, wild rice, and toasted grains.', 'Packaged to client specifications from 5 lb to 2,000 lb bulk.', 'GFSI, USDA Organic, Kosher Certified.')">
+                View Specifications 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: IQF Pasta -->
+        <div class="product-card" data-category="pasta">
+          <div class="product-media">
+            <span class="product-badge">New IQF Line</span>
+            <video autoplay muted loop playsinline poster="Assets/Image/Change_plate_to_white_one_2K_202609071352.jpeg">
+              <source src="Assets/Video/Pasta_moving_on_conveyor_belt_20260910161205.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">IQF Short & Long Cut Pasta</h3>
+            <p class="product-desc">
+              Freshly extruded, al dente cooked, and individually blast frozen. Eliminates starch degradation, sticking, and over-hydration in ready-to-eat entrees and meal kits.
+            </p>
+            <div class="product-meta-list">
+              <span class="product-meta-tag">Al Dente Texture</span>
+              <span class="product-meta-tag">No Clumping</span>
+              <span class="product-meta-tag">High-Volume Line</span>
+              <span class="product-meta-tag">Semolina & GF</span>
+            </div>
+            <div class="product-card-footer">
+              <a href="javascript:void(0)" onclick="openProductDetail('IQF Pasta Line', 'Penne, Fusilli, Macaroni, Cavatappi, Orzo, Gluten-Free legume pastas.', 'Standard 20-30 lb cases and bulk industrial totes.', 'GFSI SQF 3, HACCP, Non-GMO.')">
+                View Specifications 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Custom Prepared Blends -->
+        <div class="product-card" data-category="beans">
+          <div class="product-media">
+            <span class="product-badge">Custom Formulations</span>
+            <img src="Assets/Image/Beef_rib_and_red_beans_2K_202609080717.jpeg" alt="IQF Prepared Bean and Grain Blend" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <h3 class="product-title">Seasoned & Pre-Mixed Culinary Blends</h3>
+            <p class="product-desc">
+              Ready-to-incorporate seasoned pulses, Mexican style bean blends, Mediterranean grain mixes, and custom marinades prepared to proprietary brand formulations.
+            </p>
+            <div class="product-meta-list">
+              <span class="product-meta-tag">Turnkey Blend</span>
+              <span class="product-meta-tag">Custom Seasoning</span>
+              <span class="product-meta-tag">R&D Validated</span>
+              <span class="product-meta-tag">Zero Waste</span>
+            </div>
+            <div class="product-card-footer">
+              <a href="javascript:void(0)" onclick="openProductDetail('Custom Seasoned Blends', 'Multi-bean chili blends, grain & legume fiesta mixes, curry lentils, and custom seasoning infusions.', 'Bulk tote, food service cartons, custom retail pouches.', 'Custom QA/QC profiles, Halal, Kosher, SQF.')">
+                View Specifications 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 3: INNOVATION (OFI CO-CREATION STYLE)
+  ============================================================== -->
+  <section class="innovation-section section-padding" id="innovation">
+    <div class="innovation-bg-glow"></div>
+    <div class="container">
+      <div class="innovation-grid">
+        
+        <!-- Left Column: Copy & Value Pillars -->
+        <div class="innovation-content">
+          <div class="eyebrow eyebrow-sky">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            Culinary R&D & Co-Creation
+          </div>
+          <h2 class="section-title">Co-Creating Next-Generation Food Solutions</h2>
+          <p class="section-subtitle">
+            At Seenergy Foods, we partner with your product developers, food scientists, and executive chefs to formulate custom IQF blends that conquer texture, moisture, and shelf-stability challenges.
+          </p>
+
+          <div class="innovation-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M12 2v2"/><path d="M12 20v2"/></svg>
+              </div>
+              <h4 class="pillar-title">Custom Blending & Ratios</h4>
+              <p class="pillar-desc">Multi-ingredient precision mixing with consistent distribution per batch or tote.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h4 class="pillar-title">Clean-Label Formulations</h4>
+              <p class="pillar-desc">Non-GMO, organic, allergen-controlled, and free from artificial preservatives.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h4 class="pillar-title">Pilot Plant Validation</h4>
+              <p class="pillar-desc">Small-batch trial scaling before commercial industrial line production.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h4 class="pillar-title">Thermal Curve Engineering</h4>
+              <p class="pillar-desc">Optimized blanching curves to ensure integrity through freeze-thaw and reheat.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 36px;">
+            <a href="javascript:void(0)" onclick="openModal('sampleModal')" class="btn btn-sky">Partner With Our Culinary Team</a>
+          </div>
+        </div>
+
+        <!-- Right Column: Video & Floating Callout -->
+        <div class="innovation-media-box">
+          <div class="innovation-video-wrap">
+            <video autoplay muted loop playsinline poster="Assets/Image/Zooming_in_on_food_details_2K_202609080719.jpeg">
+              <source src="Assets/Video/Mano_deja_ingrediente_en_comida_202609071404.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="floating-card-badge">
+            <div class="floating-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="floating-card-text">
+              <h4>100% Formulation Secrecy</h4>
+              <p>Strict NDA protection for proprietary spice rubs, pulse ratios, and grain blends.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 4: SCALE WITH US (CAPACITY & INFRASTRUCTURE)
+  ============================================================== -->
+  <section class="scale-section section-padding" id="scale">
+    <div class="container">
+      <div class="scale-grid">
+        
+        <!-- Left: Industrial Media Showcase -->
+        <div class="scale-media-grid">
+          <div class="scale-media-card span-2">
+            <video autoplay muted loop playsinline poster="Assets/Image/Waiter_holding_bowl_of_food_2K_202609070303.jpeg">
+              <source src="Assets/Video/Pasta_moving_on_conveyor_belt_20260910161205.mp4" type="video/mp4" />
+            </video>
+            <span class="scale-card-label">High-Speed Automated Freezing Tunnels</span>
+          </div>
+          <div class="scale-media-card">
+            <video autoplay muted loop playsinline>
+              <source src="Assets/Video/Lentejas_caen_de_cinta_transport%E2%80%A6_202609080053.mp4" type="video/mp4" />
+            </video>
+            <span class="scale-card-label">Continuous Optical Sorting</span>
+          </div>
+          <div class="scale-media-card">
+            <img src="Assets/Image/Cambiar_plato_por_blanco_2K_202609070255.jpeg" alt="Quality Inspection on Seenergy Foods Line" loading="lazy" />
+            <span class="scale-card-label">Real-Time QA Lab Testing</span>
+          </div>
+        </div>
+
+        <!-- Right: Infrastructure Details -->
+        <div>
+          <div class="eyebrow eyebrow-forest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Industrial Capacity & Scale
+          </div>
+          <h2 class="section-title">Built to Power North America’s Largest Food Brands</h2>
+          <p class="section-subtitle">
+            With dual state-of-the-art manufacturing plants in Ontario and dedicated cross-border distribution hubs, Seenergy Foods handles multi-million pound annual contracts with zero interruption.
+          </p>
+
+          <div class="scale-feature-list">
+            <div class="scale-feature-item">
+              <div class="scale-check">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="scale-feature-text">
+                <h4>150M+ lbs Processing Capacity</h4>
+                <p>High-efficiency continuous blanching, steam cooking, and multi-tier cryogenic blast freezers.</p>
+              </div>
+            </div>
+
+            <div class="scale-feature-item">
+              <div class="scale-check">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="scale-feature-text">
+                <h4>Serving Diverse Market Sectors</h4>
+                <p>Industrial CPG manufacturers, nationwide restaurant chains, airline catering, private label retail, and prepared meal kits.</p>
+              </div>
+            </div>
+
+            <div class="scale-feature-item">
+              <div class="scale-check">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="scale-feature-text">
+                <h4>Flexible Packaging Configurations</h4>
+                <p>Custom pack sizes ranging from 5 lb foodservice pouches to 20-40 lb cartons and 1,000–2,000 lb bulk industrial macro bins.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="javascript:void(0)" onclick="openModal('sampleModal')" class="btn btn-primary">Schedule a Plant Audit</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 5: RELIABILITY, SUPPLY CHAIN & RESPONSIBILITY
+  ============================================================== -->
+  <section class="reliability-section section-padding" id="reliability">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+        <div class="eyebrow eyebrow-forest" style="justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Commitment & Governance
+        </div>
+        <h2 class="section-title">Reliability, Supply Chain Integrity & ESG</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+          From our direct relationships with North American growers to our zero-break cold chain telemetry, we guarantee total transparency, safety, and ethical sourcing.
+        </p>
+      </div>
+
+      <!-- 4 Reliability Cards -->
+      <div class="reliability-grid">
+        
+        <div class="reliability-card">
+          <div class="reliability-card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>GFSI & SQF Level 3 Certified</h3>
+          <p>
+            Rigorous hazard analysis, automated metal detection, optical vision sortation, and daily microbial testing in internal accredited laboratories.
+          </p>
+          <div class="reliability-cert-pills">
+            <span class="cert-pill">SQF Edition 9</span>
+            <span class="cert-pill">HACCP</span>
+            <span class="cert-pill">BRCGS</span>
+          </div>
+        </div>
+
+        <div class="reliability-card">
+          <div class="reliability-card-icon" style="background-color: var(--color-navy);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Farm-to-Palate Traceability</h3>
+          <p>
+            Every single batch is indexed with complete agricultural lot tracing back to contracted North American pulse and grain farmers.
+          </p>
+          <div class="reliability-cert-pills">
+            <span class="cert-pill">100% Lot ID</span>
+            <span class="cert-pill">Non-GMO Verified</span>
+            <span class="cert-pill">Full Recall Audited</span>
+          </div>
+        </div>
+
+        <div class="reliability-card">
+          <div class="reliability-card-icon" style="background-color: var(--color-olive);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Cold Chain Telematics</h3>
+          <p>
+            Continuous -18°C temperature logging across every warehousing dock and refrigerated reefer lane ensures zero condensation or defrost cycles.
+          </p>
+          <div class="reliability-cert-pills">
+            <span class="cert-pill">-18°C Guaranteed</span>
+            <span class="cert-pill">Reefer Telemetry</span>
+            <span class="cert-pill">0% Thaw Risk</span>
+          </div>
+        </div>
+
+        <div class="reliability-card">
+          <div class="reliability-card-icon" style="background-color: var(--color-sage);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Sustainability & ESG</h3>
+          <p>
+            Water reclamation loops in our steam lines, 100% recyclable carton materials, and zero landfill waste targets across Canadian operations.
+          </p>
+          <div class="reliability-cert-pills">
+            <span class="cert-pill">Water Recycled</span>
+            <span class="cert-pill">Eco Blast Freezing</span>
+            <span class="cert-pill">Clean Energy</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certification Badges Bar -->
+      <div class="certifications-banner">
+        <div class="cert-badge-group">
+          <div class="cert-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            GFSI / SQF Certified
+          </div>
+          <div class="cert-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Non-GMO Project
+          </div>
+          <div class="cert-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            USDA Organic
+          </div>
+          <div class="cert-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            COR Kosher Certified
+          </div>
+          <div class="cert-badge-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Halal Certified
+          </div>
+        </div>
+
+        <a href="javascript:void(0)" onclick="openModal('certModal')" class="btn btn-secondary btn-sm">Download Certifications</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 6: WE SHIP ACROSS THE U.S. (& CANADA)
+  ============================================================== -->
+  <section class="logistics-section section-padding" id="logistics">
+    <div class="container">
+      <div class="logistics-grid">
+        
+        <!-- Left: Interactive Logistics Map -->
+        <div class="map-container">
+          <img src="Assets/Image/Map.jpeg" alt="Seenergy Foods North America Shipping & Distribution Map" loading="lazy" />
+          <div class="map-overlay-badge">
+            <span style="color: var(--color-sky); font-weight: 700;">● Active Hubs:</span> Concord ON & Buffalo NY
+          </div>
+
+          <!-- Hotspot interactive dots -->
+          <div class="map-hotspot hotspot-concord" title="Concord, Ontario - Global HQ & Primary IQF Plant" onclick="showHubInfo('Concord, ON', 'HQ & Dual Processing Plants (150M lbs capacity)')"></div>
+          <div class="map-hotspot hotspot-buffalo" title="Buffalo, NY - US Distribution Hub" onclick="showHubInfo('Buffalo, NY', 'US Distribution Center & Cross-Border Logistics Center')"></div>
+          <div class="map-hotspot hotspot-chicago" title="Chicago Corridor - Midwest FTL/LTL Cold Hub" onclick="showHubInfo('Midwest Corridor', '24-Hour Reefer Transit to Chicago & Central Hubs')"></div>
+          <div class="map-hotspot hotspot-dallas" title="Southern Lane - Texas & Gulf Distribution" onclick="showHubInfo('South Hub', '48-Hour Temperature-Controlled Freight')"></div>
+          <div class="map-hotspot hotspot-california" title="West Coast Lane - California & Pacific Northwest" onclick="showHubInfo('West Coast Hub', 'Regular Scheduled Cross-Country Reefer Lanes')"></div>
+        </div>
+
+        <!-- Right: Freight Capabilities & Live Estimator -->
+        <div>
+          <div class="eyebrow eyebrow-navy">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Logistics & Cold Transport
+          </div>
+          <h2 class="section-title">We Ship Across the U.S. & North America</h2>
+          <p class="section-subtitle">
+            Leveraging our strategic Buffalo, New York facility and Ontario headquarters, Seenergy Foods operates seamless cross-border cold chain shipping with zero customs delays.
+          </p>
+
+          <div class="logistics-metrics">
+            <div class="log-metric-card">
+              <h5>99.4%</h5>
+              <p>On-Time Delivery Rate</p>
+            </div>
+            <div class="log-metric-card">
+              <h5>FTL & LTL</h5>
+              <p>Full & Partial Reefer Shipments</p>
+            </div>
+            <div class="log-metric-card">
+              <h5>48 Hours</h5>
+              <p>Standard East/Midwest Transit</p>
+            </div>
+            <div class="log-metric-card">
+              <h5>Direct B2B</h5>
+              <p>EDI & Automated PO Integration</p>
+            </div>
+          </div>
+
+          <!-- Interactive Shipping Lane Quick Estimator -->
+          <div class="logistics-card-box shipping-estimator">
+            <h4>Check Transit Time & Request Freight Quote</h4>
+            <div class="estimator-form-row">
+              <input type="text" class="estimator-input" id="zipInput" placeholder="Enter US Destination ZIP (e.g. 60601, 75001, 90001)" />
+              <button class="estimator-btn" onclick="calculateTransit()">Calculate</button>
+            </div>
+            <div class="estimator-result" id="estimatorResult"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 7: NEWSLETTER / SUBSCRIBE (OFI MODERN STYLE)
+  ============================================================== -->
+  <section class="newsletter-section section-padding" id="newsletter">
+    <div class="newsletter-overlay"></div>
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="eyebrow eyebrow-sky" style="justify-content: center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Industry Perspectives
+        </div>
+        <h2 class="section-title">Stay Ahead in Food Formulation & IQF Trends</h2>
+        <p class="section-subtitle">
+          Subscribe to the Seenergy Foods quarterly bulletin for proprietary ingredient market data, clean-label pulse formulations, crop harvest reports, and cold-chain innovations.
+        </p>
+
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <!-- Segment checkboxes -->
+          <div class="interest-tags">
+            <label class="interest-checkbox-label">
+              <input type="checkbox" checked /> IQF Pulse Market Trends
+            </label>
+            <label class="interest-checkbox-label">
+              <input type="checkbox" checked /> Culinary R&D Insights
+            </label>
+            <label class="interest-checkbox-label">
+              <input type="checkbox" /> Supply Chain & Harvest Reports
+            </label>
+            <label class="interest-checkbox-label">
+              <input type="checkbox" /> Plant Expansion News
+            </label>
+          </div>
+
+          <!-- Email Input Group -->
+          <div class="newsletter-input-group">
+            <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your business email address..." required />
+            <button type="submit" class="newsletter-submit">Subscribe Now</button>
+          </div>
+
+          <div class="newsletter-feedback" id="newsletterFeedback">
+            ✓ Thank you for subscribing! You will receive our latest IQF formulation report shortly.
+          </div>
+
+          <p style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6);">
+            We respect your privacy. Unsubscribe at any time. Strictly no spam.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       SECTION 8: BLOG PREVIEW
+  ============================================================== -->
+  <section class="blog-section section-padding" id="blog">
+    <div class="container">
+      <div class="blog-header-row">
+        <div>
+          <div class="eyebrow eyebrow-forest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Food Science & Insights
+          </div>
+          <h2 class="section-title">Latest Articles & Industry Perspectives</h2>
+        </div>
+        <a href="#newsletter" class="btn btn-secondary btn-sm">View All Insights</a>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid">
+        
+        <!-- Post 1 -->
+        <article class="blog-card">
+          <div class="blog-thumb">
+            <span class="blog-tag">R&D & Formulation</span>
+            <img src="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg" alt="Plant-Based Protein Formulation Trends" loading="lazy" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>September 2026</span>
+              <span>•</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-title">The Rise of Ready-to-Eat Pulses: Why IQF Outperforms Canned and Dry</h3>
+            <p class="blog-excerpt">
+              Discover how modern CPG brands eliminate sodium rinsing and soggy textures by migrating to individually quick frozen beans with 100% usable net weight.
+            </p>
+            <a href="javascript:void(0)" onclick="openModal('articleModal1')" class="blog-read-more">
+              Read Article 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card">
+          <div class="blog-thumb">
+            <span class="blog-tag">Supply Chain</span>
+            <img src="Assets/Image/Beef_rib_and_red_beans_2K_202609080717.jpeg" alt="Cold Chain Integrity in North American Logistics" loading="lazy" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>August 2026</span>
+              <span>•</span>
+              <span>4 min read</span>
+            </div>
+            <h3 class="blog-title">Cross-Border Cold Chain Resilience: Ensuring Zero Defrost in US Shipping</h3>
+            <p class="blog-excerpt">
+              A comprehensive technical overview of continuous reefer telematics and dual-facility routing between Buffalo NY and Toronto to guarantee flawless deliveries.
+            </p>
+            <a href="javascript:void(0)" onclick="openModal('articleModal2')" class="blog-read-more">
+              Read Article 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card">
+          <div class="blog-thumb">
+            <span class="blog-tag">Clean-Label</span>
+            <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="Clean Label Organic Grains and Pulses" loading="lazy" />
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span>July 2026</span>
+              <span>•</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="blog-title">Formulating Clean-Label Meal Kits: Non-GMO Ancient Grains at Industrial Scale</h3>
+            <p class="blog-excerpt">
+              How culinary teams are using pre-cooked IQF quinoa, farro, and wild rice to achieve tender grain textures without artificial binders or stabilizers.
+            </p>
+            <a href="javascript:void(0)" onclick="openModal('articleModal3')" class="blog-read-more">
+              Read Article 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       FOOTER (OFI CORPORATE STYLE)
+  ============================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#">
+            <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" style="filter: brightness(0) invert(1); height: 36px;" />
+          </a>
+          <p>
+            Seenergy Foods Limited is a premier North American food processor specializing in Individually Quick Frozen (IQF) pre-cooked beans, grains, rice, lentils, and custom formulations.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links: Portfolio -->
+        <div class="footer-col">
+          <h4>IQF Solutions</h4>
+          <div class="footer-links">
+            <a href="#iqf">IQF Black & Kidney Beans</a>
+            <a href="#iqf">Whole Grain Brown Rice</a>
+            <a href="#iqf">IQF Chickpeas & Lentils</a>
+            <a href="#iqf">IQF Al Dente Pasta</a>
+            <a href="#iqf">Ancient Grain Medleys</a>
+            <a href="#innovation">Custom Culinary Blends</a>
+          </div>
+        </div>
+
+        <!-- Quick Links: Company -->
+        <div class="footer-col">
+          <h4>Company & QA</h4>
+          <div class="footer-links">
+            <a href="#scale">Industrial Capacity</a>
+            <a href="#reliability">GFSI & SQF Level 3</a>
+            <a href="#reliability">Non-GMO & Organic</a>
+            <a href="#logistics">U.S. & Canada Shipping</a>
+            <a href="#blog">Research & Articles</a>
+            <a href="javascript:void(0)" onclick="openModal('sampleModal')">Sample Order Portal</a>
+          </div>
+        </div>
+
+        <!-- Corporate Locations -->
+        <div class="footer-col">
+          <h4>Headquarters & Facilities</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Canadian HQ & Plants:</strong><br>
+                475 N Rivermede Road<br>
+                Concord (Vaughan), ON L4K 3N1
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>US Distribution Hub:</strong><br>
+                50 Foundation Plz #1400<br>
+                Buffalo, NY 14202, USA
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Seenergy Foods Limited. All Rights Reserved. Powered by High-Quality IQF Ingredients.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Supply</a>
+          <a href="#">GFSI Certifications</a>
+          <a href="#">Supplier Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================================
+       MODAL 1: SAMPLE & QUOTE REQUEST
+  ============================================================== -->
+  <div class="modal-backdrop" id="sampleModal" onclick="handleBackdropClick(event, 'sampleModal')">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('sampleModal')">&times;</button>
+      <div class="eyebrow eyebrow-forest">Direct B2B Inquiries</div>
+      <h3 style="font-size: 1.6rem; color: var(--color-forest); margin-bottom: 8px;">Request Product Samples & Specs</h3>
+      <p style="font-size: 0.875rem; color: rgba(0,0,0,0.7); margin-bottom: 24px;">
+        Provide your formulation requirements, pack size preferences, and target application. Our culinary R&D team will ship sample coolers within 48 hours.
+      </p>
+
+      <form onsubmit="handleSampleSubmit(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>First & Last Name *</label>
+            <input type="text" class="form-control" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Company / Organization *</label>
+            <input type="text" class="form-control" placeholder="Food Brands Inc." required />
+          </div>
+          <div class="form-group">
+            <label>Work Email *</label>
+            <input type="email" class="form-control" placeholder="john@foodbrands.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" class="form-control" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label>Product of Interest *</label>
+            <select class="form-control" required>
+              <option value="">Select an IQF category...</option>
+              <option value="beans">IQF Beans (Black, Kidney, Pinto, Garbanzo)</option>
+              <option value="grains">IQF Grains & Rice (Brown, Wild, Jasmine, Quinoa)</option>
+              <option value="lentils">IQF Lentils & Pulses</option>
+              <option value="pasta">IQF Short/Long Cut Pasta</option>
+              <option value="custom">Custom Seasoned Blend / Formulation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Estimated Annual Volume</label>
+            <select class="form-control">
+              <option value="lt50k">&lt; 50,000 lbs (Pilot / Foodservice)</option>
+              <option value="50k-500k">50,000 - 500,000 lbs</option>
+              <option value="500k-2m">500,000 - 2,000,000 lbs</option>
+              <option value="gt2m">2,000,000+ lbs (Industrial Scale)</option>
+            </select>
+          </div>
+          <div class="form-group form-grid full">
+            <label>Application / Custom Formulation Details</label>
+            <textarea class="form-control" rows="3" placeholder="Tell us about your finished product (e.g. Frozen skillet meal, refrigerated salad, soup, airline tray, packaging size...)"></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 12px;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal('sampleModal')">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm">Submit Sample Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =============================================================
+       MODAL 2: PRODUCT SPECIFICATION DETAILS
+  ============================================================== -->
+  <div class="modal-backdrop" id="productModal" onclick="handleBackdropClick(event, 'productModal')">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('productModal')">&times;</button>
+      <div class="eyebrow eyebrow-forest">Technical Specification Sheet</div>
+      <h3 id="modalProductTitle" style="font-size: 1.6rem; color: var(--color-forest); margin-bottom: 12px;">IQF Product</h3>
+      
+      <div style="margin-bottom: 20px;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-olive); margin-bottom: 4px;">Description & Ingredients:</h4>
+        <p id="modalProductDesc" style="font-size: 0.9rem; color: rgba(0,0,0,0.75); line-height: 1.5;"></p>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-olive); margin-bottom: 4px;">Packaging Formats:</h4>
+        <p id="modalProductPackaging" style="font-size: 0.9rem; color: rgba(0,0,0,0.75);"></p>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-olive); margin-bottom: 4px;">Quality & Certifications:</h4>
+        <p id="modalProductCerts" style="font-size: 0.9rem; color: rgba(0,0,0,0.75);"></p>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="closeModal('productModal')">Close</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="closeModal('productModal'); openModal('sampleModal')">Request This Spec</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================================
+       MODAL 3: CERTIFICATION DOWNLOADS
+  ============================================================== -->
+  <div class="modal-backdrop" id="certModal" onclick="handleBackdropClick(event, 'certModal')">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('certModal')">&times;</button>
+      <div class="eyebrow eyebrow-forest">Compliance & Quality Assurance</div>
+      <h3 style="font-size: 1.6rem; color: var(--color-forest); margin-bottom: 8px;">Facility & Quality Certifications</h3>
+      <p style="font-size: 0.875rem; color: rgba(0,0,0,0.7); margin-bottom: 24px;">
+        Download the latest audit certificates for our Concord, Ontario dual production plants and Buffalo, New York facility.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: var(--color-cream); border-radius: var(--radius-md);">
+          <div>
+            <strong>GFSI SQF Edition 9 Certificate</strong>
+            <div style="font-size: 0.775rem; color: rgba(0,0,0,0.6);">Valid thru 2027 • Excellent Rating</div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="alert('Downloading SQF Audit Certificate...')">Download PDF</button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: var(--color-cream); border-radius: var(--radius-md);">
+          <div>
+            <strong>Non-GMO Project Verification</strong>
+            <div style="font-size: 0.775rem; color: rgba(0,0,0,0.6);">Product Registry & Audit Form</div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="alert('Downloading Non-GMO Certificate...')">Download PDF</button>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: var(--color-cream); border-radius: var(--radius-md);">
+          <div>
+            <strong>USDA Organic & COR Kosher Statements</strong>
+            <div style="font-size: 0.775rem; color: rgba(0,0,0,0.6);">Annual Rabbinical & Organic Compliance</div>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="alert('Downloading Kosher & Organic Packet...')">Download PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- =============================================================
+       JAVASCRIPT LOGIC
+  ============================================================== -->
+  <script>
+    // Header Scroll Shadow
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      const btt = document.getElementById('backToTop');
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      if (window.scrollY > 400) {
+        btt.classList.add('show');
+      } else {
+        btt.classList.remove('show');
+      }
+    });
+
+    // Mobile Navigation Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('open');
+    }
+
+    // IQF Category Filter
+    function filterIQF(category, btnElement) {
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      if (btnElement) btnElement.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Control
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function handleBackdropClick(e, id) {
+      if (e.target.id === id) {
+        closeModal(id);
+      }
+    }
+
+    // Product Specification Modal Populate
+    function openProductDetail(title, desc, packaging, certs) {
+      document.getElementById('modalProductTitle').innerText = title;
+      document.getElementById('modalProductDesc').innerText = desc;
+      document.getElementById('modalProductPackaging').innerText = packaging;
+      document.getElementById('modalProductCerts').innerText = certs;
+      openModal('productModal');
+    }
+
+    // Shipping Transit Calculator
+    function calculateTransit() {
+      const zip = document.getElementById('zipInput').value.trim();
+      const resultDiv = document.getElementById('estimatorResult');
+      
+      if (!zip) {
+        resultDiv.style.display = 'block';
+        resultDiv.style.color = '#c0392b';
+        resultDiv.innerText = 'Please enter a valid 5-digit US ZIP or Canadian postal code.';
+        return;
+      }
+
+      const firstChar = zip.charAt(0);
+      let transitTime = '24-48 Hours (Direct Daily Dedicated Reefer Lane)';
+      let hub = 'Buffalo NY Distribution Center';
+
+      if (['9', '8', '7'].includes(firstChar)) {
+        transitTime = '48-72 Hours (Coast-to-Coast Temperature Controlled)';
+      } else if (['0', '1', '2', '3'].includes(firstChar)) {
+        transitTime = '24-36 Hours (Next-Day Direct East/Northeast Dispatch)';
+      }
+
+      resultDiv.style.display = 'block';
+      resultDiv.style.color = 'var(--color-forest)';
+      resultDiv.innerHTML = `<strong>Estimated Transit to ${zip}:</strong> ${transitTime}<br><small>Dispatched from ${hub} • Zero Defrost Cold Chain Guaranteed</small>`;
+    }
+
+    // Hub Info Popover
+    function showHubInfo(hubName, details) {
+      alert(`📍 Hub Location: ${hubName}\n${details}\nDirect Reefer FTL/LTL freight lines operating daily.`);
+    }
+
+    // Newsletter Handler
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value;
+      const feedback = document.getElementById('newsletterFeedback');
+      if (email) {
+        feedback.style.display = 'block';
+        document.getElementById('newsletterEmail').value = '';
+        setTimeout(() => {
+          feedback.style.display = 'none';
+        }, 6000);
+      }
+    }
+
+    // Sample Request Form Handler
+    function handleSampleSubmit(e) {
+      e.preventDefault();
+      alert('✓ Thank you! Your sample request has been received. A Seenergy Foods culinary representative will confirm tracking within 24 hours.');
+      closeModal('sampleModal');
+    }
+
+    // Search Toggle
+    function toggleSearch() {
+      const term = prompt("Search IQF Ingredients, Beans, Grains, or Certifications:");
+      if (term) {
+        const query = term.toLowerCase();
+        const cards = document.querySelectorAll('.product-card');
+        let found = 0;
+        cards.forEach(card => {
+          if (card.innerText.toLowerCase().includes(query)) {
+            card.style.display = 'flex';
+            found++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        document.getElementById('iqf').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
