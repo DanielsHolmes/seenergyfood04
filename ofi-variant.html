@@ -1,0 +1,2391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seenergy Foods | Real Ingredients. Resilient Supply.</title>
+  <meta name="description" content="Seenergy Foods is a leading North American supplier of pre-cooked IQF beans, grains, rice, lentils, and pasta, co-creating sustainable food solutions for global brands." />
+  
+  <link rel="icon" type="image/svg+xml" href="Assets/Image/logo%20colors.svg" />
+
+  <style>
+    /* =============================================================
+       DESIGN TOKENS & TYPOGRAPHY
+       Font: Helvetica, "Helvetica Neue", Arial, sans-serif
+       Palette:
+       - Forest Green: #1D3D28
+       - Deep Navy: #100E59
+       - Dark Olive: #364331
+       - Sage Green: #83AE76
+       - Muted Sage: #789580
+       - Sky Blue: #67B3DD
+       - Muted Blue: #4A6FAA
+       - Sand Beige: #E4DCC6
+       - Warm Cream: #F6F2E8 (and 80%, 12%)
+       - Light Cream: #FEFAEE
+       - Off-White: #FFFDF7
+       - Pure White: #FFFFFF
+       - Black: #000000 (and 10% opacity)
+    ============================================================= */
+    :root {
+      --ofi-forest: #1D3D28;
+      --ofi-navy: #100E59;
+      --ofi-olive: #364331;
+      --ofi-sage: #83AE76;
+      --ofi-muted-green: #789580;
+      --ofi-blue: #4A6FAA;
+      --ofi-sky: #67B3DD;
+      --ofi-sand: #E4DCC6;
+      --ofi-cream: #F6F2E8;
+      --ofi-cream-80: rgba(246, 242, 232, 0.8);
+      --ofi-cream-12: rgba(246, 242, 232, 0.12);
+      --ofi-cream-light: #FEFAEE;
+      --ofi-offwhite: #FFFDF7;
+      --ofi-white: #FFFFFF;
+      --ofi-black: #000000;
+      --ofi-black-10: rgba(0, 0, 0, 0.1);
+      --ofi-black-05: rgba(0, 0, 0, 0.05);
+      
+      --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --ease-ofi: cubic-bezier(0.16, 1, 0.3, 1);
+      --container-max: 1360px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-pill: 9999px;
+      --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Base Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-helvetica);
+      color: var(--ofi-black);
+      background-color: var(--ofi-offwhite);
+      line-height: 1.55;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s var(--ease-ofi);
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      outline: none;
+      border: none;
+    }
+
+    .ofi-container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    .ofi-section {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .ofi-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      .ofi-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    /* OFI Buttons */
+    .ofi-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.25s var(--ease-ofi);
+      line-height: 1;
+    }
+    .ofi-btn-primary {
+      background-color: var(--ofi-forest);
+      color: var(--ofi-white);
+      border: 1.5px solid var(--ofi-forest);
+    }
+    .ofi-btn-primary:hover {
+      background-color: var(--ofi-olive);
+      border-color: var(--ofi-olive);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(29, 61, 40, 0.25);
+    }
+
+    .ofi-btn-sky {
+      background-color: var(--ofi-sky);
+      color: var(--ofi-navy);
+      border: 1.5px solid var(--ofi-sky);
+    }
+    .ofi-btn-sky:hover {
+      background-color: var(--ofi-white);
+      color: var(--ofi-navy);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(103, 179, 221, 0.35);
+    }
+
+    .ofi-btn-outline-white {
+      background-color: transparent;
+      color: var(--ofi-white);
+      border: 1.5px solid rgba(255, 255, 255, 0.75);
+    }
+    .ofi-btn-outline-white:hover {
+      background-color: var(--ofi-white);
+      color: var(--ofi-forest);
+      border-color: var(--ofi-white);
+      transform: translateY(-2px);
+    }
+
+    .ofi-btn-sm {
+      padding: 10px 22px;
+      font-size: 0.85rem;
+    }
+
+    /* =============================================================
+       TOP BAR & HEADER
+    ============================================================= */
+    .ofi-top-bar {
+      background-color: var(--ofi-forest);
+      color: var(--ofi-cream);
+      font-size: 0.8125rem;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ofi-top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ofi-lang-region {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+    .ofi-top-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .ofi-top-links a {
+      color: var(--ofi-cream);
+    }
+    .ofi-top-links a:hover {
+      color: var(--ofi-sky);
+    }
+
+    header.ofi-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--ofi-black-10);
+      transition: box-shadow 0.2s var(--ease-ofi);
+    }
+    header.ofi-header.scrolled {
+      box-shadow: var(--shadow-subtle);
+    }
+    .ofi-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+      gap: 20px;
+    }
+
+    .ofi-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .ofi-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    /* Navigation Menu: Single-Line Guaranteed */
+    .ofi-nav-list {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 1.8vw, 30px);
+      flex-wrap: nowrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .ofi-nav-item {
+      position: relative;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .ofi-nav-link {
+      font-size: clamp(0.85rem, 0.95vw, 0.9375rem);
+      font-weight: 600;
+      color: var(--ofi-forest);
+      padding: 10px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .ofi-nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--ofi-sky);
+      transition: width 0.25s var(--ease-ofi);
+    }
+    .ofi-nav-link:hover::after, .ofi-nav-link.active::after {
+      width: 100%;
+    }
+    .ofi-nav-link:hover {
+      color: var(--ofi-sky);
+    }
+
+    .ofi-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .ofi-search-trigger {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--ofi-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ofi-forest);
+      transition: all 0.2s;
+    }
+    .ofi-search-trigger:hover {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+    }
+    .ofi-mobile-toggle {
+      display: none;
+      background: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--ofi-forest);
+    }
+
+    /* Mobile Drawer */
+    .ofi-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 84px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 84px);
+      background: var(--ofi-white);
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 18px;
+      overflow-y: auto;
+      z-index: 999;
+      border-top: 1px solid var(--ofi-black-10);
+    }
+    .ofi-mobile-menu.open {
+      display: flex;
+    }
+
+    @media (max-width: 1140px) {
+      .ofi-nav-list { display: none; }
+      .ofi-mobile-toggle { display: flex; }
+      .ofi-actions .ofi-btn { display: none; }
+    }
+
+    /* =============================================================
+       HERO BANNER SECTION
+    ============================================================= */
+    .ofi-hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background-color: #000000;
+      color: var(--ofi-white);
+      overflow: hidden;
+    }
+    .ofi-hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+      z-index: 1;
+    }
+    /* Solid Black Translucent Opacity Layer */
+    .ofi-hero-black-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.55);
+      z-index: 2;
+    }
+    .ofi-hero-content {
+      position: relative;
+      z-index: 3;
+      padding-top: 70px;
+      padding-bottom: 90px;
+      max-width: 960px;
+    }
+    .ofi-hero-title {
+      font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    .ofi-hero-title span {
+      display: block;
+    }
+    .ofi-hero-subtitle {
+      font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+      line-height: 1.55;
+      color: var(--ofi-cream);
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+    .ofi-hero-cta-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* =============================================================
+       "EXPLORE FOOD & BEVERAGE SOLUTIONS" SECTION (OFI Structure)
+    ============================================================= */
+    .ofi-explore-section {
+      background-color: var(--ofi-offwhite);
+      border-top: 1px solid var(--ofi-black-10);
+    }
+    
+    .ofi-explore-eyebrow {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ofi-explore-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .ofi-explore-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--ofi-forest);
+      margin-bottom: 18px;
+    }
+
+    .ofi-explore-subtitle {
+      font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+      font-weight: 600;
+      color: var(--ofi-olive);
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .ofi-explore-text {
+      font-size: 1rem;
+      color: rgba(0, 0, 0, 0.75);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* OFI 2-Column List with Circular Icon & Border Bottom */
+    .ofi-items-columns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 36px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+
+    .ofi-items-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ofi-list-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--ofi-black-10);
+      transition: all 0.2s var(--ease-ofi);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .ofi-list-item-row:hover {
+      border-bottom-color: var(--ofi-forest);
+    }
+
+    .ofi-item-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ofi-forest);
+      transition: color 0.2s;
+    }
+
+    .ofi-list-item-row:hover .ofi-item-label {
+      color: var(--ofi-sky);
+    }
+
+    .ofi-item-circle-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid var(--ofi-forest);
+      color: var(--ofi-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.25s var(--ease-ofi);
+    }
+
+    .ofi-list-item-row:hover .ofi-item-circle-icon {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 600px) {
+      .ofi-items-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    .ofi-explore-image-box {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 2px solid var(--ofi-sand);
+      aspect-ratio: 4/3;
+      background: var(--ofi-forest);
+    }
+
+    .ofi-explore-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-ofi);
+    }
+
+    .ofi-explore-image-box:hover img {
+      transform: scale(1.04);
+    }
+
+    .ofi-explore-image-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(29, 61, 40, 0.92);
+      backdrop-filter: blur(8px);
+      color: var(--ofi-white);
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 992px) {
+      .ofi-explore-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* =============================================================
+       4. STATISTICS & GLOBAL LEADER SECTION (OFI Structure)
+    ============================================================= */
+    .ofi-stats-section {
+      position: relative;
+      background-color: var(--ofi-black);
+      color: var(--ofi-white);
+      padding: 110px 0 100px;
+      overflow: hidden;
+    }
+    .ofi-stats-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .ofi-stats-black-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.72);
+      z-index: 2;
+    }
+    .ofi-stats-container {
+      position: relative;
+      z-index: 3;
+    }
+    .ofi-stats-header {
+      max-width: 860px;
+      margin-bottom: 56px;
+    }
+    .ofi-stats-eyebrow-line {
+      display: inline-block;
+      width: 64px;
+      height: 3.5px;
+      background-color: var(--ofi-sage);
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .ofi-stats-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--ofi-white);
+      margin-bottom: 20px;
+    }
+    .ofi-stats-subtitle {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.6;
+      max-width: 760px;
+    }
+    .ofi-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px 44px;
+      margin-bottom: 56px;
+    }
+    .ofi-stat-card {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .ofi-stat-icon-wrapper {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ofi-stat-icon-wrapper svg.ofi-stat-ring {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+    .ofi-stat-icon-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ofi-white);
+      z-index: 2;
+    }
+    .ofi-stat-number-box {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .ofi-stat-number {
+      font-size: clamp(3rem, 4.4vw, 4rem);
+      font-weight: 700;
+      color: var(--ofi-white);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .ofi-stat-unit {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ofi-sky);
+    }
+    .ofi-stat-label {
+      font-size: 1.0625rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 400;
+    }
+    .ofi-stats-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+    .ofi-stats-footnote {
+      margin-top: 48px;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.52);
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 22px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .ofi-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .ofi-stat-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+    /* =============================================================
+       5. "I'M LOOKING FOR..." SECTION (OFI Structure)
+    ============================================================= */
+    .ofi-looking-section {
+      background-color: var(--ofi-cream-light);
+      padding: 100px 0;
+      border-bottom: 1px solid var(--ofi-sand);
+    }
+    .ofi-looking-header {
+      margin-bottom: 48px;
+    }
+    .ofi-looking-eyebrow-line {
+      display: inline-block;
+      width: 60px;
+      height: 3.5px;
+      background-color: var(--ofi-forest);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .ofi-looking-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      color: var(--ofi-forest);
+      letter-spacing: -0.025em;
+    }
+    .ofi-looking-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .ofi-looking-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--ofi-white);
+      border: 1.5px solid var(--ofi-sand);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform 0.35s var(--ease-ofi), box-shadow 0.35s var(--ease-ofi), border-color 0.35s var(--ease-ofi);
+    }
+    .ofi-looking-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--ofi-forest);
+    }
+    .ofi-looking-card-body {
+      padding: 32px 30px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .ofi-looking-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      gap: 16px;
+    }
+    .ofi-looking-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      letter-spacing: -0.015em;
+    }
+    .ofi-looking-card-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--ofi-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ofi-forest);
+      background: transparent;
+      flex-shrink: 0;
+      transition: all 0.25s var(--ease-ofi);
+    }
+    .ofi-looking-card:hover .ofi-looking-card-btn {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+      transform: rotate(45deg);
+    }
+    .ofi-looking-card-desc {
+      font-size: 0.95rem;
+      color: rgba(0, 0, 0, 0.72);
+      line-height: 1.55;
+    }
+    .ofi-looking-card-media {
+      width: 100%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: var(--ofi-forest);
+    }
+    .ofi-looking-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-ofi);
+    }
+    .ofi-looking-card:hover .ofi-looking-card-media img {
+      transform: scale(1.06);
+    }
+
+    @media (max-width: 992px) {
+      .ofi-looking-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* =============================================================
+       6. "GET THE LATEST OFI NEWS" SECTION (Background: #fffdf7)
+    ============================================================= */
+    .ofi-news-section {
+      position: relative;
+      background-color: #fffdf7;
+      color: var(--ofi-forest);
+      padding: 100px 0;
+      border-top: 1px solid var(--ofi-sand);
+      border-bottom: 1px solid var(--ofi-sand);
+    }
+    .ofi-news-grid-2col {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+      text-align: left;
+    }
+    .ofi-news-eyebrow-line {
+      display: inline-block;
+      width: 60px;
+      height: 3.5px;
+      background-color: var(--ofi-forest);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .ofi-news-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      color: var(--ofi-forest);
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+      line-height: 1.15;
+    }
+    .ofi-news-text {
+      font-size: 1.125rem;
+      color: rgba(0, 0, 0, 0.76);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+    .ofi-news-subscribe-card {
+      background: var(--ofi-white);
+      border: 1.5px solid var(--ofi-sand);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .ofi-news-subscribe-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      margin-bottom: 10px;
+    }
+    .ofi-news-subscribe-card-subtitle {
+      font-size: 0.92rem;
+      color: rgba(0, 0, 0, 0.68);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+    .ofi-news-form-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .ofi-news-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px 22px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid var(--ofi-black-10);
+      background: var(--ofi-cream-light);
+      color: var(--ofi-black);
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .ofi-news-input::placeholder {
+      color: rgba(0, 0, 0, 0.45);
+    }
+    .ofi-news-input:focus {
+      border-color: var(--ofi-forest);
+      background: var(--ofi-white);
+    }
+    .ofi-news-disclaimer {
+      font-size: 0.8125rem;
+      color: rgba(0, 0, 0, 0.58);
+      line-height: 1.5;
+    }
+    .ofi-news-disclaimer a {
+      color: var(--ofi-forest);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* =============================================================
+       7. "YOUR PARTNER FOR PRIVATE LABEL" SECTION (2-Column Left-Aligned)
+    ============================================================= */
+    .ofi-private-label-section {
+      position: relative;
+      background-color: var(--ofi-forest);
+      color: var(--ofi-white);
+      padding: 110px 0;
+      overflow: hidden;
+    }
+    .ofi-private-bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.28;
+      z-index: 1;
+    }
+    .ofi-private-black-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.74);
+      z-index: 2;
+    }
+    .ofi-private-grid-2col {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+      text-align: left;
+    }
+    .ofi-private-eyebrow-line {
+      display: inline-block;
+      width: 60px;
+      height: 3.5px;
+      background-color: var(--ofi-sand);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .ofi-private-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      color: var(--ofi-white);
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+    .ofi-private-text {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+    .ofi-private-caps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .ofi-private-cap-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius-lg);
+      padding: 18px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .ofi-private-cap-card:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: var(--ofi-sand);
+    }
+    .ofi-private-cap-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(228, 220, 198, 0.2);
+      color: var(--ofi-sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+    .ofi-private-cap-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ofi-white);
+      margin-bottom: 4px;
+    }
+    .ofi-private-cap-text {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.45;
+    }
+
+    @media (max-width: 992px) {
+      .ofi-news-grid-2col,
+      .ofi-private-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    /* =============================================================
+       8. "FOOD AND BEVERAGE NEWS, TRENDS, AND INSIGHTS" (OFI Structure)
+    ============================================================= */
+    .ofi-insights-section {
+      background-color: var(--ofi-cream-light);
+      padding: 100px 0;
+      border-top: 1px solid var(--ofi-sand);
+      border-bottom: 1px solid var(--ofi-sand);
+    }
+    .ofi-insights-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .ofi-insights-eyebrow-line {
+      display: inline-block;
+      width: 60px;
+      height: 3.5px;
+      background-color: var(--ofi-forest);
+      border-radius: 2px;
+      margin-bottom: 18px;
+    }
+    .ofi-insights-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-weight: 700;
+      color: var(--ofi-forest);
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .ofi-insights-subtitle {
+      font-size: 1.1rem;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.5;
+    }
+    .ofi-insights-viewall {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      font-size: 1rem;
+      border-bottom: 1.5px solid var(--ofi-forest);
+      padding-bottom: 4px;
+      transition: color 0.2s, gap 0.2s;
+    }
+    .ofi-insights-viewall:hover {
+      color: var(--ofi-sky);
+      border-color: var(--ofi-sky);
+      gap: 12px;
+    }
+    .ofi-insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .ofi-insight-card {
+      background: var(--ofi-white);
+      border: 1.5px solid var(--ofi-sand);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      transition: transform 0.35s var(--ease-ofi), box-shadow 0.35s var(--ease-ofi), border-color 0.35s var(--ease-ofi);
+    }
+    .ofi-insight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--ofi-forest);
+    }
+    .ofi-insight-media {
+      width: 100%;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: var(--ofi-forest);
+    }
+    .ofi-insight-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-ofi);
+    }
+    .ofi-insight-card:hover .ofi-insight-media img {
+      transform: scale(1.06);
+    }
+    .ofi-insight-body {
+      padding: 28px 26px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .ofi-insight-tag {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ofi-sage);
+      margin-bottom: 10px;
+    }
+    .ofi-insight-card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .ofi-insight-card-desc {
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+    .ofi-insight-readmore {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      margin-top: auto;
+    }
+    .ofi-insight-circle-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--ofi-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ofi-forest);
+      transition: all 0.25s var(--ease-ofi);
+    }
+    .ofi-insight-card:hover .ofi-insight-circle-btn {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+      transform: rotate(45deg);
+    }
+
+    @media (max-width: 992px) {
+      .ofi-insights-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* =============================================================
+       9. "GET IN TOUCH. GOT A QUESTION? TALK TO OUR EXPERTS" (OFI Callout)
+    ============================================================= */
+    .ofi-get-in-touch-section {
+      position: relative;
+      background-color: var(--ofi-navy);
+      color: var(--ofi-white);
+      padding: 100px 0;
+      overflow: hidden;
+      text-align: left;
+    }
+    .ofi-get-in-touch-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.22;
+      z-index: 1;
+    }
+    .ofi-get-in-touch-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.76);
+      z-index: 2;
+    }
+    .ofi-get-in-touch-content {
+      position: relative;
+      z-index: 3;
+      max-width: 860px;
+    }
+    .ofi-get-in-touch-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ofi-sky);
+      margin-bottom: 18px;
+    }
+    .ofi-get-in-touch-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      color: var(--ofi-white);
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+    .ofi-get-in-touch-text {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+
+    /* =============================================================
+       10. OFI FOOTER WITH SEENERGY FOODS IDENTITY & LINKS
+    ============================================================= */
+    footer.ofi-footer {
+      background-color: var(--ofi-forest);
+      color: var(--ofi-white);
+      padding: 80px 0 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .ofi-footer-logo-box {
+      margin-bottom: 48px;
+      display: inline-block;
+    }
+    .ofi-footer-logo-box img {
+      height: 48px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+    .ofi-footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+      gap: 48px 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 56px;
+      margin-bottom: 36px;
+    }
+    .ofi-footer-col h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ofi-sand);
+      margin-bottom: 22px;
+      letter-spacing: -0.01em;
+    }
+    .ofi-footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ofi-footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9375rem;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .ofi-footer-links a:hover {
+      color: var(--ofi-sky);
+      padding-left: 4px;
+    }
+    .ofi-footer-news-block p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ofi-white);
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+    .ofi-footer-contact-item {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .ofi-footer-contact-item strong {
+      color: var(--ofi-white);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .ofi-footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .ofi-footer-legal-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .ofi-footer-legal-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .ofi-footer-legal-links a:hover {
+      color: var(--ofi-sky);
+    }
+
+    @media (max-width: 992px) {
+      .ofi-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+    }
+    @media (max-width: 600px) {
+      .ofi-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .ofi-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* =============================================================
+       MODAL: CONTACT & SAMPLE INQUIRY (Width: 840px, No Cutoff)
+    ============================================================= */
+    .ofi-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.68);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .ofi-modal-overlay.open { display: flex; }
+    .ofi-modal-card {
+      background: var(--ofi-white);
+      border-radius: var(--radius-xl);
+      max-width: 840px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px 44px;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      animation: ofiModalIn 0.3s var(--ease-ofi);
+    }
+    @keyframes ofiModalIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .ofi-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--ofi-cream);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ofi-forest);
+      font-size: 1.2rem;
+      transition: all 0.2s;
+    }
+    .ofi-modal-close:hover {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+    }
+
+    .ofi-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 20px;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .ofi-form-grid.span-2col {
+      grid-column: span 2;
+    }
+    .ofi-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+      width: 100%;
+    }
+    .ofi-field-group label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+    }
+    .ofi-form-input {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 12px 16px;
+      border: 1px solid var(--ofi-black-10);
+      border-radius: var(--radius-md);
+      background: var(--ofi-offwhite);
+      font-size: 0.9rem;
+      color: var(--ofi-black);
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    select.ofi-form-input {
+      cursor: pointer;
+      appearance: auto;
+    }
+    .ofi-form-input:focus {
+      border-color: var(--ofi-forest);
+      background: var(--ofi-white);
+    }
+
+    @media (max-width: 700px) {
+      .ofi-modal-card { padding: 30px 20px; }
+      .ofi-form-grid { grid-template-columns: 1fr; }
+      .ofi-form-grid.span-2col { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utilities Bar -->
+  <div class="ofi-top-bar">
+    <div class="ofi-container">
+      <div class="ofi-top-bar-inner">
+        <div class="ofi-lang-region">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>North America / US & Canada</span>
+        </div>
+        <div class="ofi-top-links">
+          <a href="#explore">Explore Solutions</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Talk to Our Experts</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Request Sample Coolers</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation (Strict Single-Line) -->
+  <header class="ofi-header" id="ofiHeader">
+    <div class="ofi-container">
+      <div class="ofi-header-inner">
+        <!-- Logo -->
+        <a href="#" class="ofi-logo" aria-label="Seenergy Foods Homepage">
+          <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
+        </a>
+
+        <!-- Desktop Navigation: Strictly Single-Line -->
+        <nav>
+          <ul class="ofi-nav-list">
+            <li class="ofi-nav-item"><a href="#hero" class="ofi-nav-link active">Home</a></li>
+            <li class="ofi-nav-item"><a href="#explore" class="ofi-nav-link">Explore Solutions</a></li>
+            <li class="ofi-nav-item"><a href="#scale" class="ofi-nav-link">Scale Your Offer</a></li>
+            <li class="ofi-nav-item"><a href="#about-us" class="ofi-nav-link">About &amp; Scale</a></li>
+            <li class="ofi-nav-item"><a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-nav-link">Co-Create With Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="ofi-actions">
+          <div class="ofi-search-trigger" onclick="openModal('contactModal')" title="Search Solutions">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary ofi-btn-sm">Contact us</a>
+          <button class="ofi-mobile-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="ofi-mobile-menu" id="ofiMobileMenu">
+    <a href="#hero" class="ofi-nav-link" onclick="toggleMenu()">Home</a>
+    <a href="#explore" class="ofi-nav-link" onclick="toggleMenu()">Explore Food & Beverage Solutions</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="ofi-nav-link">Co-Create With Us</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="ofi-nav-link">Scale Your Offer</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="ofi-nav-link">Reliability & Responsibility</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="ofi-btn ofi-btn-primary" style="margin-top: 10px;">Contact Our Experts</a>
+  </div>
+
+  <!-- =============================================================
+       1. HERO BANNER
+  ============================================================== -->
+  <section class="ofi-hero" id="hero">
+    <video class="ofi-hero-video" autoplay muted loop playsinline poster="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg">
+      <source src="Assets/Video/timelaps%20pasta%20.mp4" type="video/mp4" />
+      <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Translucent Solid Black Layer -->
+    <div class="ofi-hero-black-layer"></div>
+
+    <div class="ofi-container">
+      <div class="ofi-hero-content">
+        <h1 class="ofi-hero-title">
+          <span>Innovate in food & beverages.</span>
+          <span>Scale with our resilient supply.</span>
+        </h1>
+        <p class="ofi-hero-subtitle">
+          With our advanced IQF processing facilities backed by resilient pulse and grain supply chains across North America, you can be the change for good food and a healthy future.
+        </p>
+
+        <div class="ofi-hero-cta-group">
+          <a href="#explore" class="ofi-btn ofi-btn-sky">Explore solutions</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       2. "EXPLORE FOOD & BEVERAGE SOLUTIONS" SECTION (OFI Structure)
+  ============================================================== -->
+  <section class="ofi-section ofi-explore-section" id="explore">
+    <div class="ofi-container">
+      
+      <!-- Eyebrow matching OFI -->
+      <div class="ofi-explore-eyebrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Explore food & beverage solutions
+      </div>
+
+      <div class="ofi-explore-layout">
+        
+        <!-- Text & Lists Column -->
+        <div>
+          <!-- Title with Lorem Ipsum -->
+          <h2 class="ofi-explore-title">
+            Lorem Ipsum Dolor Sit Amet Consectetur
+          </h2>
+
+          <!-- Subtitle with Lorem Ipsum -->
+          <h3 class="ofi-explore-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </h3>
+
+          <!-- Text paragraph with Lorem Ipsum -->
+          <p class="ofi-explore-text">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <!-- OFI 2-Column Structured Items List -->
+          <div class="ofi-items-columns-grid">
+            <!-- Column 1 -->
+            <div class="ofi-items-col">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">Ready to Eat</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">No Cooking Needed</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">No Prep Required</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">GFSI HACCP Certified</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="ofi-items-col">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">Organic</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">Kosher</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">Non-GMO</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">All-Natural</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 28px;">
+            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary">
+              <span>Explore full ingredient range</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Column with Asset Image -->
+        <div>
+          <div class="ofi-explore-image-box">
+            <img src="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg" alt="Explore food & beverage solutions - Seenergy Foods" loading="lazy" />
+            <div class="ofi-explore-image-badge">
+              ● High Performance IQF Ingredients
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       3. "SCALE YOUR OFFER WITH OUR GLOBAL INGREDIENT SUPPLY" SECTION (OFI Structure)
+  ============================================================== -->
+  <section class="ofi-section ofi-scale-supply-section" id="scale" style="background-color: var(--ofi-cream-light); border-top: 1px solid var(--ofi-sand);">
+    <div class="ofi-container">
+      
+      <!-- Eyebrow matching OFI -->
+      <div class="ofi-explore-eyebrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Scale with our supply
+      </div>
+
+      <div class="ofi-explore-layout" style="grid-template-columns: 0.85fr 1.15fr;">
+        
+        <!-- Image Column with Asset Image (Alternating Layout) -->
+        <div>
+          <div class="ofi-explore-image-box">
+            <img src="Assets/Image/Beef_rib_and_red_beans_2K_202609080717.jpeg" alt="Scale with Seenergy Foods global ingredient supply" loading="lazy" />
+            <div class="ofi-explore-image-badge">
+              ● 150M+ lbs Annual Capacity
+            </div>
+          </div>
+        </div>
+
+        <!-- Text & Products List Column -->
+        <div>
+          <!-- Title -->
+          <h2 class="ofi-explore-title">
+            Scale your offer with our global ingredient supply
+          </h2>
+
+          <!-- Subtitle -->
+          <h3 class="ofi-explore-subtitle">
+            Reliable, high-volume North American supply chains for pre-cooked IQF pulses, grains, and custom blends.
+          </h3>
+
+          <!-- Text paragraph referring to Seenergy Foods products -->
+          <p class="ofi-explore-text">
+            Operating dual state-of-the-art Canadian processing plants and a strategic cross-border distribution hub in Buffalo, NY, Seenergy Foods delivers over 150 million pounds of pre-cooked IQF ingredients annually. From individually quick frozen beans and lentils to ancient grains and al dente pasta, our resilient cold chain delivers consistent quality, 100% usable net weight, and zero preparation labor.
+          </p>
+
+          <!-- 2-Column List with ONLY Seenergy Foods Product Names -->
+          <div class="ofi-items-columns-grid">
+            <!-- Column 1 -->
+            <div class="ofi-items-col">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF Black & Pinto Beans</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF Dark Red Kidney Beans</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF Garbanzo Chickpeas</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF French Green & Brown Lentils</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="ofi-items-col">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF Whole Grain Brown & Jasmine Rice</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF Quinoa & Ancient Grains</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">IQF Pre-Cooked Al Dente Pasta</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+                <span class="ofi-item-label">Custom Seasoned & Culinary Blends</span>
+                <div class="ofi-item-circle-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 28px;">
+            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary">
+              <span>Request bulk supply specifications</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       4. "A GLOBAL LEADER OFFERING NATURALLY GOOD FOOD & BEVERAGE INGREDIENTS AND SOLUTIONS"
+          (OFI Statistics & Brand Impact Section adapted for Seenergy Foods)
+  ============================================================== -->
+  <section class="ofi-stats-section" id="about-us">
+    <!-- Background Video with Loop & Playsinline -->
+    <video class="ofi-stats-video" autoplay muted loop playsinline poster="Assets/Image/Zooming_in_on_food_details_2K_202609080719.jpeg">
+      <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
+      <source src="Assets/Video/Pasta_moving_on_conveyor_belt_20260910161205.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Translucent Solid Black Layer -->
+    <div class="ofi-stats-black-layer"></div>
+
+    <div class="ofi-container ofi-stats-container">
+      
+      <!-- Section Header with Eyebrow Line -->
+      <div class="ofi-stats-header">
+        <span class="ofi-stats-eyebrow-line"></span>
+        <h2 class="ofi-stats-title">
+          A global leader offering naturally good food &amp; beverage ingredients and solutions
+        </h2>
+        <p class="ofi-stats-subtitle">
+          Partnering with food manufacturers, national restaurant chains, and private label innovators across North America with certified IQF processing, sustainable pulse sourcing, and uncompromised culinary performance.
+        </p>
+      </div>
+
+      <!-- 3-Column Statistics Grid with OFI Circular Rings & Icons -->
+      <div class="ofi-stats-grid">
+        
+        <!-- Stat Item 1 -->
+        <div class="ofi-stat-card">
+          <div class="ofi-stat-icon-wrapper">
+            <!-- OFI Style Circular Progress Ring -->
+            <svg viewBox="0 0 100 100" class="ofi-stat-ring">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="var(--ofi-sage)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="40" stroke-linecap="round" />
+            </svg>
+            <div class="ofi-stat-icon-center">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="ofi-stat-number-box">
+              <span class="ofi-stat-number">150</span>
+              <span class="ofi-stat-unit">million+</span>
+            </div>
+            <p class="ofi-stat-label">
+              pounds of pre-cooked IQF pulses, grains &amp; pasta processed and delivered annually across North America*
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat Item 2 -->
+        <div class="ofi-stat-card">
+          <div class="ofi-stat-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="ofi-stat-ring">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="var(--ofi-sky)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="75" stroke-linecap="round" />
+            </svg>
+            <div class="ofi-stat-icon-center">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 3l3 4 3-4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="ofi-stat-number-box">
+              <span class="ofi-stat-number">2</span>
+              <span class="ofi-stat-unit">plants + hub</span>
+            </div>
+            <p class="ofi-stat-label">
+              state-of-the-art SQF &amp; GFSI manufacturing facilities in Canada plus our strategic Buffalo, NY cross-border hub*
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat Item 3 -->
+        <div class="ofi-stat-card">
+          <div class="ofi-stat-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="ofi-stat-ring">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="var(--ofi-sand)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="15" stroke-linecap="round" />
+            </svg>
+            <div class="ofi-stat-icon-center">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="ofi-stat-number-box">
+              <span class="ofi-stat-number">100</span>
+              <span class="ofi-stat-unit">%</span>
+            </div>
+            <p class="ofi-stat-label">
+              ready-to-eat usable yield with zero prep labor, certified Clean Label, USDA Organic, Kosher &amp; Non-GMO standards*
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons Row -->
+      <div class="ofi-stats-ctas">
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-sage">
+          <span>Learn more about Seenergy Foods</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white">
+          <span>Schedule a plant or sample audit</span>
+        </a>
+      </div>
+
+      <!-- Footnote Disclaimer matching OFI asterisk -->
+      <div class="ofi-stats-footnote">
+        * Certified SQF Edition 9, GFSI Benchmark, USDA Organic, COR Organic, Kosher (COR / OU), Non-GMO Project Verified, and Gluten-Free Compliant across Canadian processing facilities and U.S. cold chain logistics.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       5. "I'M LOOKING FOR..." SECTION (OFI Structure adapted for Seenergy Foods)
+  ============================================================== -->
+  <section class="ofi-looking-section" id="looking-for">
+    <div class="ofi-container">
+      
+      <!-- Section Header -->
+      <div class="ofi-looking-header">
+        <span class="ofi-looking-eyebrow-line"></span>
+        <h2 class="ofi-looking-title">
+          I’m looking for...
+        </h2>
+      </div>
+
+      <!-- 3 Discovery Cards Grid -->
+      <div class="ofi-looking-grid">
+        
+        <!-- Card 1: Inspiration -->
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card">
+          <div class="ofi-looking-card-body">
+            <div class="ofi-looking-card-top">
+              <h3 class="ofi-looking-card-title">Inspiration</h3>
+              <div class="ofi-looking-card-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+            <p class="ofi-looking-card-desc">
+              Show me chef-inspired IQF pulse bowls, vibrant salads, artisanal pasta entrées, and clean-label menu concepts.
+            </p>
+          </div>
+          <div class="ofi-looking-card-media">
+            <img src="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg" alt="Culinary Inspiration - Seenergy Foods" loading="lazy" />
+          </div>
+        </a>
+
+        <!-- Card 2: Insight -->
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card">
+          <div class="ofi-looking-card-body">
+            <div class="ofi-looking-card-top">
+              <h3 class="ofi-looking-card-title">Insight</h3>
+              <div class="ofi-looking-card-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+            <p class="ofi-looking-card-desc">
+              Explore plant-based protein shifts, North American harvest projections, and sustainable pulse sourcing data.
+            </p>
+          </div>
+          <div class="ofi-looking-card-media">
+            <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="Market Insights - Seenergy Foods" loading="lazy" />
+          </div>
+        </a>
+
+        <!-- Card 3: Innovation -->
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card">
+          <div class="ofi-looking-card-body">
+            <div class="ofi-looking-card-top">
+              <h3 class="ofi-looking-card-title">Innovation</h3>
+              <div class="ofi-looking-card-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+            <p class="ofi-looking-card-desc">
+              Discover customized seasoning blends, proprietary cooking curves, and scalable pilot formulations tailored to your brand.
+            </p>
+          </div>
+          <div class="ofi-looking-card-media">
+            <img src="Assets/Image/Waiter_holding_bowl_of_food_2K_202609070303.jpeg" alt="Food Innovation - Seenergy Foods" loading="lazy" />
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       6. "GET THE LATEST OFI NEWS" SECTION (Background: #fffdf7)
+  ============================================================== -->
+  <section class="ofi-news-section" id="news">
+    <div class="ofi-container">
+      <div class="ofi-news-grid-2col">
+        
+        <!-- Column 1: Text Content (Left Aligned) -->
+        <div>
+          <span class="ofi-news-eyebrow-line"></span>
+          <h2 class="ofi-news-title">
+            Get the latest Seenergy Foods news
+          </h2>
+          <p class="ofi-news-text">
+            If you’re looking for the latest commodity market updates, emerging IQF pulse and ancient grain innovations, and seasonal formulation guides, we’ve got you covered with our regularly released Seenergy Foods industry bulletin.
+          </p>
+        </div>
+
+        <!-- Column 2: Subscription Form Card (Left Aligned Stack) -->
+        <div>
+          <div class="ofi-news-subscribe-card">
+            <h3 class="ofi-news-subscribe-card-title">Subscribe to Industry Bulletin</h3>
+            <p class="ofi-news-subscribe-card-subtitle">Quarterly market intelligence, culinary science, and harvest updates.</p>
+            <form onsubmit="handleContactSubmit(event)">
+              <div class="ofi-news-form-stack">
+                <input type="email" class="ofi-news-input" placeholder="Enter your business email..." required />
+                <button type="submit" class="ofi-btn ofi-btn-sky" style="width: 100%; justify-content: center; padding: 15px 24px;">
+                  <span>Subscribe to Newsletter</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <p class="ofi-news-disclaimer">
+                By subscribing, you agree to Seenergy Foods’ <a href="javascript:void(0)" onclick="openModal('contactModal')">privacy policy</a> and consent to receiving quarterly industry reports.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       7. "YOUR PARTNER FOR PRIVATE LABEL" SECTION (2-Column Left-Aligned)
+  ============================================================== -->
+  <section class="ofi-private-label-section" id="private-label">
+    <!-- Dark Background Image & Solid Black Overlay Layer -->
+    <img src="Assets/Image/Waiter_holding_bowl_of_food_2K_202609070303.jpeg" alt="Private Label IQF Solutions" class="ofi-private-bg-image" loading="lazy" />
+    <div class="ofi-private-black-layer"></div>
+
+    <div class="ofi-container">
+      <div class="ofi-private-grid-2col">
+        
+        <!-- Column 1: Copy & Action (Left Aligned) -->
+        <div>
+          <span class="ofi-private-eyebrow-line"></span>
+          <h2 class="ofi-private-title">
+            Your partner for private label
+          </h2>
+          <p class="ofi-private-text">
+            Elevate your retail brand, meal kit offering, or foodservice menu with transparent pulse sourcing and a diverse portfolio of certified organic IQF beans, ancient grains, and turnkey co-manufacturing packaging solutions.
+          </p>
+          <div>
+            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary">
+              <span>Explore private label solutions</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Capabilities Cards (Left Aligned) -->
+        <div>
+          <div class="ofi-private-caps-grid">
+            <div class="ofi-private-cap-card">
+              <div class="ofi-private-cap-icon">✓</div>
+              <div>
+                <h4 class="ofi-private-cap-title">Flexible Packaging Formats</h4>
+                <p class="ofi-private-cap-text">From 2 lb stand-up retail pouches to 2,000 lb industrial bulk totes.</p>
+              </div>
+            </div>
+            <div class="ofi-private-cap-card">
+              <div class="ofi-private-cap-icon">✓</div>
+              <div>
+                <h4 class="ofi-private-cap-title">Custom Culinary Formulations</h4>
+                <p class="ofi-private-cap-text">Proprietary seasoning profiles, IQF oil coatings, and custom grain blends.</p>
+              </div>
+            </div>
+            <div class="ofi-private-cap-card">
+              <div class="ofi-private-cap-icon">✓</div>
+              <div>
+                <h4 class="ofi-private-cap-title">Certified Food Safety</h4>
+                <p class="ofi-private-cap-text">SQF Level 2, GFSI, USDA Organic, Kosher and Non-GMO Project Verified.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       8. "FOOD AND BEVERAGE NEWS, TRENDS, AND INSIGHTS" (OFI Structure adapted for Seenergy Foods)
+  ============================================================== -->
+  <section class="ofi-insights-section" id="insights">
+    <div class="ofi-container">
+      
+      <!-- Section Header Row with View All Link -->
+      <div class="ofi-insights-header-row">
+        <div>
+          <span class="ofi-insights-eyebrow-line"></span>
+          <h2 class="ofi-insights-title">
+            Food and beverage news, trends, and insights
+          </h2>
+          <p class="ofi-insights-subtitle">
+            Get the latest must-know industry reports, formulation science, and market intelligence across North American pulse and grain sectors.
+          </p>
+        </div>
+        <div>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insights-viewall">
+            <span>View all articles &amp; reports</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Article Cards Grid -->
+      <div class="ofi-insights-grid">
+        
+        <!-- Article Card 1 -->
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
+          <div class="ofi-insight-media">
+            <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="IQF ancient grains in modern menus" loading="lazy" />
+          </div>
+          <div class="ofi-insight-body">
+            <div>
+              <div class="ofi-insight-tag">Culinary Innovation • Trends</div>
+              <h3 class="ofi-insight-card-title">
+                The Rise of IQF Ancient Grains and Pulses in Modern Fast-Casual Menus
+              </h3>
+              <p class="ofi-insight-card-desc">
+                Discover how quick-service chains are cutting prep labor by 80% with individually quick-frozen beans, chickpeas, and quinoa while boosting menu margins.
+              </p>
+            </div>
+            <div class="ofi-insight-readmore">
+              <span>Read article</span>
+              <div class="ofi-insight-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article Card 2 -->
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
+          <div class="ofi-insight-media">
+            <img src="Assets/Image/Map.jpeg" alt="Cross-border cold chain logistics" loading="lazy" />
+          </div>
+          <div class="ofi-insight-body">
+            <div>
+              <div class="ofi-insight-tag">Supply Chain • Logistics Report</div>
+              <h3 class="ofi-insight-card-title">
+                Resilient Cross-Border Cold Chain: Bridging Canadian Harvests with U.S. Markets
+              </h3>
+              <p class="ofi-insight-card-desc">
+                Strategic insights from our Buffalo, NY distribution hub ensuring seamless tariff-free transit and guaranteed 24-to-48 hour delivery timelines.
+              </p>
+            </div>
+            <div class="ofi-insight-readmore">
+              <span>Read article</span>
+              <div class="ofi-insight-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Article Card 3 -->
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
+          <div class="ofi-insight-media">
+            <img src="Assets/Image/Beef_rib_and_red_beans_2K_202609080717.jpeg" alt="Clean label and zero-prep pulses" loading="lazy" />
+          </div>
+          <div class="ofi-insight-body">
+            <div>
+              <div class="ofi-insight-tag">Food Formulation • Whitepaper</div>
+              <h3 class="ofi-insight-card-title">
+                Clean Label &amp; Zero-Prep: Meeting Consumer Demand for Transparent Plant Protein
+              </h3>
+              <p class="ofi-insight-card-desc">
+                Why Non-GMO Project Verified and USDA Organic certified pre-cooked pulses are setting the new standard for healthy frozen entrées and meal kits.
+              </p>
+            </div>
+            <div class="ofi-insight-readmore">
+              <span>Read article</span>
+              <div class="ofi-insight-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       9. "GET IN TOUCH. GOT A QUESTION? TALK TO OUR EXPERTS." (OFI Callout)
+  ============================================================== -->
+  <section class="ofi-get-in-touch-section" id="contact-banner">
+    <!-- Dark Background Image & Solid Black Overlay Layer -->
+    <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="Contact Seenergy Foods Ingredient Experts" class="ofi-get-in-touch-bg" loading="lazy" />
+    <div class="ofi-get-in-touch-layer"></div>
+
+    <div class="ofi-container">
+      <div class="ofi-get-in-touch-content">
+        <div class="ofi-get-in-touch-eyebrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Get in touch</span>
+        </div>
+        <h2 class="ofi-get-in-touch-title">
+          Got a question? Talk to our experts.
+        </h2>
+        <p class="ofi-get-in-touch-text">
+          Wherever you are in North America, we’re nearby. Get in touch for IQF ingredient expertise, sustainable pulse solutions, custom culinary formulations, and bulk supply partnerships.
+        </p>
+        <div>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary" style="padding: 16px 40px; font-size: 1rem;">
+            <span>Start the conversation</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       10. OFI FOOTER WITH SEENERGY FOODS IDENTITY & LINKS
+  ============================================================== -->
+  <footer class="ofi-footer">
+    <div class="ofi-container">
+      
+      <!-- Logo Row -->
+      <a href="#hero" class="ofi-footer-logo-box" aria-label="Seenergy Foods Home">
+        <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
+      </a>
+
+      <!-- 4-Column Grid -->
+      <div class="ofi-footer-grid">
+        
+        <!-- Column 1: Newsletter Block -->
+        <div class="ofi-footer-col ofi-footer-news-block">
+          <h4>Stay Connected</h4>
+          <p>Sign up to be the first to hear about Seenergy Foods news, harvest updates, and culinary innovations.</p>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white ofi-btn-sm" style="display: inline-flex;">
+            <span>Subscribe</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Column 2: Products & Solutions -->
+        <div class="ofi-footer-col">
+          <h4>IQF Products</h4>
+          <ul class="ofi-footer-links">
+            <li><a href="#scale">IQF Black &amp; Pinto Beans</a></li>
+            <li><a href="#scale">IQF Dark Red Kidney Beans</a></li>
+            <li><a href="#scale">IQF Garbanzo Chickpeas</a></li>
+            <li><a href="#scale">IQF French Green &amp; Brown Lentils</a></li>
+            <li><a href="#scale">IQF Ancient Grains &amp; Quinoa</a></li>
+            <li><a href="#scale">IQF Pre-Cooked Al Dente Pasta</a></li>
+            <li><a href="#scale">Custom Culinary Blends</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company & Capabilities -->
+        <div class="ofi-footer-col">
+          <h4>Company &amp; Supply</h4>
+          <ul class="ofi-footer-links">
+            <li><a href="#about-us">About Seenergy Foods</a></li>
+            <li><a href="#explore">Food &amp; Beverage Solutions</a></li>
+            <li><a href="#private-label">Private Label &amp; Co-Packing</a></li>
+            <li><a href="#insights">Industry News &amp; Insights</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">SQF &amp; GFSI Certifications</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Request Sample Cooler</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Facilities & Contact Info -->
+        <div class="ofi-footer-col">
+          <h4>North America Hubs</h4>
+          <div class="ofi-footer-contact-item">
+            <strong>Canadian HQ &amp; Processing Plants</strong>
+            <span>Ontario, Canada</span>
+          </div>
+          <div class="ofi-footer-contact-item">
+            <strong>U.S. Cross-Border Distribution Hub</strong>
+            <span>Buffalo, NY, United States</span>
+          </div>
+          <div class="ofi-footer-contact-item" style="margin-top: 16px;">
+            <strong>Direct Inquiries</strong>
+            <span>info@seenergyfoods.com</span>
+            <span style="display: block;">+1 (800) 555-IQFFOOD</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Legal -->
+      <div class="ofi-footer-bottom">
+        <div>
+          Copyright &copy; 2026 Seenergy Foods Limited. All Rights Reserved.
+        </div>
+        <div class="ofi-footer-legal-links">
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Terms of Service</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Supply Chain Transparency</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =============================================================
+       MODAL: CONTACT & INQUIRY
+  ============================================================== -->
+  <div class="ofi-modal-overlay" id="contactModal" onclick="checkModalBackdrop(event, 'contactModal')">
+    <div class="ofi-modal-card">
+      <div class="ofi-modal-close" onclick="closeModal('contactModal')">&times;</div>
+      <h3 style="font-size: 1.6rem; color: var(--ofi-forest); margin-bottom: 8px;">Talk to Our Ingredient Experts</h3>
+      <p style="font-size: 0.875rem; color: rgba(0,0,0,0.7); margin-bottom: 24px;">
+        Connect with our culinary scientists and supply chain specialists to request product samples, custom formulations, or plant audit schedules.
+      </p>
+
+      <form onsubmit="handleContactSubmit(event)">
+        <div class="ofi-form-grid">
+          <div class="ofi-field-group">
+            <label>First & Last Name *</label>
+            <input type="text" class="ofi-form-input" placeholder="David Miller" required />
+          </div>
+          <div class="ofi-field-group">
+            <label>Company / Brand Name *</label>
+            <input type="text" class="ofi-form-input" placeholder="Global Foods Inc." required />
+          </div>
+          <div class="ofi-field-group">
+            <label>Work Email *</label>
+            <input type="email" class="ofi-form-input" placeholder="david@globalfoods.com" required />
+          </div>
+          <div class="ofi-field-group">
+            <label>Phone Number</label>
+            <input type="tel" class="ofi-form-input" placeholder="+1 (555) 019-2834" />
+          </div>
+          <div class="ofi-field-group">
+            <label>Product Platform of Interest *</label>
+            <select class="ofi-form-input" required>
+              <option value="">Select an IQF category...</option>
+              <option value="beans">IQF Beans (Black, Pinto, Kidney, Garbanzo)</option>
+              <option value="grains">IQF Grains & Rice (Brown, Jasmine, Quinoa)</option>
+              <option value="lentils">IQF Lentils & Pulses</option>
+              <option value="pasta">IQF Short & Long Cut Pasta</option>
+              <option value="custom">Custom Seasoned Blend / Co-Creation</option>
+            </select>
+          </div>
+          <div class="ofi-field-group">
+            <label>Estimated Annual Volume</label>
+            <select class="ofi-form-input">
+              <option value="pilot">&lt; 50,000 lbs (Pilot / Foodservice)</option>
+              <option value="mid">50,000 – 500,000 lbs</option>
+              <option value="high">500,000 – 2,000,000 lbs</option>
+              <option value="industrial">2,000,000+ lbs (Industrial Scale)</option>
+            </select>
+          </div>
+          <div class="ofi-field-group ofi-form-grid span-2col">
+            <label>Tell Us About Your Project & Requirements</label>
+            <textarea class="ofi-form-input" rows="3" placeholder="Describe your product application (e.g., Frozen skillet meal, refrigerated grain salad, soup base, packaging format...)"></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 12px;">
+          <button type="button" class="ofi-btn ofi-btn-secondary ofi-btn-sm" onclick="closeModal('contactModal')">Cancel</button>
+          <button type="submit" class="ofi-btn ofi-btn-primary ofi-btn-sm">Send Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('ofiMobileMenu').classList.toggle('open');
+    }
+
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function checkModalBackdrop(e, id) {
+      if (e.target.id === id) closeModal(id);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      alert('✓ Thank you! Your inquiry has been sent to our culinary and sales team. We will get back to you within 24 hours.');
+      closeModal('contactModal');
+    }
+  </script>
+</body>
+</html>
