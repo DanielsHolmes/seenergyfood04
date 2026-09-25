@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Fonts: Jost & Montserrat for Futura PT aesthetic matching Pura Vida Miami -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seenergy Foods | Real Ingredients. Resilient Supply.</title>
+  <title>Seenergy Foods | Real Ingredients. Resilient Supply. (Pura Vida Edition)</title>
   <meta name="description" content="Seenergy Foods is a leading North American supplier of pre-cooked IQF beans, grains, rice, lentils, and pasta, co-creating sustainable food solutions for global brands." />
   
   <link rel="icon" type="image/svg+xml" href="Assets/Image/logo%20colors.svg" />
 
   <style>
     /* =============================================================
-       DESIGN TOKENS & TYPOGRAPHY
-       Font: Helvetica, "Helvetica Neue", Arial, sans-serif
-       Palette:
-       - Forest Green: #1D3D28
-       - Deep Navy: #100E59
-       - Dark Olive: #364331
-       - Sage Green: #83AE76
-       - Muted Sage: #789580
-       - Sky Blue: #67B3DD
-       - Muted Blue: #4A6FAA
-       - Sand Beige: #E4DCC6
-       - Warm Cream: #F6F2E8 (and 80%, 12%)
-       - Light Cream: #FEFAEE
-       - Off-White: #FFFDF7
+       PURA VIDA MIAMI DESIGN TOKENS & TYPOGRAPHY
+       Font: Futura PT / Jost / Montserrat (Geometric Modern Sans)
+       Palette (from puravidamiami.com):
+       - Pura Vida Charcoal Navy: #0F2940 (Primary Dark Brand Color)
+       - Pura Vida Deepest Ocean: #091C2E (Top Bar, Stats & Footer Dark)
+       - Pura Vida Slate Navy: #263A4D (Hover & Secondary Dark)
+       - Pura Vida Coastal Sky Blue: #668DA6 (Signature Accent Blue)
+       - Pura Vida Soft Breeze: #E6F5FD (Light Sky Blue Section Tint)
+       - Pura Vida Signature Sand/Tan Border: #C9BB9D
+       - Pura Vida Warm Oat: #EFE6D2
+       - Pura Vida Warm Cream / Linen: #F9F3E8
+       - Pura Vida Ivory Light: #FAF6EE
+       - Pura Vida Soft Crisp Off-White: #FAF8F5
        - Pure White: #FFFFFF
-       - Black: #000000 (and 10% opacity)
+       - Charcoal / Text: #272727 and #4A5464
     ============================================================= */
     :root {
-      --ofi-forest: #1D3D28;
-      --ofi-navy: #100E59;
-      --ofi-olive: #364331;
-      --ofi-sage: #83AE76;
-      --ofi-muted-green: #789580;
-      --ofi-blue: #4A6FAA;
-      --ofi-sky: #67B3DD;
-      --ofi-sand: #E4DCC6;
-      --ofi-cream: #F6F2E8;
-      --ofi-cream-80: rgba(246, 242, 232, 0.8);
-      --ofi-cream-12: rgba(246, 242, 232, 0.12);
-      --ofi-cream-light: #FEFAEE;
-      --ofi-offwhite: #FFFDF7;
+      --ofi-forest: #0F2940;
+      --ofi-navy: #091C2E;
+      --ofi-olive: #263A4D;
+      --ofi-sage: #668DA6;
+      --ofi-muted-green: #728197;
+      --ofi-blue: #263A4D;
+      --ofi-sky: #668DA6;
+      --ofi-sand: #C9BB9D;
+      --ofi-cream: #F9F3E8;
+      --ofi-cream-80: rgba(249, 243, 232, 0.85);
+      --ofi-cream-12: rgba(249, 243, 232, 0.15);
+      --ofi-cream-light: #FAF6EE;
+      --ofi-offwhite: #FAF8F5;
       --ofi-white: #FFFFFF;
-      --ofi-black: #000000;
-      --ofi-black-10: rgba(0, 0, 0, 0.1);
-      --ofi-black-05: rgba(0, 0, 0, 0.05);
+      --ofi-black: #1A1A1A;
+      --ofi-black-10: rgba(15, 41, 64, 0.08);
+      --ofi-black-05: rgba(15, 41, 64, 0.04);
       
-      --font-helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --pv-sky-light: #E6F5FD;
+      --pv-oat: #EFE6D2;
+      --pv-text: #4A5464;
+      --pv-sand-border: #C9BB9D;
+      
+      --font-futura: "Futura PT", "Montserrat", "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-helvetica: var(--font-futura);
       --ease-ofi: cubic-bezier(0.16, 1, 0.3, 1);
       --container-max: 1360px;
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
       --radius-pill: 9999px;
-      --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.06);
-      --shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.12);
+      --shadow-subtle: 0 4px 20px rgba(15, 41, 64, 0.06);
+      --shadow-hover: 0 16px 36px rgba(15, 41, 64, 0.12);
     }
 
     /* Base Reset */
@@ -73,10 +82,11 @@
     }
 
     body {
-      font-family: var(--font-helvetica);
+      font-family: var(--font-futura);
       color: var(--ofi-black);
       background-color: var(--ofi-offwhite);
-      line-height: 1.55;
+      line-height: 1.65;
+      letter-spacing: 0.025em;
       overflow-x: hidden;
       min-height: 100vh;
       display: flex;
@@ -134,9 +144,11 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 32px;
-      font-weight: 700;
-      font-size: 0.9375rem;
+      padding: 15px 34px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
       border-radius: var(--radius-pill);
       cursor: pointer;
       white-space: nowrap;
@@ -152,7 +164,7 @@
       background-color: var(--ofi-olive);
       border-color: var(--ofi-olive);
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(29, 61, 40, 0.25);
+      box-shadow: 0 8px 20px rgba(15, 41, 64, 0.22);
     }
 
     .ofi-btn-sky {
@@ -164,7 +176,7 @@
       background-color: var(--ofi-white);
       color: var(--ofi-navy);
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(103, 179, 221, 0.35);
+      box-shadow: 0 8px 20px rgba(102, 141, 166, 0.28);
     }
 
     .ofi-btn-outline-white {
@@ -188,10 +200,13 @@
        TOP BAR & HEADER
     ============================================================= */
     .ofi-top-bar {
-      background-color: var(--ofi-forest);
+      background-color: var(--ofi-navy);
       color: var(--ofi-cream);
-      font-size: 0.8125rem;
-      padding: 7px 0;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 8px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .ofi-top-bar-inner {
@@ -263,8 +278,10 @@
       white-space: nowrap;
     }
     .ofi-nav-link {
-      font-size: clamp(0.85rem, 0.95vw, 0.9375rem);
-      font-weight: 600;
+      font-size: clamp(0.8rem, 0.88vw, 0.875rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       color: var(--ofi-forest);
       padding: 10px 0;
       display: inline-flex;
@@ -375,7 +392,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.55);
+      background-color: rgba(9, 28, 46, 0.65);
       z-index: 2;
     }
     .ofi-hero-content {
@@ -386,10 +403,11 @@
       max-width: 960px;
     }
     .ofi-hero-title {
-      font-size: clamp(2.6rem, 5.2vw, 4.6rem);
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
       margin-bottom: 24px;
     }
     .ofi-hero-title span {
@@ -412,8 +430,8 @@
        "EXPLORE FOOD & BEVERAGE SOLUTIONS" SECTION (OFI Structure)
     ============================================================= */
     .ofi-explore-section {
-      background-color: var(--ofi-offwhite);
-      border-top: 1px solid var(--ofi-black-10);
+      background-color: var(--ofi-white);
+      border-top: 1px solid var(--ofi-sand);
     }
     
     .ofi-explore-eyebrow {
@@ -437,10 +455,11 @@
     }
 
     .ofi-explore-title {
-      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
-      font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -0.025em;
+      font-size: clamp(2rem, 3.4vw, 3rem);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--ofi-forest);
       margin-bottom: 18px;
     }
@@ -551,7 +570,7 @@
       position: absolute;
       bottom: 20px;
       left: 20px;
-      background: rgba(29, 61, 40, 0.92);
+      background: rgba(15, 41, 64, 0.92);
       backdrop-filter: blur(8px);
       color: var(--ofi-white);
       padding: 10px 18px;
@@ -566,6 +585,71 @@
         grid-template-columns: 1fr;
         gap: 40px;
       }
+    }
+
+
+    /* Interactive Cooked Product Showcase & Thumbnails */
+    .ofi-product-thumbs-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .ofi-thumb-btn {
+      background: var(--ofi-white);
+      border: 1.5px solid var(--ofi-sand);
+      border-radius: var(--radius-md);
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.25s var(--ease-ofi);
+    }
+    .ofi-thumb-btn img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .ofi-thumb-btn span {
+      font-family: var(--font-futura);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ofi-forest);
+      white-space: nowrap;
+    }
+    .ofi-thumb-btn:hover, .ofi-thumb-btn.active {
+      border-color: var(--ofi-sky);
+      box-shadow: 0 4px 14px rgba(15, 41, 64, 0.12);
+      transform: translateY(-2px);
+    }
+    .ofi-thumb-btn.active {
+      background: var(--pv-sky-light);
+      border-color: var(--ofi-forest);
+    }
+    .ofi-list-item-row {
+      border-radius: var(--radius-sm);
+      padding: 14px 12px;
+    }
+    .ofi-list-item-row.active {
+      background-color: var(--pv-sky-light);
+      border-bottom-color: var(--ofi-forest);
+      padding-left: 16px;
+    }
+    .ofi-list-item-row.active .ofi-item-label {
+      color: var(--ofi-forest);
+      font-weight: 700;
+    }
+    .ofi-list-item-row.active .ofi-item-circle-icon {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+    }
+    #exploreFeaturedImg {
+      transition: opacity 0.2s ease, transform 0.6s var(--ease-ofi);
     }
 
     /* =============================================================
@@ -594,7 +678,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.72);
+      background-color: rgba(9, 28, 46, 0.82);
       z-index: 2;
     }
     .ofi-stats-container {
@@ -727,7 +811,7 @@
       display: inline-block;
       width: 60px;
       height: 3.5px;
-      background-color: var(--ofi-forest);
+      background-color: var(--ofi-sky);
       border-radius: 2px;
       margin-bottom: 20px;
     }
@@ -828,7 +912,7 @@
     ============================================================= */
     .ofi-news-section {
       position: relative;
-      background-color: #fffdf7;
+      background-color: var(--pv-sky-light);
       color: var(--ofi-forest);
       padding: 100px 0;
       border-top: 1px solid var(--ofi-sand);
@@ -845,7 +929,7 @@
       display: inline-block;
       width: 60px;
       height: 3.5px;
-      background-color: var(--ofi-forest);
+      background-color: var(--ofi-sky);
       border-radius: 2px;
       margin-bottom: 20px;
     }
@@ -959,7 +1043,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.74);
+      background: rgba(9, 28, 46, 0.78);
       z-index: 2;
     }
     .ofi-private-grid-2col {
@@ -1017,7 +1101,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: rgba(228, 220, 198, 0.2);
+      background: rgba(201, 187, 157, 0.25);
       color: var(--ofi-sand);
       display: flex;
       align-items: center;
@@ -1066,7 +1150,7 @@
       display: inline-block;
       width: 60px;
       height: 3.5px;
-      background-color: var(--ofi-forest);
+      background-color: var(--ofi-sky);
       border-radius: 2px;
       margin-bottom: 18px;
     }
@@ -1142,12 +1226,18 @@
       justify-content: space-between;
     }
     .ofi-insight-tag {
-      font-size: 0.8125rem;
-      font-weight: 700;
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--ofi-sage);
-      margin-bottom: 10px;
+      letter-spacing: 0.12em;
+      color: var(--ofi-forest);
+      background-color: var(--pv-sky-light);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
+      width: fit-content;
+      border: 1px solid rgba(102, 141, 166, 0.2);
     }
     .ofi-insight-card-title {
       font-size: 1.25rem;
@@ -1222,7 +1312,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.76);
+      background: rgba(9, 28, 46, 0.80);
       z-index: 2;
     }
     .ofi-get-in-touch-content {
@@ -1537,7 +1627,7 @@
        1. HERO BANNER
   ============================================================== -->
   <section class="ofi-hero" id="hero">
-    <video class="ofi-hero-video" autoplay muted loop playsinline poster="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg">
+    <video class="ofi-hero-video" autoplay muted loop playsinline poster="Assets/Image/puravida/iqf_cooked_grains.jpg">
       <source src="Assets/Video/timelaps%20pasta%20.mp4" type="video/mp4" />
       <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
     </video>
@@ -1597,19 +1687,19 @@
           <div class="ofi-items-columns-grid">
             <!-- Column 1 -->
             <div class="ofi-items-col">
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('beans')" class="ofi-list-item-row active" data-product="beans">
                 <span class="ofi-item-label">IQF Beans</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('lentils')" class="ofi-list-item-row" data-product="lentils">
                 <span class="ofi-item-label">IQF Lentils</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('grains')" class="ofi-list-item-row" data-product="grains">
                 <span class="ofi-item-label">IQF Grains</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1619,19 +1709,19 @@
 
             <!-- Column 2 -->
             <div class="ofi-items-col">
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('rice')" class="ofi-list-item-row" data-product="rice">
                 <span class="ofi-item-label">IQF Rice</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('blends')" class="ofi-list-item-row" data-product="blends">
                 <span class="ofi-item-label">IQF Blends</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('pasta')" class="ofi-list-item-row" data-product="pasta">
                 <span class="ofi-item-label">IQF Pasta</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1648,13 +1738,40 @@
           </div>
         </div>
 
-        <!-- Image Column with Asset Image -->
+        <!-- Image Column with Cooked Product Showcase -->
         <div>
-          <div class="ofi-explore-image-box">
-            <img src="Assets/Image/Buddha_bowl_served_on_table_2K_202609071449.jpeg" alt="Explore food & beverage solutions - Seenergy Foods" loading="lazy" />
-            <div class="ofi-explore-image-badge">
-              ● High Performance IQF Ingredients
+          <div class="ofi-explore-image-box" id="exploreImageBox">
+            <img id="exploreFeaturedImg" src="Assets/Image/puravida/iqf_cooked_beans.jpg" alt="Pre-Cooked IQF Beans - Seenergy Foods" loading="lazy" />
+            <div class="ofi-explore-image-badge" id="exploreFeaturedBadge">
+              ● Pre-Cooked IQF Beans
             </div>
+          </div>
+          <!-- 6-Product Cooked Thumbnails Strip -->
+          <div class="ofi-product-thumbs-strip">
+            <button type="button" class="ofi-thumb-btn active" onclick="switchProduct('beans')" title="Cooked IQF Beans">
+              <img src="Assets/Image/puravida/iqf_cooked_beans.jpg" alt="Cooked IQF Beans" />
+              <span>Beans</span>
+            </button>
+            <button type="button" class="ofi-thumb-btn" onclick="switchProduct('lentils')" title="Cooked IQF Lentils">
+              <img src="Assets/Image/puravida/iqf_cooked_lentils.jpg" alt="Cooked IQF Lentils" />
+              <span>Lentils</span>
+            </button>
+            <button type="button" class="ofi-thumb-btn" onclick="switchProduct('grains')" title="Cooked IQF Grains">
+              <img src="Assets/Image/puravida/iqf_cooked_grains.jpg" alt="Cooked IQF Grains" />
+              <span>Grains</span>
+            </button>
+            <button type="button" class="ofi-thumb-btn" onclick="switchProduct('rice')" title="Cooked IQF Rice">
+              <img src="Assets/Image/puravida/iqf_cooked_rice.jpg" alt="Cooked IQF Rice" />
+              <span>Rice</span>
+            </button>
+            <button type="button" class="ofi-thumb-btn" onclick="switchProduct('blends')" title="Cooked IQF Blends">
+              <img src="Assets/Image/puravida/iqf_cooked_blends.jpg" alt="Cooked IQF Blends" />
+              <span>Blends</span>
+            </button>
+            <button type="button" class="ofi-thumb-btn" onclick="switchProduct('pasta')" title="Cooked IQF Pasta">
+              <img src="Assets/Image/puravida/iqf_cooked_pasta.jpg" alt="Cooked IQF Pasta" />
+              <span>Pasta</span>
+            </button>
           </div>
         </div>
 
@@ -1665,7 +1782,7 @@
   <!-- =============================================================
        3. "SCALE YOUR OFFER WITH OUR GLOBAL INGREDIENT SUPPLY" SECTION (OFI Structure)
   ============================================================== -->
-  <section class="ofi-section ofi-scale-supply-section" id="scale" style="background-color: var(--ofi-cream-light); border-top: 1px solid var(--ofi-sand);">
+  <section class="ofi-section ofi-scale-supply-section" id="scale" style="background-color: var(--ofi-cream); border-top: 1px solid var(--ofi-sand);">
     <div class="ofi-container">
       
       <!-- Eyebrow matching OFI -->
@@ -1679,7 +1796,7 @@
         <!-- Image Column with Asset Image (Alternating Layout) -->
         <div>
           <div class="ofi-explore-image-box">
-            <img src="Assets/Image/Beef_rib_and_red_beans_2K_202609080717.jpeg" alt="Scale with Seenergy Foods global ingredient supply" loading="lazy" />
+            <img src="Assets/Image/puravida/iqf_cooked_pasta.jpg" alt="Cooked Lemon & Thyme Herb Orzo Pasta - Seenergy Foods" loading="lazy" />
             <div class="ofi-explore-image-badge">
               ● 150M+ lbs Annual Capacity
             </div>
@@ -1781,7 +1898,7 @@
   ============================================================== -->
   <section class="ofi-stats-section" id="about-us">
     <!-- Background Video with Loop & Playsinline -->
-    <video class="ofi-stats-video" autoplay muted loop playsinline poster="Assets/Image/Zooming_in_on_food_details_2K_202609080719.jpeg">
+    <video class="ofi-stats-video" autoplay muted loop playsinline poster="Assets/Image/puravida/iqf_cooked_blends.jpg">
       <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
       <source src="Assets/Video/Pasta_moving_on_conveyor_belt_20260910161205.mp4" type="video/mp4" />
     </video>
@@ -1931,7 +2048,7 @@
             </p>
           </div>
           <div class="ofi-looking-card-media">
-            <img src="Assets/Image/Zooming_in_on_food_details_2K_202609080719.jpeg" alt="Reliability - Seenergy Foods" loading="lazy" />
+            <img src="Assets/Image/puravida/iqf_cooked_lentils.jpg" alt="Cooked IQF Lentils & Reliability - Seenergy Foods" loading="lazy" />
           </div>
         </a>
 
@@ -2024,7 +2141,7 @@
   ============================================================== -->
   <section class="ofi-private-label-section" id="private-label">
     <!-- Dark Background Image & Solid Black Overlay Layer -->
-    <img src="Assets/Image/Waiter_holding_bowl_of_food_2K_202609070303.jpeg" alt="Private Label IQF Solutions" class="ofi-private-bg-image" loading="lazy" />
+    <img src="Assets/Image/puravida/private_label_table.jpg" alt="Private Label IQF Solutions" class="ofi-private-bg-image" loading="lazy" />
     <div class="ofi-private-black-layer"></div>
 
     <div class="ofi-container">
@@ -2109,7 +2226,7 @@
         <!-- Article Card 1 -->
         <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
           <div class="ofi-insight-media">
-            <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="Choosing IQF ingredients for your production workflow" loading="lazy" />
+            <img src="Assets/Image/puravida/iqf_cooked_grains.jpg" alt="Cooked IQF Grains - Choosing IQF ingredients" loading="lazy" />
           </div>
           <div class="ofi-insight-body">
             <div>
@@ -2157,7 +2274,7 @@
         <!-- Article Card 3 -->
         <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
           <div class="ofi-insight-media">
-            <img src="Assets/Image/Beef_rib_and_red_beans_2K_202609080717.jpeg" alt="Planning IQF supply for a growing food program" loading="lazy" />
+            <img src="Assets/Image/puravida/iqf_cooked_rice.jpg" alt="Cooked IQF Rice Blend - Planning IQF supply" loading="lazy" />
           </div>
           <div class="ofi-insight-body">
             <div>
@@ -2188,7 +2305,7 @@
   ============================================================== -->
   <section class="ofi-get-in-touch-section" id="contact-banner">
     <!-- Dark Background Image & Solid Black Overlay Layer -->
-    <img src="Assets/Image/Chickpeas_served_on_rustic_table_2K_202609071513.jpeg" alt="Contact Seenergy Foods Ingredient Experts" class="ofi-get-in-touch-bg" loading="lazy" />
+    <img src="Assets/Image/puravida/mediterranean_grain_bowl.jpg" alt="Contact Seenergy Foods Ingredient Experts" class="ofi-get-in-touch-bg" loading="lazy" />
     <div class="ofi-get-in-touch-layer"></div>
 
     <div class="ofi-container">
@@ -2367,6 +2484,63 @@
 
   <!-- Scripts -->
   <script>
+
+    const productsData = {
+      beans: {
+        src: 'Assets/Image/puravida/iqf_cooked_beans.jpg',
+        badge: '● Pre-Cooked IQF Beans',
+        alt: 'Cooked IQF Beans - Seenergy Foods'
+      },
+      lentils: {
+        src: 'Assets/Image/puravida/iqf_cooked_lentils.jpg',
+        badge: '● Pre-Cooked IQF Lentils',
+        alt: 'Cooked IQF Lentils - Seenergy Foods'
+      },
+      grains: {
+        src: 'Assets/Image/puravida/iqf_cooked_grains.jpg',
+        badge: '● Pre-Cooked IQF Grains',
+        alt: 'Cooked IQF Grains - Seenergy Foods'
+      },
+      rice: {
+        src: 'Assets/Image/puravida/iqf_cooked_rice.jpg',
+        badge: '● Pre-Cooked IQF Rice',
+        alt: 'Cooked IQF Rice - Seenergy Foods'
+      },
+      blends: {
+        src: 'Assets/Image/puravida/iqf_cooked_blends.jpg',
+        badge: '● Pre-Cooked IQF Blends',
+        alt: 'Cooked IQF Blends - Seenergy Foods'
+      },
+      pasta: {
+        src: 'Assets/Image/puravida/iqf_cooked_pasta.jpg',
+        badge: '● Pre-Cooked IQF Pasta',
+        alt: 'Cooked IQF Pasta - Seenergy Foods'
+      }
+    };
+
+    function switchProduct(key) {
+      const data = productsData[key];
+      if (!data) return;
+      const img = document.getElementById('exploreFeaturedImg');
+      const badge = document.getElementById('exploreFeaturedBadge');
+      if (img) {
+        img.style.opacity = '0.35';
+        setTimeout(() => {
+          img.src = data.src;
+          img.alt = data.alt;
+          img.style.opacity = '1';
+        }, 120);
+      }
+      if (badge) badge.textContent = data.badge;
+
+      document.querySelectorAll('.ofi-list-item-row').forEach(row => {
+        row.classList.toggle('active', row.getAttribute('data-product') === key);
+      });
+      document.querySelectorAll('.ofi-thumb-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(key));
+      });
+    }
+
     function toggleMenu() {
       document.getElementById('ofiMobileMenu').classList.toggle('open');
     }
