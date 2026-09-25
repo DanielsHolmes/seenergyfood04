@@ -375,14 +375,15 @@
       color: var(--ofi-white);
       overflow: hidden;
     }
-    .ofi-hero-video {
+    .ofi-hero-video,
+    .ofi-hero-bg-image {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.65;
+      opacity: 0.70;
       z-index: 1;
     }
     /* Solid Black Translucent Opacity Layer */
@@ -662,13 +663,15 @@
       padding: 110px 0 100px;
       overflow: hidden;
     }
-    .ofi-stats-video {
+    .ofi-stats-video,
+    .ofi-stats-bg-image {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0.45;
       z-index: 1;
       pointer-events: none;
     }
@@ -1627,10 +1630,8 @@
        1. HERO BANNER
   ============================================================== -->
   <section class="ofi-hero" id="hero">
-    <video class="ofi-hero-video" autoplay muted loop playsinline poster="Assets/Image/puravida/iqf_cooked_grains.jpg">
-      <source src="Assets/Video/timelaps%20pasta%20.mp4" type="video/mp4" />
-      <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
-    </video>
+    <!-- Background Image in Pura Vida Miami Style -->
+    <img src="Assets/Image/puravida/hero_puravida_bg.jpg" alt="Seenergy Foods IQF Ingredients" class="ofi-hero-bg-image" loading="eager" />
 
     <!-- Translucent Solid Black Layer -->
     <div class="ofi-hero-black-layer"></div>
@@ -1897,11 +1898,8 @@
           (OFI Statistics & Brand Impact Section adapted for Seenergy Foods)
   ============================================================== -->
   <section class="ofi-stats-section" id="about-us">
-    <!-- Background Video with Loop & Playsinline -->
-    <video class="ofi-stats-video" autoplay muted loop playsinline poster="Assets/Image/puravida/iqf_cooked_blends.jpg">
-      <source src="Assets/Video/Frijoles_cayendo_en_ca%CC%81mara_lenta_202609080726.mp4" type="video/mp4" />
-      <source src="Assets/Video/Pasta_moving_on_conveyor_belt_20260910161205.mp4" type="video/mp4" />
-    </video>
+    <!-- Background Image in Pura Vida Miami Style -->
+    <img src="Assets/Image/puravida/stats_puravida_bg.jpg" alt="Scale your food programs with confidence - Seenergy Foods" class="ofi-stats-bg-image" loading="lazy" />
 
     <!-- Translucent Solid Black Layer -->
     <div class="ofi-stats-black-layer"></div>
