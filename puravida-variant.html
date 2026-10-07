@@ -1574,33 +1574,34 @@
 
     /* =============================================================
        PREMIUM SCROLL FADE-IN & REVEAL ANIMATIONS
+       Luxury Easing: Cinematic Exponential Deceleration
     ============================================================= */
     .pv-reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(36px);
+      transition: opacity 1.05s cubic-bezier(0.25, 1, 0.35, 1),
+                  transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
       will-change: opacity, transform;
     }
     .pv-reveal-left {
       opacity: 0;
-      transform: translateX(-32px);
-      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateX(-42px);
+      transition: opacity 1.05s cubic-bezier(0.25, 1, 0.35, 1),
+                  transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
       will-change: opacity, transform;
     }
     .pv-reveal-right {
       opacity: 0;
-      transform: translateX(32px);
-      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateX(42px);
+      transition: opacity 1.05s cubic-bezier(0.25, 1, 0.35, 1),
+                  transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
       will-change: opacity, transform;
     }
     .pv-reveal-scale {
       opacity: 0;
-      transform: scale(0.96);
-      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: scale(0.94);
+      transition: opacity 1.05s cubic-bezier(0.25, 1, 0.35, 1),
+                  transform 1.3s cubic-bezier(0.19, 1, 0.22, 1);
       will-change: opacity, transform;
     }
 
@@ -1612,12 +1613,12 @@
       transform: translate(0, 0) scale(1);
     }
 
-    /* Stagger Delays */
-    .pv-delay-1 { transition-delay: 0.1s; }
-    .pv-delay-2 { transition-delay: 0.2s; }
-    .pv-delay-3 { transition-delay: 0.3s; }
-    .pv-delay-4 { transition-delay: 0.4s; }
-    .pv-delay-5 { transition-delay: 0.5s; }
+    /* Stagger Delays - Slower, More Pronounced Cascade */
+    .pv-delay-1 { transition-delay: 0.15s; }
+    .pv-delay-2 { transition-delay: 0.30s; }
+    .pv-delay-3 { transition-delay: 0.45s; }
+    .pv-delay-4 { transition-delay: 0.60s; }
+    .pv-delay-5 { transition-delay: 0.75s; }
 
     @media (prefers-reduced-motion: reduce) {
       .pv-reveal,
