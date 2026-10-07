@@ -1377,7 +1377,7 @@
     }
     .ofi-footer-grid {
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+      grid-template-columns: 1.3fr 1fr 1.1fr;
       gap: 48px 40px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       padding-bottom: 56px;
@@ -1573,23 +1573,6 @@
 </head>
 <body>
 
-  <!-- Top Utilities Bar -->
-  <div class="ofi-top-bar">
-    <div class="ofi-container">
-      <div class="ofi-top-bar-inner">
-        <div class="ofi-lang-region">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span>North America / US & Canada</span>
-        </div>
-        <div class="ofi-top-links">
-          <a href="#explore">Explore Solutions</a>
-          <a href="javascript:void(0)" onclick="openModal('contactModal')">Talk to Our Experts</a>
-          <a href="javascript:void(0)" onclick="openModal('contactModal')">Request Sample Coolers</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Header Navigation (Strict Single-Line) -->
   <header class="ofi-header" id="ofiHeader">
     <div class="ofi-container">
@@ -1602,7 +1585,6 @@
         <!-- Desktop Navigation: Strictly Single-Line -->
         <nav>
           <ul class="ofi-nav-list">
-            <li class="ofi-nav-item"><a href="#hero" class="ofi-nav-link active">Home</a></li>
             <li class="ofi-nav-item"><a href="#about-us" class="ofi-nav-link">About us</a></li>
             <li class="ofi-nav-item"><a href="#explore" class="ofi-nav-link">IQF Products</a></li>
             <li class="ofi-nav-item"><a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-nav-link">Innovate With Us</a></li>
@@ -1626,7 +1608,6 @@
 
   <!-- Mobile Navigation Drawer -->
   <div class="ofi-mobile-menu" id="ofiMobileMenu">
-    <a href="#hero" class="ofi-nav-link" onclick="toggleMenu()">Home</a>
     <a href="#about-us" class="ofi-nav-link" onclick="toggleMenu()">About us</a>
     <a href="#explore" class="ofi-nav-link" onclick="toggleMenu()">IQF Products</a>
     <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="ofi-nav-link">Innovate With Us</a>
@@ -1640,7 +1621,7 @@
   <section class="ofi-hero" id="hero">
     <!-- Video Background in Hero Banner -->
     <video class="ofi-hero-video" autoplay muted loop playsinline poster="Assets/Image/puravida/hero_puravida_bg.jpg">
-      <source src="Assets/Video/Serving_bowls_of_grains_1080p_20260927182954.mp4" type="video/mp4" />
+      <source src="Assets/Video/Hands_serving_bowls_of_food_20261007041320.mp4" type="video/mp4" />
     </video>
 
     <!-- Translucent Solid Black Layer -->
@@ -1698,19 +1679,19 @@
           <div class="ofi-items-columns-grid">
             <!-- Column 1 -->
             <div class="ofi-items-col">
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('beans')" class="ofi-list-item-row active" data-product="beans">
+              <a href="javascript:void(0)" onclick="switchProduct('beans')" onmouseenter="switchProduct('beans')" class="ofi-list-item-row active" data-product="beans">
                 <span class="ofi-item-label">IQF Beans</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('lentils')" class="ofi-list-item-row" data-product="lentils">
+              <a href="javascript:void(0)" onclick="switchProduct('lentils')" onmouseenter="switchProduct('lentils')" class="ofi-list-item-row" data-product="lentils">
                 <span class="ofi-item-label">IQF Lentils</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('grains')" class="ofi-list-item-row" data-product="grains">
+              <a href="javascript:void(0)" onclick="switchProduct('grains')" onmouseenter="switchProduct('grains')" class="ofi-list-item-row" data-product="grains">
                 <span class="ofi-item-label">IQF Grains</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1720,19 +1701,19 @@
 
             <!-- Column 2 -->
             <div class="ofi-items-col">
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('rice')" class="ofi-list-item-row" data-product="rice">
+              <a href="javascript:void(0)" onclick="switchProduct('rice')" onmouseenter="switchProduct('rice')" class="ofi-list-item-row" data-product="rice">
                 <span class="ofi-item-label">IQF Rice</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('blends')" class="ofi-list-item-row" data-product="blends">
+              <a href="javascript:void(0)" onclick="switchProduct('blends')" onmouseenter="switchProduct('blends')" class="ofi-list-item-row" data-product="blends">
                 <span class="ofi-item-label">IQF Blends</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" onmouseenter="switchProduct('pasta')" class="ofi-list-item-row" data-product="pasta">
+              <a href="javascript:void(0)" onclick="switchProduct('pasta')" onmouseenter="switchProduct('pasta')" class="ofi-list-item-row" data-product="pasta">
                 <span class="ofi-item-label">IQF Pasta</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1742,7 +1723,7 @@
           </div>
 
           <div style="margin-top: 28px;">
-            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary">
+            <a href="javascript:void(0)" class="ofi-btn ofi-btn-primary">
               <span>Request Product Information</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1835,25 +1816,25 @@
           <div class="ofi-items-columns-grid">
             <!-- Column 1 -->
             <div class="ofi-items-col">
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Everyday Essentials</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Lemon & Thyme Herb Orzo</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Sweet pea and zucchini inclusions</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Clean-label, low-sodium side dishes</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1863,25 +1844,25 @@
 
             <!-- Column 2 -->
             <div class="ofi-items-col">
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Next-Gen Culinary</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Gochujang & Charred Sweet Onion</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">Soy-free grain mix with crisp vegetables</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
               </a>
-              <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-list-item-row">
+              <a href="javascript:void(0)" class="ofi-list-item-row">
                 <span class="ofi-item-label">“Swicy” sweet-spicy global bowls</span>
                 <div class="ofi-item-circle-icon">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1891,7 +1872,7 @@
           </div>
 
           <div style="margin-top: 28px;">
-            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary">
+            <a href="javascript:void(0)" class="ofi-btn ofi-btn-primary">
               <span>Discuss Your Next Concept</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1908,8 +1889,10 @@
           (OFI Statistics & Brand Impact Section adapted for Seenergy Foods)
   ============================================================== -->
   <section class="ofi-stats-section" id="about-us">
-    <!-- Background Image in Pura Vida Miami Style -->
-    <img src="Assets/Image/puravida/stats_puravida_bg.jpg" alt="Scale your food programs with confidence - Seenergy Foods" class="ofi-stats-bg-image" loading="lazy" />
+    <!-- Video Background -->
+    <video class="ofi-stats-video" autoplay muted loop playsinline poster="Assets/Image/puravida/stats_puravida_bg.jpg">
+      <source src="Assets/Video/Untitled_Scene_09-10_22_19_06_20261007043554.mp4" type="video/mp4" />
+    </video>
 
     <!-- Translucent Solid Black Layer -->
     <div class="ofi-stats-black-layer"></div>
@@ -2221,7 +2204,7 @@
           </p>
         </div>
         <div>
-          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insights-viewall">
+          <a href="javascript:void(0)" class="ofi-insights-viewall">
             <span>View All Insights</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -2232,7 +2215,7 @@
       <div class="ofi-insights-grid">
         
         <!-- Article Card 1 -->
-        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
+        <a href="javascript:void(0)" class="ofi-insight-card">
           <div class="ofi-insight-media">
             <img src="Assets/Image/puravida/iqf_cooked_grains.jpg" alt="Cooked IQF Grains - Choosing IQF ingredients" loading="lazy" />
           </div>
@@ -2256,7 +2239,7 @@
         </a>
 
         <!-- Article Card 2 -->
-        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
+        <a href="javascript:void(0)" class="ofi-insight-card">
           <div class="ofi-insight-media">
             <img src="Assets/Image/Map.jpeg" alt="What to include in a custom blend brief" loading="lazy" />
           </div>
@@ -2280,7 +2263,7 @@
         </a>
 
         <!-- Article Card 3 -->
-        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-insight-card">
+        <a href="javascript:void(0)" class="ofi-insight-card">
           <div class="ofi-insight-media">
             <img src="Assets/Image/puravida/iqf_cooked_rice.jpg" alt="Cooked IQF Rice Blend - Planning IQF supply" loading="lazy" />
           </div>
@@ -2364,33 +2347,18 @@
           </a>
         </div>
 
-        <!-- Column 2: Pre-Cooked IQF Products -->
+        <!-- Column 2: Navigation -->
         <div class="ofi-footer-col">
-          <h4>Pre-Cooked IQF Products</h4>
+          <h4>Navigation</h4>
           <ul class="ofi-footer-links">
-            <li><a href="#explore">IQF Beans</a></li>
-            <li><a href="#explore">IQF Lentils</a></li>
-            <li><a href="#explore">IQF Grains</a></li>
-            <li><a href="#explore">IQF Rice</a></li>
-            <li><a href="#explore">IQF Blends</a></li>
-            <li><a href="#explore">IQF Pasta</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#explore">IQF Products</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Innovate With Us</a></li>
+            <li><a href="#insights">Knowledge Center</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Work With Us -->
-        <div class="ofi-footer-col">
-          <h4>Work With Us</h4>
-          <ul class="ofi-footer-links">
-            <li><a href="#scale">Innovate With Us</a></li>
-            <li><a href="#about-us">Scale With Us</a></li>
-            <li><a href="#looking-for">Reliability &amp; Responsibility</a></li>
-            <li><a href="#private-label">U.S. Supply</a></li>
-            <li><a href="#insights">Insights</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Request a Sample</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Contact Our Team -->
+        <!-- Column 3: Contact Our Team -->
         <div class="ofi-footer-col">
           <h4>Contact Our Team</h4>
           <p style="font-size: 0.9375rem; color: rgba(255, 255, 255, 0.8); line-height: 1.5; margin-bottom: 18px;">
