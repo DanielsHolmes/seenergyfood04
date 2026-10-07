@@ -169,12 +169,12 @@
 
     .ofi-btn-sky {
       background-color: var(--ofi-sky);
-      color: var(--ofi-navy);
+      color: var(--ofi-white);
       border: 1.5px solid var(--ofi-sky);
     }
     .ofi-btn-sky:hover {
       background-color: var(--ofi-white);
-      color: var(--ofi-navy);
+      color: var(--ofi-forest);
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(102, 141, 166, 0.28);
     }
@@ -673,7 +673,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.50;
+      opacity: 0.90;
       z-index: 1;
       pointer-events: none;
     }
@@ -683,7 +683,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(9, 28, 46, 0.85) 0%, rgba(9, 28, 46, 0.78) 100%);
+      background: linear-gradient(180deg, rgba(9, 28, 46, 0.45) 0%, rgba(9, 28, 46, 0.35) 55%, rgba(9, 28, 46, 0.78) 100%);
       z-index: 2;
     }
     .ofi-stats-container {
@@ -768,7 +768,7 @@
     .ofi-stat-unit {
       font-size: 1.4rem;
       font-weight: 600;
-      color: var(--ofi-sky);
+      color: var(--ofi-white);
     }
     .ofi-stat-label {
       font-size: 1.0625rem;
@@ -784,11 +784,13 @@
     }
     .ofi-stats-footnote {
       margin-top: 48px;
-      font-size: 0.8125rem;
-      color: rgba(255, 255, 255, 0.52);
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--ofi-white);
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
       padding-top: 22px;
-      line-height: 1.5;
+      line-height: 1.6;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
     }
 
     @media (max-width: 900px) {
@@ -1569,6 +1571,64 @@
       .ofi-form-grid { grid-template-columns: 1fr; }
       .ofi-form-grid.span-2col { grid-column: span 1; }
     }
+
+    /* =============================================================
+       PREMIUM SCROLL FADE-IN & REVEAL ANIMATIONS
+    ============================================================= */
+    .pv-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .pv-reveal-left {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .pv-reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .pv-reveal-scale {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .pv-reveal.is-revealed,
+    .pv-reveal-left.is-revealed,
+    .pv-reveal-right.is-revealed,
+    .pv-reveal-scale.is-revealed {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    /* Stagger Delays */
+    .pv-delay-1 { transition-delay: 0.1s; }
+    .pv-delay-2 { transition-delay: 0.2s; }
+    .pv-delay-3 { transition-delay: 0.3s; }
+    .pv-delay-4 { transition-delay: 0.4s; }
+    .pv-delay-5 { transition-delay: 0.5s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pv-reveal,
+      .pv-reveal-left,
+      .pv-reveal-right,
+      .pv-reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1629,15 +1689,15 @@
 
     <div class="ofi-container">
       <div class="ofi-hero-content">
-        <h1 class="ofi-hero-title">
+        <h1 class="ofi-hero-title pv-reveal">
           <span>INNOVATE IN FOOD.</span>
           <span>SCALE WITH OUR SUPPLY.</span>
         </h1>
-        <p class="ofi-hero-subtitle">
+        <p class="ofi-hero-subtitle pv-reveal pv-delay-1">
           North America’s leading IQF manufacturer of fully cooked beans, grains, rice, and pasta - built to support industrial, foodservice, and retail.
         </p>
 
-        <div class="ofi-hero-cta-group">
+        <div class="ofi-hero-cta-group pv-reveal pv-delay-2">
           <a href="#explore" class="ofi-btn ofi-btn-sky">Explore Products</a>
           <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white">Contact Sales</a>
         </div>
@@ -1652,7 +1712,7 @@
     <div class="ofi-container">
       
       <!-- Eyebrow matching OFI -->
-      <div class="ofi-explore-eyebrow">
+      <div class="ofi-explore-eyebrow pv-reveal">
         Pre-Cooked IQF Products
       </div>
 
@@ -1661,22 +1721,22 @@
         <!-- Text & Lists Column -->
         <div>
           <!-- Title -->
-          <h2 class="ofi-explore-title">
+          <h2 class="ofi-explore-title pv-reveal pv-delay-1">
             IQF ingredients that work for your operation
           </h2>
 
           <!-- Subtitle -->
-          <h3 class="ofi-explore-subtitle">
+          <h3 class="ofi-explore-subtitle pv-reveal pv-delay-2">
             Pre-cooked beans, lentils, grains, rice, blends and pasta for high-volume food programs.
           </h3>
 
           <!-- Text paragraph -->
-          <p class="ofi-explore-text">
+          <p class="ofi-explore-text pv-reveal pv-delay-2">
             IQF means individually quick frozen. Our ingredients help simplify preparation and portioning while supporting consistent results in prepared foods, bowls, sides and more. Find the product, format and specification that fit your application and the way your team works.
           </p>
 
           <!-- OFI 2-Column Structured Items List -->
-          <div class="ofi-items-columns-grid">
+          <div class="ofi-items-columns-grid pv-reveal pv-delay-3">
             <!-- Column 1 -->
             <div class="ofi-items-col">
               <a href="javascript:void(0)" onclick="switchProduct('beans')" onmouseenter="switchProduct('beans')" class="ofi-list-item-row active" data-product="beans">
@@ -1722,7 +1782,7 @@
             </div>
           </div>
 
-          <div style="margin-top: 28px;">
+          <div style="margin-top: 28px;" class="pv-reveal pv-delay-4">
             <a href="javascript:void(0)" class="ofi-btn ofi-btn-primary">
               <span>Request Product Information</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1731,7 +1791,7 @@
         </div>
 
         <!-- Image Column with Cooked Product Showcase -->
-        <div>
+        <div class="pv-reveal-right pv-delay-2">
           <div class="ofi-explore-image-box" id="exploreImageBox">
             <img id="exploreFeaturedImg" src="Assets/Image/puravida/iqf_cooked_beans.jpg" alt="Pre-Cooked IQF Beans - Seenergy Foods" loading="lazy" />
             <div class="ofi-explore-image-badge" id="exploreFeaturedBadge">
@@ -1778,7 +1838,7 @@
     <div class="ofi-container">
       
       <!-- Eyebrow matching OFI -->
-      <div class="ofi-explore-eyebrow">
+      <div class="ofi-explore-eyebrow pv-reveal">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         Innovation
       </div>
@@ -1786,7 +1846,7 @@
       <div class="ofi-explore-layout" style="grid-template-columns: 0.85fr 1.15fr;">
         
         <!-- Image Column with Asset Image (Alternating Layout) -->
-        <div>
+        <div class="pv-reveal-left">
           <div class="ofi-explore-image-box">
             <img src="Assets/Image/puravida/iqf_cooked_pasta.jpg" alt="Cooked Lemon & Thyme Herb Orzo Pasta - Seenergy Foods" loading="lazy" />
             <div class="ofi-explore-image-badge">
@@ -1798,22 +1858,22 @@
         <!-- Text & Products List Column -->
         <div>
           <!-- Title -->
-          <h2 class="ofi-explore-title">
+          <h2 class="ofi-explore-title pv-reveal pv-delay-1">
             Innovate with us
           </h2>
 
           <!-- Subtitle -->
-          <h3 class="ofi-explore-subtitle">
+          <h3 class="ofi-explore-subtitle pv-reveal pv-delay-2">
             From technical specifications to market-ready flavor profiles.
           </h3>
 
           <!-- Text paragraph -->
-          <p class="ofi-explore-text">
+          <p class="ofi-explore-text pv-reveal pv-delay-2">
             We partner with you from initial concept to commercial production to co-create custom seasoned blends and vegetable inclusions, engineered around your targets for fiber, protein or sodium reduction without sacrificing taste. Explore two development concepts to inspire your next launch.
           </p>
 
           <!-- 2-Column List -->
-          <div class="ofi-items-columns-grid">
+          <div class="ofi-items-columns-grid pv-reveal pv-delay-3">
             <!-- Column 1 -->
             <div class="ofi-items-col">
               <a href="javascript:void(0)" class="ofi-list-item-row">
@@ -1871,7 +1931,7 @@
             </div>
           </div>
 
-          <div style="margin-top: 28px;">
+          <div style="margin-top: 28px;" class="pv-reveal pv-delay-4">
             <a href="javascript:void(0)" class="ofi-btn ofi-btn-primary">
               <span>Discuss Your Next Concept</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1900,7 +1960,7 @@
     <div class="ofi-container ofi-stats-container">
       
       <!-- Section Header with Eyebrow Line -->
-      <div class="ofi-stats-header">
+      <div class="ofi-stats-header pv-reveal">
         <span class="ofi-stats-eyebrow-line"></span>
         <h2 class="ofi-stats-title">
           Scale your food programs with confidence
@@ -1914,7 +1974,7 @@
       <div class="ofi-stats-grid">
         
         <!-- Stat Item 1 -->
-        <div class="ofi-stat-card">
+        <div class="ofi-stat-card pv-reveal pv-delay-1">
           <div class="ofi-stat-icon-wrapper">
             <!-- OFI Style Circular Progress Ring -->
             <svg viewBox="0 0 100 100" class="ofi-stat-ring">
@@ -1939,7 +1999,7 @@
         </div>
 
         <!-- Stat Item 2 -->
-        <div class="ofi-stat-card">
+        <div class="ofi-stat-card pv-reveal pv-delay-2">
           <div class="ofi-stat-icon-wrapper">
             <svg viewBox="0 0 100 100" class="ofi-stat-ring">
               <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
@@ -1963,7 +2023,7 @@
         </div>
 
         <!-- Stat Item 3 -->
-        <div class="ofi-stat-card">
+        <div class="ofi-stat-card pv-reveal pv-delay-3">
           <div class="ofi-stat-icon-wrapper">
             <svg viewBox="0 0 100 100" class="ofi-stat-ring">
               <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
@@ -1990,7 +2050,7 @@
       </div>
 
       <!-- Action Buttons Row -->
-      <div class="ofi-stats-ctas">
+      <div class="ofi-stats-ctas pv-reveal pv-delay-4">
         <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-sage">
           <span>Discuss Your Program</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2001,7 +2061,7 @@
       </div>
 
       <!-- Footnote Disclaimer matching OFI asterisk -->
-      <div class="ofi-stats-footnote">
+      <div class="ofi-stats-footnote pv-reveal pv-delay-5">
         Custom options are subject to application review, technical feasibility, approved specifications, volume and commercial requirements.
       </div>
 
@@ -2015,7 +2075,7 @@
     <div class="ofi-container">
       
       <!-- Section Header -->
-      <div class="ofi-looking-header">
+      <div class="ofi-looking-header pv-reveal">
         <span class="ofi-looking-eyebrow-line"></span>
         <h2 class="ofi-looking-title">
           Reliability, supply chain &amp; responsibility
@@ -2026,7 +2086,7 @@
       <div class="ofi-looking-grid">
         
         <!-- Card 1: Reliability -->
-        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card">
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card pv-reveal pv-delay-1">
           <div class="ofi-looking-card-body">
             <div class="ofi-looking-card-top">
               <h3 class="ofi-looking-card-title">Reliability</h3>
@@ -2044,7 +2104,7 @@
         </a>
 
         <!-- Card 2: Supply Chain -->
-        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card">
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card pv-reveal pv-delay-2">
           <div class="ofi-looking-card-body">
             <div class="ofi-looking-card-top">
               <h3 class="ofi-looking-card-title">Supply Chain</h3>
@@ -2062,7 +2122,7 @@
         </a>
 
         <!-- Card 3: Responsibility -->
-        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card">
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-looking-card pv-reveal pv-delay-3">
           <div class="ofi-looking-card-body">
             <div class="ofi-looking-card-top">
               <h3 class="ofi-looking-card-title">Responsibility</h3>
@@ -2092,7 +2152,7 @@
       <div class="ofi-news-grid-2col">
         
         <!-- Column 1: Text Content (Left Aligned) -->
-        <div>
+        <div class="pv-reveal-left">
           <span class="ofi-news-eyebrow-line"></span>
           <h2 class="ofi-news-title">
             Fresh ideas for your next food program
@@ -2103,7 +2163,7 @@
         </div>
 
         <!-- Column 2: Subscription Form Card (Left Aligned Stack) -->
-        <div>
+        <div class="pv-reveal-right pv-delay-1">
           <div class="ofi-news-subscribe-card">
             <h3 class="ofi-news-subscribe-card-title">Stay connected</h3>
             <p class="ofi-news-subscribe-card-subtitle">Relevant updates, delivered to your inbox.</p>
@@ -2139,7 +2199,7 @@
       <div class="ofi-private-grid-2col">
         
         <!-- Column 1: Copy & Action (Left Aligned) -->
-        <div>
+        <div class="pv-reveal-left">
           <span class="ofi-private-eyebrow-line"></span>
           <h2 class="ofi-private-title">
             We ship across the U.S.
@@ -2156,7 +2216,7 @@
         </div>
 
         <!-- Column 2: Capabilities Cards (Left Aligned) -->
-        <div>
+        <div class="pv-reveal-right pv-delay-1">
           <div class="ofi-private-caps-grid">
             <div class="ofi-private-cap-card">
               <div class="ofi-private-cap-icon">✓</div>
@@ -2193,7 +2253,7 @@
     <div class="ofi-container">
       
       <!-- Section Header Row with View All Link -->
-      <div class="ofi-insights-header-row">
+      <div class="ofi-insights-header-row pv-reveal">
         <div>
           <span class="ofi-insights-eyebrow-line"></span>
           <h2 class="ofi-insights-title">
@@ -2215,7 +2275,7 @@
       <div class="ofi-insights-grid">
         
         <!-- Article Card 1 -->
-        <a href="javascript:void(0)" class="ofi-insight-card">
+        <a href="javascript:void(0)" class="ofi-insight-card pv-reveal pv-delay-1">
           <div class="ofi-insight-media">
             <img src="Assets/Image/puravida/iqf_cooked_grains.jpg" alt="Cooked IQF Grains - Choosing IQF ingredients" loading="lazy" />
           </div>
@@ -2239,7 +2299,7 @@
         </a>
 
         <!-- Article Card 2 -->
-        <a href="javascript:void(0)" class="ofi-insight-card">
+        <a href="javascript:void(0)" class="ofi-insight-card pv-reveal pv-delay-2">
           <div class="ofi-insight-media">
             <img src="Assets/Image/Map.jpeg" alt="What to include in a custom blend brief" loading="lazy" />
           </div>
@@ -2263,7 +2323,7 @@
         </a>
 
         <!-- Article Card 3 -->
-        <a href="javascript:void(0)" class="ofi-insight-card">
+        <a href="javascript:void(0)" class="ofi-insight-card pv-reveal pv-delay-3">
           <div class="ofi-insight-media">
             <img src="Assets/Image/puravida/iqf_cooked_rice.jpg" alt="Cooked IQF Rice Blend - Planning IQF supply" loading="lazy" />
           </div>
@@ -2300,7 +2360,7 @@
     <div class="ofi-get-in-touch-layer"></div>
 
     <div class="ofi-container">
-      <div class="ofi-get-in-touch-content">
+      <div class="ofi-get-in-touch-content pv-reveal">
         <div class="ofi-get-in-touch-eyebrow">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <span>Get in touch</span>
@@ -2328,7 +2388,7 @@
     <div class="ofi-container">
       
       <!-- Logo Row -->
-      <a href="#hero" class="ofi-footer-logo-box" aria-label="Seenergy Foods Home">
+      <a href="#hero" class="ofi-footer-logo-box pv-reveal" aria-label="Seenergy Foods Home">
         <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
       </a>
 
@@ -2336,7 +2396,7 @@
       <div class="ofi-footer-grid">
         
         <!-- Column 1: Newsletter Block -->
-        <div class="ofi-footer-col ofi-footer-news-block">
+        <div class="ofi-footer-col ofi-footer-news-block pv-reveal pv-delay-1">
           <h4>Stay Connected</h4>
           <p style="font-size: 0.9375rem; font-weight: 400; color: rgba(255, 255, 255, 0.8); line-height: 1.5; margin-bottom: 18px;">
             Product updates, application ideas and IQF insights from Seenergy Foods.
@@ -2348,7 +2408,7 @@
         </div>
 
         <!-- Column 2: Navigation -->
-        <div class="ofi-footer-col">
+        <div class="ofi-footer-col pv-reveal pv-delay-2">
           <h4>Navigation</h4>
           <ul class="ofi-footer-links">
             <li><a href="#about-us">About us</a></li>
@@ -2359,7 +2419,7 @@
         </div>
 
         <!-- Column 3: Contact Our Team -->
-        <div class="ofi-footer-col">
+        <div class="ofi-footer-col pv-reveal pv-delay-3">
           <h4>Contact Our Team</h4>
           <p style="font-size: 0.9375rem; color: rgba(255, 255, 255, 0.8); line-height: 1.5; margin-bottom: 18px;">
             Discuss product information, samples, custom development or supply requirements.
@@ -2373,7 +2433,7 @@
       </div>
 
       <!-- Bottom Bar: Copyright & Legal -->
-      <div class="ofi-footer-bottom">
+      <div class="ofi-footer-bottom pv-reveal pv-delay-4">
         <div>
           Copyright &copy; 2026 Seenergy Foods Limited. All Rights Reserved.
         </div>
@@ -2612,6 +2672,35 @@
         }
       }
     }
+
+    // =============================================================
+    // PREMIUM SCROLL REVEAL OBSERVER
+    // =============================================================
+    (function initScrollReveal() {
+      const revealElements = document.querySelectorAll('.pv-reveal, .pv-reveal-left, .pv-reveal-right, .pv-reveal-scale');
+      if (!revealElements.length) return;
+
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('is-revealed'));
+      }
+    })();
   </script>
 </body>
 </html>
