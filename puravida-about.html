@@ -235,41 +235,8 @@
     }
 
     /* =============================================================
-       TOP BAR & HEADER
+       STICKY HEADER NAVIGATION
     ============================================================= */
-    .ofi-top-bar {
-      background-color: var(--ofi-navy);
-      color: var(--ofi-cream);
-      font-size: 0.78rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .ofi-top-bar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .ofi-lang-region {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-    }
-    .ofi-top-links {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
-    .ofi-top-links a {
-      color: var(--ofi-cream);
-    }
-    .ofi-top-links a:hover {
-      color: var(--ofi-sky);
-    }
-
     header.ofi-header {
       position: sticky;
       top: 0;
@@ -1280,22 +1247,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Top Announcement Bar -->
-  <div class="ofi-top-bar">
-    <div class="ofi-container">
-      <div class="ofi-top-bar-inner">
-        <div class="ofi-lang-region">
-          <span class="material-symbols-outlined" style="font-size: 16px;">public</span>
-          <span>North America | Family-Owned Since 1994</span>
-        </div>
-        <div class="ofi-top-links">
-          <a href="javascript:void(0)" onclick="openModal('contactModal')">Request Samples</a>
-          <a href="puravida-variant.html#insights">Knowledge Center</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Header Navigation -->
   <header class="ofi-header" id="ofiHeader">
