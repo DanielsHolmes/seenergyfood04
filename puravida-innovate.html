@@ -11,8 +11,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Seenergy Foods</title>
-  <meta name="description" content="For over 30 years, Seenergy Foods has been a family-owned business making wholesome, plant-based ingredients more accessible, convenient, and consistent." />
+  <title>Innovate With Us | From Concept to Commercial Production | Seenergy Foods</title>
+  <meta name="description" content="Whether you’re developing a new product, reformulating an existing one, or looking for an ingredient solution that meets specific requirements, Seenergy works with you from concept through commercialization." />
   
   <link rel="icon" type="image/svg+xml" href="Assets/Image/logo%20colors.svg" />
 
@@ -121,8 +121,8 @@
 
     /* Section Base */
     .pv-section {
-      padding-top: 84px;
-      padding-bottom: 84px;
+      padding-top: 88px;
+      padding-bottom: 88px;
       position: relative;
     }
 
@@ -193,7 +193,7 @@
     }
 
     /* =============================================================
-       STICKY HEADER (NO HOME LINK IN NAV - HOME ON LOGO)
+       STICKY HEADER
     ============================================================= */
     header.pv-header {
       position: sticky;
@@ -302,111 +302,97 @@
     /* =============================================================
        HERO BANNER
     ============================================================= */
-    .about-hero {
+    .innovate-hero {
       position: relative;
       background-color: var(--pv-deep-ocean);
       color: var(--pv-white);
-      padding: 100px 0 80px;
+      padding: 100px 0 88px;
       overflow: hidden;
       min-height: 480px;
       display: flex;
       align-items: center;
     }
-    .about-hero-bg {
+    .innovate-hero-bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.28;
+      opacity: 0.32;
       z-index: 1;
-      transform: scale(1.04);
+      transform: scale(1.03);
     }
-    .about-hero-overlay {
+    .innovate-hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at top right, rgba(102, 141, 166, 0.25), transparent 60%),
-                  linear-gradient(180deg, rgba(9, 28, 46, 0.75) 0%, rgba(15, 41, 64, 0.95) 100%);
+      background: radial-gradient(circle at top right, rgba(102, 141, 166, 0.3), transparent 60%),
+                  linear-gradient(180deg, rgba(9, 28, 46, 0.75) 0%, rgba(15, 41, 64, 0.96) 100%);
       z-index: 2;
     }
-    .about-hero-content {
+    .innovate-hero-content {
       position: relative;
       z-index: 3;
-      max-width: 900px;
+      max-width: 880px;
     }
-    .about-eyebrow {
+    .innovate-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
       font-weight: 700;
       color: var(--pv-sand);
       margin-bottom: 16px;
     }
-    .about-hero-title {
+    .innovate-hero-title {
       font-size: clamp(2.2rem, 3.8vw, 3.4rem);
       font-weight: 700;
-      line-height: 1.18;
+      line-height: 1.16;
       letter-spacing: -0.01em;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       color: var(--pv-white);
     }
-    .about-hero-lead {
+    .innovate-hero-lead {
       font-size: clamp(1.05rem, 1.35vw, 1.25rem);
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--pv-cream);
       font-weight: 400;
-      max-width: 780px;
+      max-width: 800px;
       margin-bottom: 32px;
     }
 
     /* =============================================================
-       EDITORIAL CONTENT SECTION
+       WE CAN SUPPORT SECTION
     ============================================================= */
-    .story-editorial-section {
+    .support-section {
       background-color: var(--pv-white);
       border-bottom: 1px solid var(--pv-border-subtle);
     }
 
-    .story-layout {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 64px;
-      align-items: center;
+    .support-header {
+      max-width: 780px;
+      margin-bottom: 50px;
     }
 
-    @media (max-width: 980px) {
-      .story-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
-    .story-text-column {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .story-section-tag {
+    .section-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: var(--pv-sky);
       font-size: 0.8rem;
-      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--pv-sky);
+      margin-bottom: 8px;
     }
 
-    .story-heading {
+    .section-heading {
       font-size: clamp(1.6rem, 2.2vw, 2.1rem);
       font-weight: 700;
       color: var(--pv-navy);
@@ -415,80 +401,82 @@
       line-height: 1.25;
     }
 
-    .story-p {
-      font-size: 1.025rem;
-      color: var(--pv-text-muted);
-      line-height: 1.75;
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
     }
 
-    .family-quote-banner {
-      background: var(--pv-cream);
-      border-left: 4px solid var(--pv-sky);
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      padding: 24px 28px;
-      margin-top: 12px;
+    @media (max-width: 1024px) {
+      .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 680px) {
+      .support-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .support-card {
+      background: var(--pv-cream-light);
+      border: 1px solid var(--pv-sand);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      transition: all 0.35s var(--ease-smooth);
+      display: flex;
+      flex-direction: column;
       position: relative;
     }
-    .family-quote-text {
-      font-size: 1.05rem;
-      font-weight: 500;
-      font-style: italic;
+
+    .support-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+      background: var(--pv-white);
+      border-color: var(--pv-sky);
+    }
+
+    .support-card-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--pv-sky-light);
       color: var(--pv-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .support-card:hover .support-card-icon {
+      background: var(--pv-navy);
+      color: var(--pv-white);
+    }
+
+    .support-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--pv-navy);
+      margin-bottom: 12px;
+      letter-spacing: 0.01em;
+    }
+
+    .support-card-desc {
+      font-size: 0.95rem;
+      color: var(--pv-text-muted);
       line-height: 1.65;
     }
 
-    .story-image-column {
-      position: relative;
-    }
-    .story-image-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid rgba(201, 187, 157, 0.4);
-      position: relative;
-    }
-    .story-image-card img {
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-      transition: transform 0.6s var(--ease-smooth);
-    }
-    .story-image-card:hover img {
-      transform: scale(1.03);
-    }
-    .story-floating-tag {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      right: 24px;
-      background: rgba(15, 41, 64, 0.92);
-      backdrop-filter: blur(12px);
-      color: var(--pv-white);
-      padding: 16px 20px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(201, 187, 157, 0.3);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .story-tag-year {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--pv-oat);
-      line-height: 1;
-    }
-    .story-tag-caption {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      line-height: 1.35;
-      font-weight: 600;
+    /* Card spanning wider if odd count */
+    .support-card.card-featured {
+      background: linear-gradient(135deg, var(--pv-cream) 0%, var(--pv-cream-light) 100%);
     }
 
     /* =============================================================
-       METRICS & CORE IMPACT SECTION (20+ Years, 6 Categories, 3 Groups)
+       EXPERTISE & COMMERCIAL PRODUCTION SECTION
     ============================================================= */
-    .metrics-section {
+    .expertise-section {
       background-color: var(--pv-deep-ocean);
       color: var(--pv-white);
       position: relative;
@@ -496,137 +484,94 @@
       padding-top: 96px;
       padding-bottom: 96px;
     }
-    .metrics-bg-pattern {
+    .expertise-bg-pattern {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.25;
+      opacity: 0.24;
       z-index: 1;
       pointer-events: none;
     }
-    .metrics-overlay {
+    .expertise-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(9, 28, 46, 0.94) 0%, rgba(15, 41, 64, 0.88) 100%);
+      background: linear-gradient(135deg, rgba(9, 28, 46, 0.92) 0%, rgba(15, 41, 64, 0.88) 100%);
       z-index: 2;
     }
-    .metrics-container {
+    .expertise-container {
       position: relative;
       z-index: 3;
     }
 
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 10px;
+    .expertise-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(201, 187, 157, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      backdrop-filter: blur(12px);
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    @media (max-width: 950px) {
-      .metrics-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+    @media (max-width: 768px) {
+      .expertise-card {
+        padding: 32px 24px;
       }
     }
 
-    .metric-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(201, 187, 157, 0.25);
-      border-radius: var(--radius-lg);
-      padding: 36px 30px;
-      backdrop-filter: blur(10px);
-      transition: all 0.35s var(--ease-smooth);
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .metric-card:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: var(--pv-sky);
-      transform: translateY(-5px);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
-    }
-
-    .metric-icon-wrap {
-      position: relative;
-      width: 68px;
-      height: 68px;
-      margin-bottom: 24px;
-    }
-    .metric-svg-ring {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: rotate(-90deg);
-    }
-    .metric-icon-center {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
+    .expertise-icon-badge {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: var(--pv-sand);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(102, 141, 166, 0.2);
+      border: 1px solid var(--pv-sky);
+      color: var(--pv-oat);
+      margin-bottom: 24px;
     }
 
-    .metric-number-title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: var(--pv-white);
-      line-height: 1.1;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-    }
-    .metric-unit-text {
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--pv-sand);
-    }
-
-    .metric-description {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.82);
-      line-height: 1.65;
-      margin-top: 14px;
+    .expertise-text {
+      font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+      line-height: 1.7;
+      color: var(--pv-cream);
+      font-weight: 500;
     }
 
     /* =============================================================
-       COMPACT CTA STRIP
+       CALL TO ACTION SECTION
     ============================================================= */
-    .cta-strip-section {
-      background: var(--pv-cream-light);
-      border-top: 1px solid rgba(201, 187, 157, 0.3);
-      border-bottom: 1px solid rgba(201, 187, 157, 0.3);
-      padding: 56px 0;
+    .cta-talk-section {
+      background-color: var(--pv-cream-light);
+      border-top: 1px solid rgba(201, 187, 157, 0.4);
+      padding: 80px 0;
       text-align: center;
     }
-    .cta-strip-inner {
+
+    .cta-talk-inner {
       max-width: 720px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
     }
-    .cta-strip-p {
-      font-size: 1.05rem;
-      color: var(--pv-text-muted);
-      line-height: 1.6;
+
+    .cta-talk-title {
+      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+      font-weight: 700;
+      color: var(--pv-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
     }
 
     /* =============================================================
@@ -697,7 +642,7 @@
     }
 
     /* =============================================================
-       MODAL: CONTACT & INQUIRY
+       MODAL: CONTACT / LET'S TALK
     ============================================================= */
     .pv-modal-overlay {
       display: none;
@@ -799,9 +744,11 @@
       opacity: 1;
       transform: translateY(0);
     }
-    .pv-delay-1 { transition-delay: 0.15s; }
-    .pv-delay-2 { transition-delay: 0.3s; }
-    .pv-delay-3 { transition-delay: 0.45s; }
+    .pv-delay-1 { transition-delay: 0.12s; }
+    .pv-delay-2 { transition-delay: 0.24s; }
+    .pv-delay-3 { transition-delay: 0.36s; }
+    .pv-delay-4 { transition-delay: 0.48s; }
+    .pv-delay-5 { transition-delay: 0.60s; }
   </style>
 </head>
 <body>
@@ -810,7 +757,7 @@
   <header class="pv-header" id="pvHeader">
     <div class="pv-container">
       <div class="pv-header-inner">
-        <!-- Logo (Links to Home) -->
+        <!-- Logo -->
         <a href="puravida-variant.html" class="pv-logo" aria-label="Seenergy Foods Homepage">
           <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
         </a>
@@ -818,16 +765,16 @@
         <!-- Navigation Menu: No Home text link, logo handles Home -->
         <nav>
           <ul class="pv-nav-list">
-            <li class="pv-nav-item"><a href="puravida-about.html" class="pv-nav-link active">About Us</a></li>
+            <li class="pv-nav-item"><a href="puravida-about.html" class="pv-nav-link">About Us</a></li>
             <li class="pv-nav-item"><a href="puravida-variant.html#explore" class="pv-nav-link">IQF Products</a></li>
-            <li class="pv-nav-item"><a href="puravida-innovate.html" class="pv-nav-link">Innovate With Us</a></li>
+            <li class="pv-nav-item"><a href="puravida-innovate.html" class="pv-nav-link active">Innovate With Us</a></li>
             <li class="pv-nav-item"><a href="puravida-variant.html#insights" class="pv-nav-link">Knowledge Center</a></li>
           </ul>
         </nav>
 
         <!-- Action Button -->
         <div class="pv-header-actions">
-          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="pv-btn pv-btn-primary pv-btn-sm">Contact Us</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="pv-btn pv-btn-primary pv-btn-sm">Let’s Talk</a>
           <button class="pv-mobile-toggle" onclick="toggleMenu()" aria-label="Open Navigation Menu">
             <span class="material-symbols-outlined" style="font-size: 24px;">menu</span>
           </button>
@@ -838,39 +785,39 @@
 
   <!-- Mobile Drawer -->
   <div class="pv-mobile-menu" id="pvMobileMenu">
-    <a href="puravida-about.html" class="pv-nav-link active" onclick="toggleMenu()">About Us</a>
+    <a href="puravida-about.html" class="pv-nav-link" onclick="toggleMenu()">About Us</a>
     <a href="puravida-variant.html#explore" class="pv-nav-link" onclick="toggleMenu()">IQF Products</a>
-    <a href="puravida-innovate.html" class="pv-nav-link" onclick="toggleMenu()">Innovate With Us</a>
+    <a href="puravida-innovate.html" class="pv-nav-link active" onclick="toggleMenu()">Innovate With Us</a>
     <a href="puravida-variant.html#insights" class="pv-nav-link" onclick="toggleMenu()">Knowledge Center</a>
-    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="pv-btn pv-btn-primary" style="margin-top: 8px;">Contact Us</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="pv-btn pv-btn-primary" style="margin-top: 8px;">Let’s Talk</a>
   </div>
 
   <!-- =============================================================
        HERO BANNER
   ============================================================== -->
-  <section class="about-hero" id="hero">
-    <img src="Assets/Image/puravida/private_label_table.jpg" alt="Seenergy Foods About Us" class="about-hero-bg" />
-    <div class="about-hero-overlay"></div>
+  <section class="innovate-hero" id="hero">
+    <img src="Assets/Image/puravida/iqf_cooked_blends.jpg" alt="Innovate With Us" class="innovate-hero-bg" />
+    <div class="innovate-hero-overlay"></div>
 
     <div class="pv-container">
-      <div class="about-hero-content pv-reveal">
-        <div class="about-eyebrow">
-          <span class="material-symbols-outlined" style="font-size: 18px;">spa</span>
-          Seenergy Foods
+      <div class="innovate-hero-content pv-reveal">
+        <div class="innovate-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 18px;">science</span>
+          Innovate With Us
         </div>
-        <h1 class="about-hero-title">
-          About Us
+        <h1 class="innovate-hero-title">
+          From Concept to Commercial Production
         </h1>
-        <p class="about-hero-lead">
-          For over 30 years, Seenergy Foods has been a family-owned business built around a simple idea: making wholesome, plant-based ingredients more accessible, convenient, and consistent.
+        <p class="innovate-hero-lead">
+          Whether you’re developing a new product, reformulating an existing one, or looking for an ingredient solution that meets specific requirements, Seenergy works with you from concept through commercialization.
         </p>
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <a href="#our-story" class="pv-btn pv-btn-sky">
-            <span>Read Our Story</span>
+          <a href="#capabilities" class="pv-btn pv-btn-sky">
+            <span>Our Capabilities</span>
             <span class="material-symbols-outlined" style="font-size: 18px;">arrow_downward</span>
           </a>
           <a href="javascript:void(0)" onclick="openModal('contactModal')" class="pv-btn pv-btn-outline-white">
-            <span>Contact Us</span>
+            <span>Let’s Talk</span>
           </a>
         </div>
       </div>
@@ -878,54 +825,75 @@
   </section>
 
   <!-- =============================================================
-       EDITORIAL CONTENT / OUR STORY SECTION
+       WE CAN SUPPORT SECTION
   ============================================================== -->
-  <section class="pv-section story-editorial-section" id="our-story">
+  <section class="pv-section support-section" id="capabilities">
     <div class="pv-container">
-      <div class="story-layout">
+      <div class="support-header pv-reveal">
+        <div class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 18px;">hub</span>
+          Solutions & Support
+        </div>
+        <h2 class="section-heading">
+          We Can Support:
+        </h2>
+      </div>
+
+      <div class="support-grid">
         
-        <!-- Text Column -->
-        <div class="story-text-column pv-reveal">
-          <div class="story-section-tag">
-            <span class="material-symbols-outlined" style="font-size: 18px;">history_edu</span>
-            Our Heritage & Vision
+        <!-- 1. New Product Development -->
+        <div class="support-card pv-reveal pv-delay-1">
+          <div class="support-card-icon">
+            <span class="material-symbols-outlined" style="font-size: 26px;">lightbulb</span>
           </div>
-
-          <h2 class="story-heading">
-            A Vision for Wholesome, Convenient Food
-          </h2>
-
-          <p class="story-p">
-            For over 30 years, Seenergy Foods has been a family-owned business built around a simple idea: making wholesome, plant-based ingredients more accessible, convenient, and consistent.
+          <h3 class="support-card-title">New Product Development</h3>
+          <p class="support-card-desc">
+            Turn an idea into a scalable, market-ready IQF solution.
           </p>
-
-          <p class="story-p">
-            Founded in 1994 by the Ajmera family, Seenergy began with a vision to bring high-quality beans and grains to a growing market that wanted healthier, convenient food options. Today, as a second-generation family business, that vision continues to shape everything we do.
-          </p>
-
-          <p class="story-p">
-            We specialize in ready-to-eat, individually quick-frozen (IQF) beans, grains, lentils, pastas, and custom blends, supplying foodservice and food manufacturers across North America. Our products are designed to deliver the quality, consistency, and convenience today’s kitchens and food brands need.
-          </p>
-
-          <!-- Family Quote -->
-          <div class="family-quote-banner pv-reveal pv-delay-1">
-            <p class="family-quote-text">
-              “From our family to the millions of meals our products become every year, we’re proud to play a small part in making wholesome, plant-based food easier to serve every day.”
-            </p>
-          </div>
         </div>
 
-        <!-- Image Column -->
-        <div class="story-image-column pv-reveal pv-delay-2">
-          <div class="story-image-card">
-            <img src="Assets/Image/puravida/mediterranean_grain_bowl.jpg" alt="Wholesome plant-based ingredients and grains" />
-            <div class="story-floating-tag">
-              <div class="story-tag-year">1994</div>
-              <div class="story-tag-caption">
-                Founded by the Ajmera family<br />Second-generation family business
-              </div>
-            </div>
+        <!-- 2. Custom Blends -->
+        <div class="support-card pv-reveal pv-delay-2">
+          <div class="support-card-icon">
+            <span class="material-symbols-outlined" style="font-size: 26px;">blender</span>
           </div>
+          <h3 class="support-card-title">Custom Blends</h3>
+          <p class="support-card-desc">
+            Combine ingredients, flavors, and formats to achieve your desired product profile.
+          </p>
+        </div>
+
+        <!-- 3. Specification Matching -->
+        <div class="support-card pv-reveal pv-delay-3">
+          <div class="support-card-icon">
+            <span class="material-symbols-outlined" style="font-size: 26px;">tune</span>
+          </div>
+          <h3 class="support-card-title">Specification Matching</h3>
+          <p class="support-card-desc">
+            Develop products to meet specific taste, texture, nutritional, ingredient, or cost targets.
+          </p>
+        </div>
+
+        <!-- 4. Product Reformulation -->
+        <div class="support-card pv-reveal pv-delay-4">
+          <div class="support-card-icon">
+            <span class="material-symbols-outlined" style="font-size: 26px;">autorenew</span>
+          </div>
+          <h3 class="support-card-title">Product Reformulation</h3>
+          <p class="support-card-desc">
+            Optimize an existing product or create an alternative based on your current specifications.
+          </p>
+        </div>
+
+        <!-- 5. Custom Applications -->
+        <div class="support-card card-featured pv-reveal pv-delay-5">
+          <div class="support-card-icon">
+            <span class="material-symbols-outlined" style="font-size: 26px;">restaurant</span>
+          </div>
+          <h3 class="support-card-title">Custom Applications</h3>
+          <p class="support-card-desc">
+            Develop ingredients and solutions designed to perform in your finished product.
+          </p>
         </div>
 
       </div>
@@ -933,99 +901,35 @@
   </section>
 
   <!-- =============================================================
-       METRICS & SCALE SECTION
-       (20+ years, 6 product categories, 3 customer groups)
+       EXPERTISE & COMMERCIAL PRODUCTION SECTION
   ============================================================== -->
-  <section class="pv-section metrics-section" id="capabilities">
-    <img src="Assets/Image/puravida/stats_puravida_bg.jpg" alt="Background pattern" class="metrics-bg-pattern" />
-    <div class="metrics-overlay"></div>
+  <section class="pv-section expertise-section">
+    <img src="Assets/Image/puravida/stats_puravida_bg.jpg" alt="Commercial Production" class="expertise-bg-pattern" />
+    <div class="expertise-overlay"></div>
 
-    <div class="pv-container metrics-container">
-      
-      <div class="metrics-grid">
-        
-        <!-- Metric 1: 20+ Years -->
-        <div class="metric-card pv-reveal pv-delay-1">
-          <div class="metric-icon-wrap">
-            <svg viewBox="0 0 100 100" class="metric-svg-ring">
-              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.15)" stroke-width="4" fill="none" />
-              <circle cx="50" cy="50" r="44" stroke="var(--pv-sky)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="35" stroke-linecap="round" />
-            </svg>
-            <div class="metric-icon-center">
-              <span class="material-symbols-outlined" style="font-size: 30px;">hourglass_top</span>
-            </div>
-          </div>
-          <div>
-            <div class="metric-number-title">
-              20+
-              <span class="metric-unit-text">years</span>
-            </div>
-            <p class="metric-description">
-              20+ years of IQF experience informing product performance, custom development, and practical commercial support.
-            </p>
-          </div>
+    <div class="pv-container expertise-container">
+      <div class="expertise-card pv-reveal">
+        <div class="expertise-icon-badge">
+          <span class="material-symbols-outlined" style="font-size: 32px;">precision_manufacturing</span>
         </div>
-
-        <!-- Metric 2: 6 Product Categories -->
-        <div class="metric-card pv-reveal pv-delay-2">
-          <div class="metric-icon-wrap">
-            <svg viewBox="0 0 100 100" class="metric-svg-ring">
-              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.15)" stroke-width="4" fill="none" />
-              <circle cx="50" cy="50" r="44" stroke="var(--pv-sand)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="65" stroke-linecap="round" />
-            </svg>
-            <div class="metric-icon-center">
-              <span class="material-symbols-outlined" style="font-size: 30px;">category</span>
-            </div>
-          </div>
-          <div>
-            <div class="metric-number-title">
-              6
-              <span class="metric-unit-text">product categories</span>
-            </div>
-            <p class="metric-description">
-              6 product categories: beans, lentils, grains, rice, blends, and pasta in pre-cooked IQF formats for a range of food applications.
-            </p>
-          </div>
-        </div>
-
-        <!-- Metric 3: 3 Customer Groups -->
-        <div class="metric-card pv-reveal pv-delay-3">
-          <div class="metric-icon-wrap">
-            <svg viewBox="0 0 100 100" class="metric-svg-ring">
-              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.15)" stroke-width="4" fill="none" />
-              <circle cx="50" cy="50" r="44" stroke="var(--pv-sky)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="20" stroke-linecap="round" />
-            </svg>
-            <div class="metric-icon-center">
-              <span class="material-symbols-outlined" style="font-size: 30px;">groups</span>
-            </div>
-          </div>
-          <div>
-            <div class="metric-number-title">
-              3
-              <span class="metric-unit-text">customer groups</span>
-            </div>
-            <p class="metric-description">
-              3 customer groups: food manufacturers, restaurant and foodservice groups, and retail or private-label teams.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- =============================================================
-       COMPACT CTA STRIP
-  ============================================================== -->
-  <section class="cta-strip-section">
-    <div class="pv-container">
-      <div class="cta-strip-inner pv-reveal">
-        <p class="cta-strip-p">
-          Supplying foodservice and food manufacturers across North America with ready-to-eat, pre-cooked IQF ingredients.
+        <p class="expertise-text">
+          With expertise across beans, lentils, grains, rice, pasta, and vegetables, we bring the ingredients, IQF technology, and commercial production capabilities to help move your product from idea to scale.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       CALL TO ACTION SECTION
+  ============================================================== -->
+  <section class="cta-talk-section">
+    <div class="pv-container">
+      <div class="cta-talk-inner pv-reveal">
+        <h2 class="cta-talk-title">
+          Have a product to develop or a specification to meet? Let’s talk.
+        </h2>
         <a href="javascript:void(0)" onclick="openModal('contactModal')" class="pv-btn pv-btn-primary">
-          <span>Contact Us</span>
+          <span>Let’s Talk</span>
           <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
         </a>
       </div>
@@ -1045,7 +949,7 @@
             <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods" style="filter: brightness(0) invert(1);" />
           </a>
           <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.6; max-width: 320px;">
-            Making wholesome, plant-based ingredients more accessible, convenient, and consistent since 1994.
+            Moving your product from idea to scale with pre-cooked IQF technology and commercial production capabilities.
           </p>
         </div>
 
@@ -1064,8 +968,8 @@
         <div class="pv-footer-col">
           <h4>Get in Touch</h4>
           <ul class="pv-footer-links">
-            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Inquiries & Contact</a></li>
-            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Request Samples</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Let’s Talk</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Inquiries & Specifications</a></li>
           </ul>
         </div>
 
@@ -1085,7 +989,7 @@
   </footer>
 
   <!-- =============================================================
-       MODAL: CONTACT INQUIRY
+       MODAL: CONTACT / LET'S TALK
   ============================================================== -->
   <div class="pv-modal-overlay" id="contactModal">
     <div class="pv-modal-card">
@@ -1093,15 +997,15 @@
         <span class="material-symbols-outlined" style="font-size: 20px;">close</span>
       </div>
       
-      <div class="story-section-tag" style="margin-bottom: 8px;">
-        <span class="material-symbols-outlined" style="font-size: 16px;">mail</span>
-        Get In Touch
+      <div class="section-eyebrow" style="margin-bottom: 8px;">
+        <span class="material-symbols-outlined" style="font-size: 16px;">forum</span>
+        Start the Conversation
       </div>
       <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--pv-navy); text-transform: uppercase;">
-        Contact Seenergy Foods
+        Let’s Talk
       </h3>
       <p style="font-size: 0.9rem; color: var(--pv-text-muted); margin-top: 6px;">
-        Connect with our team for product specifications, custom blends, or sample requests.
+        Have a product to develop or a specification to meet? Connect directly with our development and production specialists.
       </p>
 
       <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! A Seenergy Foods specialist will contact you shortly.'); closeModal('contactModal');">
@@ -1123,12 +1027,12 @@
             <input type="text" class="pv-input" placeholder="Company Name" required />
           </div>
           <div class="pv-field span-2">
-            <label>Inquiry Details</label>
-            <textarea class="pv-input" rows="3" placeholder="Tell us about your product or application requirements..." required></textarea>
+            <label>Project / Specification Details</label>
+            <textarea class="pv-input" rows="3" placeholder="Tell us about your product idea, reformulation, custom blend, or target specification..." required></textarea>
           </div>
           <div class="pv-field span-2" style="margin-top: 8px;">
             <button type="submit" class="pv-btn pv-btn-primary" style="width: 100%;">
-              <span>Submit Message</span>
+              <span>Send Message</span>
               <span class="material-symbols-outlined" style="font-size: 18px;">send</span>
             </button>
           </div>
