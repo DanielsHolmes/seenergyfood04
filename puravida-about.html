@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Fonts: Jost & Montserrat for Futura PT aesthetic matching Pura Vida Miami -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Seenergy Foods - 30+ Years of Wholesome Plant-Based Ingredients</title>
+  <meta name="description" content="Founded in 1994 by the Ajmera family, Seenergy Foods is a leading second-generation manufacturer of pre-cooked IQF beans, grains, lentils, pasta, and custom blends." />
+  
+  <link rel="icon" type="image/svg+xml" href="Assets/Image/logo%20colors.svg" />
+
+  <style>
+    /* =============================================================
+       PURA VIDA MIAMI DESIGN TOKENS & TYPOGRAPHY
+       Font: Futura PT / Jost / Montserrat (Geometric Modern Sans)
+       Palette:
+       - Pura Vida Charcoal Navy: #0F2940 (Primary Dark Brand Color)
+       - Pura Vida Deepest Ocean: #091C2E (Top Bar, Stats & Footer Dark)
+       - Pura Vida Slate Navy: #263A4D (Hover & Secondary Dark)
+       - Pura Vida Coastal Sky Blue: #668DA6 (Signature Accent Blue)
+       - Pura Vida Soft Breeze: #E6F5FD (Light Sky Blue Section Tint)
+       - Pura Vida Signature Sand/Tan Border: #C9BB9D
+       - Pura Vida Warm Oat: #EFE6D2
+       - Pura Vida Warm Cream / Linen: #F9F3E8
+       - Pura Vida Ivory Light: #FAF6EE
+       - Pura Vida Soft Crisp Off-White: #FAF8F5
+       - Pure White: #FFFFFF
+       - Charcoal / Text: #272727 and #4A5464
+    ============================================================= */
+    :root {
+      --ofi-forest: #0F2940;
+      --ofi-navy: #091C2E;
+      --ofi-olive: #263A4D;
+      --ofi-sage: #668DA6;
+      --ofi-muted-green: #728197;
+      --ofi-blue: #263A4D;
+      --ofi-sky: #668DA6;
+      --ofi-sand: #C9BB9D;
+      --ofi-cream: #F9F3E8;
+      --ofi-cream-80: rgba(249, 243, 232, 0.85);
+      --ofi-cream-12: rgba(249, 243, 232, 0.15);
+      --ofi-cream-light: #FAF6EE;
+      --ofi-offwhite: #FAF8F5;
+      --ofi-white: #FFFFFF;
+      --ofi-black: #1A1A1A;
+      --ofi-black-10: rgba(15, 41, 64, 0.08);
+      --ofi-black-05: rgba(15, 41, 64, 0.04);
+      
+      --pv-sky-light: #E6F5FD;
+      --pv-oat: #EFE6D2;
+      --pv-text: #4A5464;
+      --pv-sand-border: #C9BB9D;
+      
+      --font-futura: "Futura PT", "Montserrat", "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-helvetica: var(--font-futura);
+      --ease-ofi: cubic-bezier(0.16, 1, 0.3, 1);
+      --container-max: 1360px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --radius-pill: 9999px;
+      --shadow-subtle: 0 4px 20px rgba(15, 41, 64, 0.06);
+      --shadow-hover: 0 16px 36px rgba(15, 41, 64, 0.12);
+    }
+
+    /* Base Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-futura);
+      color: var(--ofi-black);
+      background-color: var(--ofi-offwhite);
+      line-height: 1.65;
+      letter-spacing: 0.025em;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s var(--ease-ofi);
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      outline: none;
+      border: none;
+    }
+
+    .ofi-container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    .ofi-section {
+      padding-top: 96px;
+      padding-bottom: 96px;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .ofi-section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+      }
+      .ofi-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    /* OFI Buttons */
+    .ofi-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 34px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.25s var(--ease-ofi);
+      line-height: 1;
+    }
+    .ofi-btn-primary {
+      background-color: var(--ofi-forest);
+      color: var(--ofi-white);
+      border: 1.5px solid var(--ofi-forest);
+    }
+    .ofi-btn-primary:hover {
+      background-color: var(--ofi-olive);
+      border-color: var(--ofi-olive);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 41, 64, 0.22);
+    }
+
+    .ofi-btn-sky {
+      background-color: var(--ofi-sky);
+      color: var(--ofi-white);
+      border: 1.5px solid var(--ofi-sky);
+    }
+    .ofi-btn-sky:hover {
+      background-color: var(--ofi-white);
+      color: var(--ofi-forest);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 141, 166, 0.28);
+    }
+
+    .ofi-btn-outline-white {
+      background-color: transparent;
+      color: var(--ofi-white);
+      border: 1.5px solid rgba(255, 255, 255, 0.75);
+    }
+    .ofi-btn-outline-white:hover {
+      background-color: var(--ofi-white);
+      color: var(--ofi-forest);
+      border-color: var(--ofi-white);
+      transform: translateY(-2px);
+    }
+
+    .ofi-btn-outline-dark {
+      background-color: transparent;
+      color: var(--ofi-forest);
+      border: 1.5px solid var(--ofi-forest);
+    }
+    .ofi-btn-outline-dark:hover {
+      background-color: var(--ofi-forest);
+      color: var(--ofi-white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 41, 64, 0.15);
+    }
+
+    .ofi-btn-sm {
+      padding: 10px 22px;
+      font-size: 0.85rem;
+    }
+
+    /* =============================================================
+       TOP BAR & HEADER
+    ============================================================= */
+    .ofi-top-bar {
+      background-color: var(--ofi-navy);
+      color: var(--ofi-cream);
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ofi-top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ofi-lang-region {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+    .ofi-top-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .ofi-top-links a {
+      color: var(--ofi-cream);
+    }
+    .ofi-top-links a:hover {
+      color: var(--ofi-sky);
+    }
+
+    header.ofi-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--ofi-black-10);
+      transition: box-shadow 0.2s var(--ease-ofi);
+    }
+    header.ofi-header.scrolled {
+      box-shadow: var(--shadow-subtle);
+    }
+    .ofi-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+      gap: 20px;
+    }
+
+    .ofi-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .ofi-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    /* Navigation Menu */
+    .ofi-nav-list {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 1.8vw, 30px);
+      flex-wrap: nowrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .ofi-nav-item {
+      position: relative;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .ofi-nav-link {
+      font-size: clamp(0.8rem, 0.88vw, 0.875rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ofi-forest);
+      padding: 10px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .ofi-nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--ofi-sky);
+      transition: width 0.25s var(--ease-ofi);
+    }
+    .ofi-nav-link:hover::after, .ofi-nav-link.active::after {
+      width: 100%;
+    }
+    .ofi-nav-link.active {
+      color: var(--ofi-forest);
+      font-weight: 700;
+    }
+    .ofi-nav-link:hover {
+      color: var(--ofi-sky);
+    }
+
+    .ofi-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .ofi-search-trigger {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--ofi-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--ofi-forest);
+      transition: all 0.2s;
+    }
+    .ofi-search-trigger:hover {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+    }
+    .ofi-mobile-toggle {
+      display: none;
+      background: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--ofi-forest);
+    }
+
+    /* Mobile Drawer */
+    .ofi-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 84px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 84px);
+      background: var(--ofi-white);
+      padding: 32px 24px;
+      flex-direction: column;
+      gap: 18px;
+      overflow-y: auto;
+      z-index: 999;
+      border-top: 1px solid var(--ofi-black-10);
+    }
+    .ofi-mobile-menu.open {
+      display: flex;
+    }
+
+    @media (max-width: 1140px) {
+      .ofi-nav-list { display: none; }
+      .ofi-mobile-toggle { display: flex; }
+      .ofi-actions .ofi-btn { display: none; }
+    }
+
+    /* =============================================================
+       HERO BANNER - ABOUT PAGE
+    ============================================================= */
+    .about-hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      background-color: var(--ofi-navy);
+      color: var(--ofi-white);
+      overflow: hidden;
+      padding: 100px 0 80px;
+    }
+    .about-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.28;
+      z-index: 1;
+    }
+    .about-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(9, 28, 46, 0.88) 0%, rgba(15, 41, 64, 0.72) 100%);
+      z-index: 2;
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 900px;
+    }
+    .about-breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pv-sand-border);
+      margin-bottom: 20px;
+    }
+    .about-breadcrumbs a {
+      color: var(--pv-sand-border);
+    }
+    .about-breadcrumbs a:hover {
+      color: var(--ofi-white);
+    }
+    .about-hero-title {
+      font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      text-wrap: balance;
+    }
+    .about-hero-subtitle {
+      font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--ofi-cream);
+      max-width: 760px;
+      margin-bottom: 32px;
+      text-wrap: pretty;
+    }
+
+    /* =============================================================
+       OUR STORY & HERITAGE SECTION (Editorial Layout)
+    ============================================================= */
+    .story-section {
+      background-color: var(--ofi-offwhite);
+      border-bottom: 1px solid var(--pv-sand-border);
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+    }
+    .story-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ofi-sky);
+      margin-bottom: 14px;
+    }
+    .story-title {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      font-weight: 700;
+      color: var(--ofi-forest);
+      line-height: 1.2;
+      margin-bottom: 28px;
+      text-wrap: balance;
+    }
+    .story-lead {
+      font-size: 1.1875rem;
+      font-weight: 500;
+      color: var(--ofi-forest);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      text-wrap: pretty;
+    }
+    .story-body-p {
+      font-size: 1.03125rem;
+      color: var(--pv-text);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      text-wrap: pretty;
+    }
+    .story-quote-card {
+      background: var(--ofi-cream);
+      border-left: 4px solid var(--ofi-sky);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 24px 28px;
+      margin-top: 28px;
+      position: relative;
+    }
+    .story-quote-text {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--ofi-forest);
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .story-quote-author {
+      margin-top: 10px;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      font-weight: 700;
+      color: var(--ofi-sky);
+    }
+    .story-visuals {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+    .story-main-img-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(15, 41, 64, 0.10);
+      border: 1px solid rgba(201, 187, 157, 0.4);
+      position: relative;
+    }
+    .story-main-img-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-ofi);
+    }
+    .story-main-img-card:hover img {
+      transform: scale(1.03);
+    }
+    .story-badge-floating {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(15, 41, 64, 0.92);
+      backdrop-filter: blur(10px);
+      color: var(--ofi-white);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(201, 187, 157, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .story-badge-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--pv-oat);
+      line-height: 1;
+    }
+    .story-badge-text {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+    .story-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .story-mini-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(201, 187, 157, 0.3);
+      position: relative;
+      height: 160px;
+    }
+    .story-mini-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .story-mini-card-label {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ofi-forest);
+      text-align: center;
+    }
+
+    /* =============================================================
+       VALUES & COMMITMENTS (4 Pillars)
+    ============================================================= */
+    .values-section {
+      background-color: var(--ofi-white);
+      border-bottom: 1px solid var(--ofi-black-10);
+    }
+    .values-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 56px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1100px) {
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+    .value-card {
+      background: var(--ofi-cream-light);
+      border: 1px solid var(--pv-sand-border);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: all 0.35s var(--ease-ofi);
+      display: flex;
+      flex-direction: column;
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      background: var(--ofi-white);
+      border-color: var(--ofi-sky);
+    }
+    .value-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--pv-sky-light);
+      color: var(--ofi-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      transition: all 0.3s ease;
+    }
+    .value-card:hover .value-icon-box {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+    }
+    .value-title {
+      font-size: 1.1875rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      margin-bottom: 12px;
+    }
+    .value-desc {
+      font-size: 0.9375rem;
+      color: var(--pv-text);
+      line-height: 1.6;
+    }
+
+    /* =============================================================
+       STATISTICS & IMPACT SECTION (OFI Pura Vida Style)
+    ============================================================= */
+    .ofi-stats-section {
+      position: relative;
+      background-color: var(--ofi-black);
+      color: var(--ofi-white);
+      padding: 110px 0 100px;
+      overflow: hidden;
+    }
+    .ofi-stats-bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .ofi-stats-black-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(9, 28, 46, 0.90) 0%, rgba(15, 41, 64, 0.85) 100%);
+      z-index: 2;
+    }
+    .ofi-stats-container {
+      position: relative;
+      z-index: 3;
+    }
+    .ofi-stats-header {
+      max-width: 860px;
+      margin-bottom: 56px;
+    }
+    .ofi-stats-eyebrow-line {
+      display: inline-block;
+      width: 64px;
+      height: 3.5px;
+      background-color: var(--ofi-sky);
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .ofi-stats-title {
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ofi-white);
+      margin-bottom: 20px;
+    }
+    .ofi-stats-subtitle {
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.6;
+      max-width: 780px;
+    }
+    .ofi-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px 44px;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 900px) {
+      .ofi-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .ofi-stat-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s var(--ease-ofi);
+    }
+    .ofi-stat-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--ofi-sky);
+      transform: translateY(-4px);
+    }
+    .ofi-stat-icon-wrapper {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+    }
+    .ofi-stat-ring {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+    .ofi-stat-icon-center {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ofi-cream);
+    }
+    .ofi-stat-number-box {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .ofi-stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--pv-oat);
+      letter-spacing: -0.02em;
+    }
+    .ofi-stat-unit {
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ofi-cream);
+    }
+    .ofi-stat-label {
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 400;
+    }
+    .ofi-stats-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+    .ofi-stats-footnote {
+      margin-top: 48px;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.52);
+    }
+
+    /* =============================================================
+       3 CUSTOMER GROUPS IN DETAIL
+    ============================================================= */
+    .groups-section {
+      background-color: var(--ofi-cream-light);
+      border-bottom: 1px solid var(--pv-sand-border);
+    }
+    .groups-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 56px;
+    }
+    .groups-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 992px) {
+      .groups-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .group-card {
+      background: var(--ofi-white);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(201, 187, 157, 0.45);
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s var(--ease-ofi);
+    }
+    .group-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--ofi-sky);
+    }
+    .group-card-img-wrap {
+      height: 220px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .group-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-ofi);
+    }
+    .group-card:hover .group-card-img-wrap img {
+      transform: scale(1.05);
+    }
+    .group-card-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(15, 41, 64, 0.90);
+      backdrop-filter: blur(8px);
+      color: var(--ofi-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(201, 187, 157, 0.3);
+    }
+    .group-card-body {
+      padding: 32px 28px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .group-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .group-card-desc {
+      font-size: 0.9375rem;
+      color: var(--pv-text);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .group-features-list {
+      list-style: none;
+      margin: 0 0 24px 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .group-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--ofi-forest);
+      font-weight: 600;
+    }
+    .group-feature-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--pv-sky-light);
+      color: var(--ofi-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* =============================================================
+       6 PRODUCT CATEGORIES STRIP
+    ============================================================= */
+    .categories-strip-section {
+      background: var(--ofi-white);
+      padding: 80px 0;
+      border-bottom: 1px solid var(--ofi-black-10);
+    }
+    .cat-strip-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 1100px) {
+      .cat-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .cat-card-mini {
+      background: var(--ofi-cream-light);
+      border: 1px solid var(--pv-sand-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 16px;
+      text-align: center;
+      transition: all 0.3s var(--ease-ofi);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
+    .cat-card-mini:hover {
+      background: var(--pv-sky-light);
+      border-color: var(--ofi-sky);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-subtle);
+    }
+    .cat-mini-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--ofi-white);
+      color: var(--ofi-forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(15, 41, 64, 0.08);
+    }
+    .cat-mini-name {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--ofi-forest);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* =============================================================
+       CTA BANNER (READY TO SCALE)
+    ============================================================= */
+    .about-cta-section {
+      background: linear-gradient(135deg, var(--ofi-forest) 0%, var(--ofi-navy) 100%);
+      color: var(--ofi-white);
+      padding: 90px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-cta-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .about-cta-title {
+      font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 18px;
+    }
+    .about-cta-text {
+      font-size: 1.125rem;
+      color: var(--ofi-cream);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .about-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    /* =============================================================
+       FOOTER (Matching Pura Vida Variant)
+    ============================================================= */
+    footer.ofi-footer {
+      background-color: var(--ofi-navy);
+      color: var(--ofi-white);
+      padding-top: 80px;
+      padding-bottom: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .ofi-footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 900px) {
+      .ofi-footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .ofi-footer-col h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ofi-cream);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .ofi-footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ofi-footer-links a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9375rem;
+    }
+    .ofi-footer-links a:hover {
+      color: var(--ofi-sky);
+      padding-left: 4px;
+    }
+    .ofi-footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.55);
+    }
+    .ofi-footer-legal-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .ofi-footer-legal-links a {
+      color: rgba(255, 255, 255, 0.55);
+    }
+    .ofi-footer-legal-links a:hover {
+      color: var(--ofi-cream);
+    }
+
+    /* =============================================================
+       MODAL: CONTACT & INQUIRY
+    ============================================================= */
+    .ofi-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(9, 28, 46, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .ofi-modal-overlay.open {
+      display: flex;
+    }
+    .ofi-modal-card {
+      background: var(--ofi-white);
+      border-radius: var(--radius-lg);
+      max-width: 680px;
+      width: 100%;
+      padding: 40px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      position: relative;
+      animation: modalFadeIn 0.3s var(--ease-ofi);
+      border: 1px solid var(--pv-sand-border);
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .ofi-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--ofi-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--ofi-forest);
+      transition: all 0.2s;
+    }
+    .ofi-modal-close:hover {
+      background: var(--ofi-forest);
+      color: var(--ofi-white);
+    }
+    .ofi-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      .ofi-form-grid { grid-template-columns: 1fr; }
+    }
+    .ofi-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ofi-field-group.span-2col {
+      grid-column: 1 / -1;
+    }
+    .ofi-field-group label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ofi-forest);
+    }
+    .ofi-form-input {
+      padding: 12px 14px;
+      border: 1px solid var(--pv-sand-border);
+      border-radius: var(--radius-sm);
+      background-color: var(--ofi-cream-light);
+      font-size: 0.9375rem;
+      color: var(--ofi-black);
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .ofi-form-input:focus {
+      border-color: var(--ofi-forest);
+      background-color: var(--ofi-white);
+    }
+
+    /* =============================================================
+       PREMIUM SCROLL REVEAL UTILITIES
+    ============================================================= */
+    .pv-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease-ofi), transform 0.75s var(--ease-ofi);
+      will-change: opacity, transform;
+    }
+    .pv-reveal.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pv-reveal-left {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: opacity 0.75s var(--ease-ofi), transform 0.75s var(--ease-ofi);
+    }
+    .pv-reveal-left.is-revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .pv-reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.75s var(--ease-ofi), transform 0.75s var(--ease-ofi);
+    }
+    .pv-reveal-right.is-revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .pv-delay-1 { transition-delay: 0.15s; }
+    .pv-delay-2 { transition-delay: 0.30s; }
+    .pv-delay-3 { transition-delay: 0.45s; }
+    .pv-delay-4 { transition-delay: 0.60s; }
+    .pv-delay-5 { transition-delay: 0.75s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pv-reveal, .pv-reveal-left, .pv-reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ofi-top-bar">
+    <div class="ofi-container">
+      <div class="ofi-top-bar-inner">
+        <div class="ofi-lang-region">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>North America | Family-Owned Since 1994</span>
+        </div>
+        <div class="ofi-top-links">
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Request Samples</a>
+          <a href="puravida-variant.html#insights">Knowledge Center</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="ofi-header" id="ofiHeader">
+    <div class="ofi-container">
+      <div class="ofi-header-inner">
+        <!-- Logo -->
+        <a href="puravida-variant.html" class="ofi-logo" aria-label="Seenergy Foods Homepage">
+          <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
+        </a>
+
+        <!-- Desktop Navigation: Strictly Single-Line -->
+        <nav>
+          <ul class="ofi-nav-list">
+            <li class="ofi-nav-item"><a href="puravida-variant.html" class="ofi-nav-link">Home</a></li>
+            <li class="ofi-nav-item"><a href="puravida-about.html" class="ofi-nav-link active">About us</a></li>
+            <li class="ofi-nav-item"><a href="puravida-variant.html#explore" class="ofi-nav-link">IQF Products</a></li>
+            <li class="ofi-nav-item"><a href="puravida-variant.html#co-creation" class="ofi-nav-link">Innovate With Us</a></li>
+            <li class="ofi-nav-item"><a href="puravida-variant.html#insights" class="ofi-nav-link">Knowledge Center</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="ofi-actions">
+          <div class="ofi-search-trigger" onclick="openModal('contactModal')" title="Search Solutions">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary ofi-btn-sm">Contact us</a>
+          <button class="ofi-mobile-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="ofi-mobile-menu" id="ofiMobileMenu">
+    <a href="puravida-variant.html" class="ofi-nav-link" onclick="toggleMenu()">Home</a>
+    <a href="puravida-about.html" class="ofi-nav-link active" onclick="toggleMenu()">About us</a>
+    <a href="puravida-variant.html#explore" class="ofi-nav-link" onclick="toggleMenu()">IQF Products</a>
+    <a href="puravida-variant.html#co-creation" class="ofi-nav-link" onclick="toggleMenu()">Innovate With Us</a>
+    <a href="puravida-variant.html#insights" class="ofi-nav-link" onclick="toggleMenu()">Knowledge Center</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="ofi-btn ofi-btn-primary" style="margin-top: 10px;">Contact us</a>
+  </div>
+
+  <!-- =============================================================
+       1. HERO BANNER - ABOUT
+  ============================================================== -->
+  <section class="about-hero" id="hero">
+    <img src="Assets/Image/puravida/private_label_table.jpg" alt="Seenergy Foods About Banner" class="about-hero-bg" />
+    <div class="about-hero-overlay"></div>
+
+    <div class="ofi-container">
+      <div class="about-hero-content">
+        <div class="about-breadcrumbs pv-reveal">
+          <a href="puravida-variant.html">Home</a>
+          <span>/</span>
+          <span>About Us</span>
+        </div>
+
+        <h1 class="about-hero-title pv-reveal pv-delay-1">
+          For Over 30 Years, Delivering Wholesome Food with Passion & Precision
+        </h1>
+        <p class="about-hero-subtitle pv-reveal pv-delay-2">
+          From a family vision in 1994 to supplying North America’s leading food manufacturers, restaurant chains, and retail brands with premium pre-cooked IQF ingredients.
+        </p>
+
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;" class="pv-reveal pv-delay-3">
+          <a href="#story" class="ofi-btn ofi-btn-sky">Our Story</a>
+          <a href="#scale-impact" class="ofi-btn ofi-btn-outline-white">Capabilities & Scale</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       2. OUR STORY & HERITAGE (User-Specified Story Content)
+  ============================================================== -->
+  <section class="ofi-section story-section" id="story">
+    <div class="ofi-container">
+      <div class="story-grid">
+        
+        <!-- Story Text Column -->
+        <div class="story-content pv-reveal-left">
+          <div class="story-eyebrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Our Heritage & Purpose
+          </div>
+          
+          <h2 class="story-title">
+            Making Wholesome, Plant-Based Ingredients Accessible & Consistent
+          </h2>
+
+          <p class="story-lead">
+            For over 30 years, Seenergy Foods has been a family-owned business built around a simple idea: making wholesome, plant-based ingredients more accessible, convenient, and consistent.
+          </p>
+
+          <p class="story-body-p">
+            Founded in 1994 by the Ajmera family, Seenergy began with a vision to bring high-quality beans and grains to a growing market that wanted healthier, convenient food options. Today, as a second-generation family business, that vision continues to shape everything we do.
+          </p>
+
+          <p class="story-body-p">
+            We specialize in ready-to-eat, individually quick-frozen (IQF) beans, grains, lentils, pastas, and custom blends, supplying foodservice and food manufacturers across North America. Our products are designed to deliver the quality, consistency, and convenience today’s kitchens and food brands need.
+          </p>
+
+          <!-- Highlight Pullquote -->
+          <div class="story-quote-card">
+            <p class="story-quote-text">
+              “From our family to the millions of meals our products become every year, we’re proud to play a small part in making wholesome, plant-based food easier to serve every day.”
+            </p>
+            <div class="story-quote-author">
+              The Ajmera Family &mdash; Second Generation Leadership
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Visuals Column -->
+        <div class="story-visuals pv-reveal-right">
+          <div class="story-main-img-card">
+            <img src="Assets/Image/puravida/mediterranean_grain_bowl.jpg" alt="Wholesome grain bowls and fresh ingredients" />
+            <div class="story-badge-floating">
+              <div class="story-badge-number">1994</div>
+              <div class="story-badge-text">
+                Founded with a Passion<br />for Quality Grains & Beans
+              </div>
+            </div>
+          </div>
+
+          <div class="story-mini-grid">
+            <div class="story-mini-card">
+              <img src="Assets/Image/puravida/iqf_ingredients_bowls.jpg" alt="IQF Pre-cooked ingredients" />
+              <div class="story-mini-card-label">Ready-to-Eat IQF Precision</div>
+            </div>
+            <div class="story-mini-card">
+              <img src="Assets/Image/puravida/orzo_grain_dish.jpg" alt="Custom blended grains and pasta" />
+              <div class="story-mini-card-label">Custom Blends & Solutions</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       3. CORE COMMITMENTS / VALUES (4 Pillars)
+  ============================================================== -->
+  <section class="ofi-section values-section">
+    <div class="ofi-container">
+      <div class="values-header pv-reveal">
+        <div class="story-eyebrow" style="justify-content: center;">
+          What Drives Our Family Business
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 700; color: var(--ofi-forest); text-transform: uppercase; letter-spacing: 0.04em;">
+          Built on Trust, Quality & Consistency
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--pv-text); margin-top: 12px;">
+          Decades of continuous refinement have shaped our manufacturing standards into the most dependable IQF grain and bean processing in North America.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Pillar 1 -->
+        <div class="value-card pv-reveal pv-delay-1">
+          <div class="value-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="value-title">Uncompromising Quality</h3>
+          <p class="value-desc">
+            Proprietary gentle batch-cooking and rapid IQF freezing lock in exact moisture, bite, color, and wholesome nutrient profiles.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="value-card pv-reveal pv-delay-2">
+          <div class="value-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M7 12h10M12 7v10"/></svg>
+          </div>
+          <h3 class="value-title">Consistency at Scale</h3>
+          <p class="value-desc">
+            Eliminating back-of-house labor and cooking variability with perfectly prepared, portion-controlled ingredients ready for immediate assembly.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="value-card pv-reveal pv-delay-3">
+          <div class="value-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="value-title">Supply Chain Resilience</h3>
+          <p class="value-desc">
+            Direct farmer partnerships, strict multi-point QA audits, and strategic North American logistics ensure continuous supply year-round.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="value-card pv-reveal pv-delay-4">
+          <div class="value-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="value-title">Family Collaboration</h3>
+          <p class="value-desc">
+            We partner closely with R&D culinary teams and executive chefs to develop bespoke grain blends, custom sauces, and custom pack formats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       4. STATISTICS & IMPACT SECTION (The 20+ Years, 6 Categories, 3 Groups)
+  ============================================================== -->
+  <section class="ofi-stats-section" id="scale-impact">
+    <img src="Assets/Image/puravida/stats_puravida_bg.jpg" alt="Statistics background" class="ofi-stats-bg-image" />
+    <div class="ofi-stats-black-layer"></div>
+
+    <div class="ofi-container ofi-stats-container">
+      
+      <!-- Header -->
+      <div class="ofi-stats-header pv-reveal">
+        <span class="ofi-stats-eyebrow-line"></span>
+        <h2 class="ofi-stats-title">
+          Scale Your Food Programs with Confidence
+        </h2>
+        <p class="ofi-stats-subtitle">
+          Production-ready IQF ingredients and custom solutions for food manufacturers, restaurant groups, and retail teams. We help you evaluate product specifications, samples, pack configurations, and supply requirements as you move toward recurring production or rollout across locations.
+        </p>
+      </div>
+
+      <!-- 3-Column Statistics Grid -->
+      <div class="ofi-stats-grid">
+        
+        <!-- Stat Item 1: 30+ / 20+ Years -->
+        <div class="ofi-stat-card pv-reveal pv-delay-1">
+          <div class="ofi-stat-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="ofi-stat-ring">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="var(--ofi-sage)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="35" stroke-linecap="round" />
+            </svg>
+            <div class="ofi-stat-icon-center">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="ofi-stat-number-box">
+              <span class="ofi-stat-number">20+</span>
+              <span class="ofi-stat-unit">years</span>
+            </div>
+            <p class="ofi-stat-label">
+              of IQF experience informing product performance, custom development, and practical commercial support.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat Item 2: 6 Product Categories -->
+        <div class="ofi-stat-card pv-reveal pv-delay-2">
+          <div class="ofi-stat-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="ofi-stat-ring">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="var(--ofi-sky)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="65" stroke-linecap="round" />
+            </svg>
+            <div class="ofi-stat-icon-center">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 3l3 4 3-4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="ofi-stat-number-box">
+              <span class="ofi-stat-number">6</span>
+              <span class="ofi-stat-unit">product categories</span>
+            </div>
+            <p class="ofi-stat-label">
+              beans, lentils, grains, rice, blends, and pasta in pre-cooked IQF formats for a range of food applications.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stat Item 3: 3 Customer Groups -->
+        <div class="ofi-stat-card pv-reveal pv-delay-3">
+          <div class="ofi-stat-icon-wrapper">
+            <svg viewBox="0 0 100 100" class="ofi-stat-ring">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,0.2)" stroke-width="4" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="var(--ofi-sand)" stroke-width="4" fill="none" stroke-dasharray="276" stroke-dashoffset="20" stroke-linecap="round" />
+            </svg>
+            <div class="ofi-stat-icon-center">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="ofi-stat-number-box">
+              <span class="ofi-stat-number">3</span>
+              <span class="ofi-stat-unit">customer groups</span>
+            </div>
+            <p class="ofi-stat-label">
+              food manufacturers, restaurant and foodservice groups, and retail or private-label teams.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons Row -->
+      <div class="ofi-stats-ctas pv-reveal pv-delay-4">
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-sage">
+          <span>Discuss Your Program</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white">
+          <span>Request Product Samples</span>
+        </a>
+      </div>
+
+      <!-- Footnote Disclaimer -->
+      <div class="ofi-stats-footnote pv-reveal pv-delay-5">
+        Custom options are subject to application review, technical feasibility, approved specifications, volume, and commercial requirements.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       5. THE 3 CUSTOMER GROUPS IN DETAIL
+  ============================================================== -->
+  <section class="ofi-section groups-section" id="customer-groups">
+    <div class="ofi-container">
+      <div class="groups-header pv-reveal">
+        <div class="story-eyebrow" style="justify-content: center;">
+          Tailored Foodservice & Industrial Partnerships
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.75rem); font-weight: 700; color: var(--ofi-forest); text-transform: uppercase; letter-spacing: 0.04em;">
+          Who We Serve Across North America
+        </h2>
+        <p style="font-size: 1.05rem; color: var(--pv-text); margin-top: 12px;">
+          Whether scaling a national chain menu, formulating high-volume CPG frozen entrees, or creating signature store brand blends, our teams engineer solutions around your exact operational parameters.
+        </p>
+      </div>
+
+      <div class="groups-grid">
+        
+        <!-- Group 1: Food Manufacturers -->
+        <div class="group-card pv-reveal pv-delay-1">
+          <div class="group-card-img-wrap">
+            <img src="Assets/Image/puravida/iqf_grain_bowls.jpg" alt="Industrial food manufacturing IQF ingredients" />
+            <div class="group-card-badge">Customer Group 01</div>
+          </div>
+          <div class="group-card-body">
+            <h3 class="group-card-title">Food Manufacturers & Industrial CPG</h3>
+            <p class="group-card-desc">
+              High-volume, bulk IQF ingredients formulated to withstand secondary industrial processes including frozen entrees, canned foods, prepared soups, burritos, and ready meals.
+            </p>
+            <ul class="group-features-list">
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Bulk tote & corrugated pack formats
+              </li>
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Precision moisture & bite specification
+              </li>
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                GFSI / SQF Level 3 certified production
+              </li>
+            </ul>
+            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary ofi-btn-sm" style="width: 100%;">
+              Industrial Specs Inquiry
+            </a>
+          </div>
+        </div>
+
+        <!-- Group 2: Restaurant & Foodservice Chains -->
+        <div class="group-card pv-reveal pv-delay-2">
+          <div class="group-card-img-wrap">
+            <img src="Assets/Image/puravida/mediterranean_grain_bowl.jpg" alt="Foodservice and restaurant grain solutions" />
+            <div class="group-card-badge">Customer Group 02</div>
+          </div>
+          <div class="group-card-body">
+            <h3 class="group-card-title">Restaurant & Foodservice Chains</h3>
+            <p class="group-card-desc">
+              Ready-to-heat IQF grains, ancient grains, pastas, and beans that eliminate kitchen prep labor, minimize back-of-house food waste, and ensure 100% dish consistency across 50 to 1,000+ locations.
+            </p>
+            <ul class="group-features-list">
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Rapid thaw & steam-ready formulations
+              </li>
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Custom seasoning & vegetable blends
+              </li>
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Distribution via national broadliners
+              </li>
+            </ul>
+            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary ofi-btn-sm" style="width: 100%;">
+              Foodservice Rollout Inquiry
+            </a>
+          </div>
+        </div>
+
+        <!-- Group 3: Retail & Private Label -->
+        <div class="group-card pv-reveal pv-delay-3">
+          <div class="group-card-img-wrap">
+            <img src="Assets/Image/puravida/private_label_table.jpg" alt="Retail and private label packaging" />
+            <div class="group-card-badge">Customer Group 03</div>
+          </div>
+          <div class="group-card-body">
+            <h3 class="group-card-title">Retail & Private Label Teams</h3>
+            <p class="group-card-desc">
+              Custom recipe formulation, clean-label certification, and flexible retail packaging for supermarket private brands seeking premium plant-based meal kits and side dishes.
+            </p>
+            <ul class="group-features-list">
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Organic, Non-GMO, and Kosher certified
+              </li>
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Flexible bag-in-box and retail pouches
+              </li>
+              <li class="group-feature-item">
+                <span class="group-feature-icon">✓</span>
+                Culinary co-development & bench sampling
+              </li>
+            </ul>
+            <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-primary ofi-btn-sm" style="width: 100%;">
+              Private Label Inquiry
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       6. THE 6 PRODUCT CATEGORIES STRIP
+  ============================================================== -->
+  <section class="categories-strip-section">
+    <div class="ofi-container">
+      <div class="cat-strip-header pv-reveal">
+        <div>
+          <div class="story-eyebrow">Complete Product Portfolio</div>
+          <h2 style="font-size: 1.85rem; font-weight: 700; color: var(--ofi-forest); text-transform: uppercase;">
+            Explore Our 6 Core IQF Categories
+          </h2>
+        </div>
+        <a href="puravida-variant.html#explore" class="ofi-btn ofi-btn-outline-dark ofi-btn-sm">
+          <span>View All Products in Catalog</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="cat-grid pv-reveal pv-delay-1">
+        <!-- 1. Beans -->
+        <a href="puravida-variant.html#explore" class="cat-card-mini">
+          <div class="cat-mini-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="cat-mini-name">IQF Beans</div>
+        </a>
+
+        <!-- 2. Lentils -->
+        <a href="puravida-variant.html#explore" class="cat-card-mini">
+          <div class="cat-mini-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="4"/><circle cx="16" cy="12" r="4"/></svg>
+          </div>
+          <div class="cat-mini-name">IQF Lentils</div>
+        </a>
+
+        <!-- 3. Grains -->
+        <a href="puravida-variant.html#explore" class="cat-card-mini">
+          <div class="cat-mini-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="cat-mini-name">IQF Grains</div>
+        </a>
+
+        <!-- 4. Rice -->
+        <a href="puravida-variant.html#explore" class="cat-card-mini">
+          <div class="cat-mini-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a5 5 0 0 0-5 5v10a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/></svg>
+          </div>
+          <div class="cat-mini-name">IQF Rice</div>
+        </a>
+
+        <!-- 5. Blends -->
+        <a href="puravida-variant.html#explore" class="cat-card-mini">
+          <div class="cat-mini-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <div class="cat-mini-name">IQF Blends</div>
+        </a>
+
+        <!-- 6. Pasta -->
+        <a href="puravida-variant.html#explore" class="cat-card-mini">
+          <div class="cat-mini-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </div>
+          <div class="cat-mini-name">IQF Pasta</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       7. CTA BANNER (READY TO SCALE)
+  ============================================================== -->
+  <section class="about-cta-section">
+    <div class="ofi-container about-cta-container pv-reveal">
+      <h2 class="about-cta-title">
+        Ready to Co-Create Your Next Wholesome Food Program?
+      </h2>
+      <p class="about-cta-text">
+        Whether you require bench-top sample evaluation, custom blending specifications, or annual contracted volume pricing, our team is ready to assist.
+      </p>
+      <div class="about-cta-buttons">
+        <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-sky">
+          <span>Request Product Samples</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="puravida-variant.html#explore" class="ofi-btn ofi-btn-outline-white">
+          <span>Explore IQF Products</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       8. FOOTER (Matching Pura Vida Variant)
+  ============================================================== -->
+  <footer class="ofi-footer">
+    <div class="ofi-container">
+      
+      <div class="ofi-footer-top">
+        
+        <!-- Column 1: Brand & Overview -->
+        <div class="ofi-footer-col pv-reveal pv-delay-1">
+          <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods" style="height: 36px; margin-bottom: 20px; filter: brightness(0) invert(1);" />
+          <p style="font-size: 0.9375rem; font-weight: 400; color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 18px; max-width: 360px;">
+            Founded in 1994 by the Ajmera family, Seenergy Foods delivers North America’s premier individually quick-frozen (IQF) plant-based ingredients and custom blends.
+          </p>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-sky ofi-btn-sm" style="display: inline-flex;">
+            <span>Contact Our Team</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="ofi-footer-col pv-reveal pv-delay-2">
+          <h4>Navigation</h4>
+          <ul class="ofi-footer-links">
+            <li><a href="puravida-variant.html">Home</a></li>
+            <li><a href="puravida-about.html" style="color: var(--ofi-sky); font-weight: 600;">About us</a></li>
+            <li><a href="puravida-variant.html#explore">IQF Products</a></li>
+            <li><a href="puravida-variant.html#co-creation">Innovate With Us</a></li>
+            <li><a href="puravida-variant.html#insights">Knowledge Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Our Team -->
+        <div class="ofi-footer-col pv-reveal pv-delay-3">
+          <h4>Get in Touch</h4>
+          <p style="font-size: 0.9375rem; color: rgba(255, 255, 255, 0.8); line-height: 1.5; margin-bottom: 18px;">
+            Discuss product specs, custom formulations, plant audits, or supply agreements.
+          </p>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="ofi-btn ofi-btn-outline-white ofi-btn-sm" style="display: inline-flex;">
+            <span>Send an Inquiry</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright & Legal -->
+      <div class="ofi-footer-bottom pv-reveal pv-delay-4">
+        <div>
+          Copyright &copy; 2026 Seenergy Foods Limited. All Rights Reserved.
+        </div>
+        <div class="ofi-footer-legal-links">
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Terms of Service</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Supply Chain Transparency</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Accessibility</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =============================================================
+       MODAL: CONTACT & INQUIRY
+  ============================================================== -->
+  <div class="ofi-modal-overlay" id="contactModal" onclick="checkModalBackdrop(event, 'contactModal')">
+    <div class="ofi-modal-card">
+      <div class="ofi-modal-close" onclick="closeModal('contactModal')">&times;</div>
+      <h3 style="font-size: 1.6rem; color: var(--ofi-forest); margin-bottom: 8px;">Talk to Our Ingredient Experts</h3>
+      <p style="font-size: 0.875rem; color: rgba(0,0,0,0.7); margin-bottom: 24px;">
+        Connect with our culinary scientists and supply chain specialists to request product samples, custom formulations, or plant audit schedules.
+      </p>
+
+      <form id="inquiryForm" onsubmit="handleContactSubmit(event)" novalidate>
+        <div id="contactModalFeedback" style="display: none; font-size: 0.875rem; margin-bottom: 16px; font-weight: 500; border-radius: 8px; padding: 12px 16px;"></div>
+        
+        <div class="ofi-form-grid">
+          <div class="ofi-field-group">
+            <label>Full name *</label>
+            <input type="text" name="fullName" class="ofi-form-input" placeholder="Enter your full name" required />
+          </div>
+          <div class="ofi-field-group">
+            <label>Company name *</label>
+            <input type="text" name="companyName" class="ofi-form-input" placeholder="Enter your company name" required />
+          </div>
+          <div class="ofi-field-group">
+            <label>Work email *</label>
+            <input type="email" name="workEmail" class="ofi-form-input" placeholder="Enter your work email" required />
+          </div>
+          <div class="ofi-field-group">
+            <label>Phone number</label>
+            <input type="tel" name="phoneNumber" class="ofi-form-input" placeholder="Enter your phone number" />
+          </div>
+          <div class="ofi-field-group">
+            <label>Product category of interest *</label>
+            <select name="category" class="ofi-form-input" required>
+              <option value="" disabled selected>Select an IQF category</option>
+              <option value="IQF Beans">IQF Beans</option>
+              <option value="IQF Lentils">IQF Lentils</option>
+              <option value="IQF Grains">IQF Grains</option>
+              <option value="IQF Rice">IQF Rice</option>
+              <option value="IQF Blends">IQF Blends</option>
+              <option value="IQF Pasta">IQF Pasta</option>
+            </select>
+          </div>
+          <div class="ofi-field-group">
+            <label>Customer Group</label>
+            <select name="customerGroup" class="ofi-form-input">
+              <option value="" disabled selected>Select your industry segment</option>
+              <option value="Food Manufacturer">Food Manufacturer & Industrial CPG</option>
+              <option value="Foodservice / Chain">Restaurant & Foodservice Chain</option>
+              <option value="Retail / Private Label">Retail & Private Label</option>
+            </select>
+          </div>
+          <div class="ofi-field-group span-2col">
+            <label>Tell us about your project</label>
+            <textarea name="projectDetails" class="ofi-form-input" rows="3" placeholder="Share your application, ingredient or blend, delivery location, target timing and any technical requirements."></textarea>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <span style="font-size: 0.8125rem; color: rgba(0, 0, 0, 0.55); font-weight: 500;">* Required fields</span>
+          <div style="display: flex; gap: 12px;">
+            <button type="button" class="ofi-btn ofi-btn-secondary ofi-btn-sm" onclick="closeModal('contactModal')" style="background: var(--ofi-cream); color: var(--ofi-forest);">Cancel</button>
+            <button type="submit" class="ofi-btn ofi-btn-primary ofi-btn-sm">Send Inquiry</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('ofiMobileMenu');
+      if (menu) menu.classList.toggle('open');
+    }
+
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function checkModalBackdrop(e, id) {
+      if (e.target.id === id) closeModal(id);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const feedback = document.getElementById('contactModalFeedback');
+      
+      const fullName = form.querySelector('[name="fullName"]') ? form.querySelector('[name="fullName"]').value.trim() : '';
+      const companyName = form.querySelector('[name="companyName"]') ? form.querySelector('[name="companyName"]').value.trim() : '';
+      const workEmail = form.querySelector('[name="workEmail"]') ? form.querySelector('[name="workEmail"]').value.trim() : '';
+      const category = form.querySelector('[name="category"]') ? form.querySelector('[name="category"]').value : '';
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!fullName || !companyName || !workEmail || !category || !emailRegex.test(workEmail)) {
+        if (feedback) {
+          feedback.style.display = 'block';
+          feedback.style.backgroundColor = '#fde8e8';
+          feedback.style.color = '#9b1c1c';
+          feedback.textContent = 'Please complete the required fields and enter a valid email address.';
+        }
+        return;
+      }
+
+      try {
+        if (feedback) {
+          feedback.style.display = 'block';
+          feedback.style.backgroundColor = '#def7ec';
+          feedback.style.color = '#03543f';
+          feedback.textContent = "Thank you. We've received your inquiry and our team will be in touch.";
+        }
+        form.reset();
+        setTimeout(() => {
+          closeModal('contactModal');
+          if (feedback) feedback.style.display = 'none';
+        }, 2500);
+      } catch (err) {
+        if (feedback) {
+          feedback.style.display = 'block';
+          feedback.style.backgroundColor = '#fde8e8';
+          feedback.style.color = '#9b1c1c';
+          feedback.textContent = "We couldn't send your inquiry. Please try again.";
+        }
+      }
+    }
+
+    // Scroll Reveal Observer
+    (function initScrollReveal() {
+      const revealElements = document.querySelectorAll('.pv-reveal, .pv-reveal-left, .pv-reveal-right');
+      if (!revealElements.length) return;
+
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add('is-revealed'));
+      }
+    })();
+  </script>
+</body>
+</html>
