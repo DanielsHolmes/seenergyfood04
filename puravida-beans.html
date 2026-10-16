@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Fonts: Jost & Montserrat for Futura PT aesthetic matching Pura Vida Miami -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Cooked IQF Beans Portfolio | Seenergy Foods Limited</title>
+  <meta name="description" content="Explore Seenergy Foods' full range of pre-cooked IQF beans and pulses available in bulk for industrial, foodservice, and retail manufacturers across the USA and Canada." />
+  
+  <link rel="icon" type="image/svg+xml" href="Assets/Image/logo%20colors.svg" />
+
+  <style>
+    /* =============================================================
+       PURA VIDA MIAMI DESIGN SYSTEM & COLOR TOKENS
+    ============================================================= */
+    :root {
+      --pv-navy: #0F2940;
+      --pv-ocean: #091C2E;
+      --pv-slate: #263A4D;
+      --pv-sky: #668DA6;
+      --pv-sky-light: #E6F5FD;
+      --pv-sand: #C9BB9D;
+      --pv-sand-light: #EAE5D9;
+      --pv-oat: #EFE6D2;
+      --pv-cream: #F9F3E8;
+      --pv-card-bg: #FFFFFF;
+      --pv-card-border: #E8E5DD;
+      --pv-card-border-active: #0F2940;
+      --pv-text: #132435;
+      --pv-text-muted: #5C6A79;
+      --pv-white: #FFFFFF;
+      --pv-gray-bg: #F4F3EE;
+      
+      --font-primary: "Futura PT", "Montserrat", "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+      --container-max: 1380px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --radius-pill: 9999px;
+      --shadow-subtle: 0 4px 20px rgba(15, 41, 64, 0.06);
+      --shadow-card: 0 8px 24px rgba(15, 41, 64, 0.05);
+      --shadow-hover: 0 16px 36px rgba(15, 41, 64, 0.12);
+      --shadow-selected: 0 12px 30px rgba(15, 41, 64, 0.16);
+    }
+
+    /* Base Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: clip;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      color: var(--pv-text);
+      background-color: #FAF8F5;
+      line-height: 1.6;
+      overflow-x: clip;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.2s var(--ease-smooth);
+    }
+
+    h1, h2, h3, h4 {
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      color: var(--pv-navy);
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+      line-height: 1.25;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .pv-container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .pv-container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    /* Buttons */
+    .pv-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 30px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.25s var(--ease-smooth);
+      line-height: 1;
+      border: 1.5px solid transparent;
+    }
+
+    .pv-btn-primary {
+      background-color: var(--pv-navy);
+      color: var(--pv-white);
+      border-color: var(--pv-navy);
+    }
+    .pv-btn-primary:hover {
+      background-color: var(--pv-slate);
+      border-color: var(--pv-slate);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 41, 64, 0.2);
+    }
+
+    .pv-btn-sky {
+      background-color: var(--pv-sky);
+      color: var(--pv-white);
+      border-color: var(--pv-sky);
+    }
+    .pv-btn-sky:hover {
+      background-color: var(--pv-navy);
+      border-color: var(--pv-navy);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 141, 166, 0.28);
+    }
+
+    .pv-btn-outline {
+      background-color: transparent;
+      color: var(--pv-navy);
+      border-color: var(--pv-card-border);
+    }
+    .pv-btn-outline:hover {
+      border-color: var(--pv-navy);
+      background-color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .pv-btn-sm {
+      padding: 10px 20px;
+      font-size: 0.8rem;
+    }
+
+    /* =============================================================
+       STICKY HEADER WITH IQF PRODUCTS DROPDOWN
+    ============================================================= */
+    header.pv-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--pv-card-border);
+      transition: box-shadow 0.2s var(--ease-smooth);
+    }
+    header.pv-header.scrolled {
+      box-shadow: var(--shadow-subtle);
+    }
+    .pv-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      gap: 20px;
+    }
+
+    .pv-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .pv-logo img {
+      height: 38px;
+      width: auto;
+    }
+
+    .pv-nav-list {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.2vw, 32px);
+      list-style: none;
+    }
+    .pv-nav-item {
+      position: relative;
+      white-space: nowrap;
+    }
+    .pv-nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pv-navy);
+      padding: 12px 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+    }
+    .pv-nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--pv-sky);
+      transition: width 0.3s var(--ease-smooth);
+    }
+    .pv-nav-link:hover::after,
+    .pv-nav-link.active::after {
+      width: 100%;
+    }
+    .pv-nav-link.active {
+      color: var(--pv-sky);
+      font-weight: 600;
+    }
+
+    /* IQF Products Dropdown */
+    .pv-nav-item.has-dropdown {
+      position: relative;
+    }
+    .pv-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      background: #FFFFFF;
+      min-width: 250px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 18px 40px rgba(15, 41, 64, 0.12);
+      border: 1px solid var(--pv-card-border);
+      padding: 10px 8px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.22s var(--ease-smooth), transform 0.22s var(--ease-smooth), visibility 0.22s;
+      z-index: 1001;
+    }
+    .pv-nav-item.has-dropdown:hover .pv-dropdown-menu,
+    .pv-nav-item.has-dropdown:focus-within .pv-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .pv-dropdown-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--pv-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, padding-left 0.15s;
+    }
+    .pv-dropdown-item:hover, .pv-dropdown-item.active {
+      background: #F4F2EC;
+      color: var(--pv-sky);
+      padding-left: 18px;
+    }
+    .pv-dropdown-item .badge {
+      font-size: 0.68rem;
+      background: var(--pv-sky-light);
+      color: var(--pv-sky);
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.04em;
+    }
+    .pv-dropdown-divider {
+      height: 1px;
+      background: var(--pv-card-border);
+      margin: 6px 8px;
+    }
+
+    .pv-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .pv-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--pv-navy);
+      padding: 6px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 1180px) {
+      .pv-nav-list { display: none; }
+      .pv-mobile-toggle { display: flex; }
+      .pv-header-actions .pv-btn { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .pv-header-inner {
+        height: 64px;
+        gap: 12px;
+      }
+      .pv-logo img {
+        height: 28px;
+        max-width: 195px;
+        width: auto;
+      }
+      .pv-mobile-menu {
+        top: 64px;
+        height: calc(100vh - 64px);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .pv-container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .pv-logo img {
+        height: 24px;
+        max-width: 155px;
+        width: auto;
+      }
+    }
+
+    /* Mobile Drawer */
+    .pv-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background: #FFFFFF;
+      border-top: 1px solid var(--pv-card-border);
+      padding: 24px;
+      flex-direction: column;
+      gap: 16px;
+      overflow-y: auto;
+      z-index: 999;
+      box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+    }
+    .pv-mobile-menu.open {
+      display: flex;
+    }
+    .pv-mobile-accordion-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pv-navy);
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    .pv-mobile-accordion-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-left: 14px;
+      margin-bottom: 8px;
+      border-left: 2px solid var(--pv-sand);
+    }
+    .pv-mobile-accordion-content a {
+      font-size: 0.85rem;
+      color: var(--pv-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 0;
+    }
+    .pv-mobile-accordion-content a.active {
+      color: var(--pv-sky);
+      font-weight: 700;
+    }
+
+    /* =============================================================
+       PAGE HEADER / HERO BANNER
+    ============================================================= */
+    .beans-page-header {
+      background: linear-gradient(180deg, #F9F7F2 0%, #FAF8F5 100%);
+      border-bottom: 1px solid var(--pv-card-border);
+      padding: 44px 0 32px;
+    }
+    @media (max-width: 768px) {
+      .beans-page-header {
+        padding: 24px 0 20px;
+      }
+      .beans-header-title {
+        font-size: clamp(1.75rem, 5vw, 2.2rem);
+        margin-bottom: 16px;
+      }
+    }
+    .beans-breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      color: var(--pv-text-muted);
+      margin-bottom: 18px;
+    }
+    .beans-breadcrumb a:hover {
+      color: var(--pv-sky);
+    }
+    .beans-header-title {
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      margin-bottom: 24px;
+      line-height: 1.15;
+    }
+
+    /* Filters Bar */
+    .beans-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .beans-pills-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+    .beans-pill {
+      background: #FFFFFF;
+      border: 1px solid var(--pv-card-border);
+      border-radius: var(--radius-pill);
+      padding: 8px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pv-navy);
+      cursor: pointer;
+      transition: all 0.2s var(--ease-smooth);
+      white-space: nowrap;
+    }
+    .beans-pill:hover,
+    .beans-pill.active {
+      background: var(--pv-navy);
+      border-color: var(--pv-navy);
+      color: var(--pv-white);
+    }
+
+    .beans-search-wrap {
+      position: relative;
+      min-width: 260px;
+      max-width: 100%;
+    }
+    .beans-search-input {
+      width: 100%;
+      box-sizing: border-box;
+      background: #FFFFFF;
+      border: 1.5px solid var(--pv-card-border);
+      border-radius: var(--radius-pill);
+      padding: 10px 18px 10px 42px;
+      font-size: 0.875rem;
+      color: var(--pv-text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .beans-search-input:focus {
+      border-color: var(--pv-navy);
+      box-shadow: 0 0 0 3px rgba(15, 41, 64, 0.08);
+    }
+    .beans-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--pv-text-muted);
+      pointer-events: none;
+      font-size: 20px;
+    }
+
+    /* =============================================================
+       CATALOG 2-COLUMN LAYOUT (SALAD STUDIO MASTER-DETAIL)
+    ============================================================= */
+    .beans-catalog-section {
+      padding: 44px 0 90px;
+    }
+
+    .beans-catalog-layout {
+      display: grid;
+      grid-template-columns: 390px minmax(0, 1fr);
+      gap: 40px;
+      align-items: start;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* LEFT COLUMN: STICKY DETAIL CARD */
+    .beans-detail-col {
+      position: sticky;
+      top: 96px;
+      align-self: start;
+      z-index: 10;
+    }
+
+    .beans-detail-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--pv-card-border);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.25s var(--ease-smooth);
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    /* Custom Scrollbar for Detail Card */
+    .beans-detail-card::-webkit-scrollbar {
+      width: 6px;
+    }
+    .beans-detail-card::-webkit-scrollbar-thumb {
+      background: var(--pv-sand-light);
+      border-radius: 3px;
+    }
+
+    .detail-img-box {
+      width: 100%;
+      height: 270px;
+      background: #F4F3EE;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 22px;
+      border: 1px solid rgba(15, 41, 64, 0.04);
+    }
+    .detail-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.35s var(--ease-smooth), opacity 0.25s;
+    }
+    .detail-badge-corner {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--pv-card-border);
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pv-navy);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 12px rgba(15, 41, 64, 0.12);
+      pointer-events: none;
+    }
+
+    .detail-category-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--pv-sky);
+      margin-bottom: 6px;
+    }
+    .detail-title {
+      font-size: 1.55rem;
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+    .detail-subtitle {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--pv-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .detail-desc {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--pv-text);
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--pv-card-border);
+    }
+
+    .detail-section-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      color: var(--pv-navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .detail-nutrients-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .nutrient-chip {
+      background: #F4F2EC;
+      color: var(--pv-navy);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--pv-card-border);
+    }
+
+    /* Key Specs Table */
+    .detail-specs-table {
+      width: 100%;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+      font-size: 0.825rem;
+      table-layout: fixed;
+    }
+    .detail-specs-table tr {
+      border-bottom: 1px solid #F1EFEA;
+    }
+    .detail-specs-table tr:last-child {
+      border-bottom: none;
+    }
+    .detail-specs-table td {
+      padding: 8px 0;
+      vertical-align: top;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    .detail-specs-table .spec-label {
+      color: var(--pv-text-muted);
+      font-weight: 500;
+      width: 36%;
+      padding-right: 8px;
+    }
+    .detail-specs-table .spec-value {
+      color: var(--pv-navy);
+      font-weight: 600;
+      text-align: right;
+      width: 64%;
+    }
+
+    .detail-actions-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--pv-card-border);
+    }
+    .detail-actions-group .pv-btn {
+      width: 100%;
+    }
+
+    /* RIGHT COLUMN: PRODUCT GRID */
+    .beans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+      gap: 22px;
+    }
+
+    .bean-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--pv-card-border);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s var(--ease-smooth), border-color 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth);
+      position: relative;
+      user-select: none;
+    }
+    .bean-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--pv-sky);
+      box-shadow: var(--shadow-hover);
+    }
+    .bean-card.is-selected {
+      border-color: var(--pv-navy);
+      box-shadow: var(--shadow-selected);
+      background: #FFFFFF;
+    }
+
+    .bean-card-img-box {
+      width: 100%;
+      height: 175px;
+      background: #F4F3EE;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(15, 41, 64, 0.03);
+    }
+    .bean-card-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.35s var(--ease-smooth);
+    }
+    .bean-card:hover .bean-card-img-box img {
+      transform: scale(1.06);
+    }
+
+    .bean-card-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .bean-card-category {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pv-sky);
+      margin-bottom: 4px;
+    }
+    .bean-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--pv-navy);
+      line-height: 1.3;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .bean-card-format {
+      font-size: 0.78rem;
+      color: var(--pv-text-muted);
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .bean-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 10px;
+      border-top: 1px solid #F4F2EC;
+      margin-top: auto;
+    }
+    .bean-card-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--pv-navy);
+      background: #F4F2EC;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+    }
+    .bean-card-selector {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1.5px solid var(--pv-card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s var(--ease-smooth);
+      color: transparent;
+    }
+    .bean-card:hover .bean-card-selector {
+      border-color: var(--pv-navy);
+    }
+    .bean-card.is-selected .bean-card-selector {
+      background: var(--pv-navy);
+      border-color: var(--pv-navy);
+      color: #FFFFFF;
+    }
+
+    /* Empty state */
+    .beans-no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--pv-text-muted);
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1.5px dashed var(--pv-card-border);
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 1080px) {
+      .beans-catalog-layout {
+        grid-template-columns: 340px minmax(0, 1fr);
+        gap: 28px;
+      }
+      .beans-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .beans-catalog-section {
+        padding: 24px 0 60px;
+      }
+      .beans-catalog-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+      .beans-detail-col {
+        position: relative;
+        top: 0;
+        margin-bottom: 24px;
+        width: 100%;
+        max-width: 100%;
+      }
+      .beans-detail-card {
+        max-height: none;
+        padding: 22px 18px;
+      }
+      .detail-img-box {
+        height: 220px;
+      }
+      .beans-controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+      }
+      .beans-pills-list {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .beans-pills-list::-webkit-scrollbar {
+        height: 4px;
+      }
+      .beans-pills-list::-webkit-scrollbar-thumb {
+        background: var(--pv-sand-light);
+        border-radius: 2px;
+      }
+      .beans-pill {
+        flex-shrink: 0;
+      }
+      .beans-search-wrap {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .beans-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .bean-card {
+        padding: 10px;
+        border-radius: var(--radius-md);
+      }
+      .bean-card-img-box {
+        height: 125px;
+        margin-bottom: 8px;
+      }
+      .bean-card-category {
+        font-size: 0.66rem;
+      }
+      .bean-card-title {
+        font-size: 0.825rem;
+        margin-bottom: 4px;
+      }
+      .bean-card-format {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+      .bean-card-footer {
+        padding-top: 8px;
+      }
+      .bean-card-tag {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+      }
+      .bean-card-selector {
+        width: 24px;
+        height: 24px;
+      }
+      .bean-card-selector .material-symbols-outlined {
+        font-size: 15px !important;
+      }
+      .beans-detail-card {
+        padding: 16px 14px;
+        border-radius: var(--radius-lg);
+      }
+      .detail-img-box {
+        height: 180px;
+        margin-bottom: 14px;
+      }
+      .detail-title {
+        font-size: 1.35rem;
+      }
+      .detail-desc {
+        font-size: 0.86rem;
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .beans-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+      }
+      .bean-card-img-box {
+        height: 150px;
+      }
+      .bean-card-title {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* =============================================================
+       BOTTOM CTA BANNER
+    ============================================================= */
+    .beans-bottom-cta {
+      background: var(--pv-navy);
+      color: var(--pv-white);
+      padding: 72px 0;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+    .beans-bottom-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+    .beans-bottom-cta h2 {
+      color: var(--pv-white);
+      font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+      margin-bottom: 10px;
+    }
+    .beans-bottom-cta p {
+      color: var(--pv-oat);
+      font-size: 1rem;
+      max-width: 620px;
+    }
+
+    @media (max-width: 768px) {
+      .beans-bottom-cta {
+        padding: 48px 0;
+      }
+      .beans-bottom-cta-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+      }
+      .beans-bottom-cta-inner .pv-btn {
+        width: 100%;
+      }
+    }
+
+    /* =============================================================
+       FOOTER
+    ============================================================= */
+    footer.pv-footer {
+      background-color: var(--pv-navy);
+      color: var(--pv-white);
+      padding: 80px 0 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 100%;
+    }
+    .pv-footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+    .pv-footer-col h4 {
+      color: var(--pv-white);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 24px;
+    }
+    .pv-footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pv-footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      transition: color 0.2s var(--ease-smooth);
+    }
+    .pv-footer-links a:hover {
+      color: var(--pv-sky);
+    }
+    .pv-footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .pv-footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .pv-footer-legal a {
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .pv-footer-legal a:hover {
+      color: var(--pv-sky);
+    }
+
+    @media (max-width: 768px) {
+      footer.pv-footer {
+        padding: 48px 0 32px;
+      }
+      .pv-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 36px;
+      }
+      .pv-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .pv-footer-legal {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* =============================================================
+       MODAL POPUP
+    ============================================================= */
+    .pv-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(9, 28, 46, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .pv-modal.open {
+      display: flex;
+    }
+    .pv-modal-card {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 580px;
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .pv-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #F4F2EC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--pv-navy);
+      transition: all 0.2s;
+    }
+    .pv-modal-close:hover {
+      background: var(--pv-navy);
+      color: #FFFFFF;
+    }
+    .pv-form-group {
+      margin-bottom: 16px;
+    }
+    .pv-form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pv-navy);
+      margin-bottom: 6px;
+    }
+    .pv-form-control {
+      width: 100%;
+      border: 1.5px solid var(--pv-card-border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--pv-text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .pv-form-control:focus {
+      border-color: var(--pv-navy);
+      box-shadow: 0 0 0 3px rgba(15, 41, 64, 0.08);
+    }
+    .pv-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 560px) {
+      .pv-form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .pv-modal {
+        padding: 12px;
+      }
+      .pv-modal-card {
+        padding: 24px 18px;
+        border-radius: var(--radius-lg);
+      }
+      .pv-modal-close {
+        top: 14px;
+        right: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation with IQF Products Dropdown -->
+  <header class="pv-header" id="pvHeader">
+    <div class="pv-container">
+      <div class="pv-header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="pv-logo" aria-label="Seenergy Foods Homepage">
+          <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods Limited" />
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav>
+          <ul class="pv-nav-list">
+            <li class="pv-nav-item"><a href="puravida-about.html" class="pv-nav-link">About Us</a></li>
+            
+            <!-- IQF Products with Dropdown Menu -->
+            <li class="pv-nav-item has-dropdown">
+              <a href="javascript:void(0)" class="pv-nav-link active" aria-haspopup="true">
+                <span>IQF Products</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+              </a>
+              <div class="pv-dropdown-menu">
+                <a href="puravida-beans.html" class="pv-dropdown-item active">
+                  <span>IQF Beans</span>
+                  <span class="badge">19 Items</span>
+                </a>
+                <a href="puravida-pasta.html" class="pv-dropdown-item">
+                  <span>IQF Pasta</span>
+                  <span class="badge">6 Items</span>
+                </a>
+                <a href="index.html#explore" class="pv-dropdown-item">IQF Lentils</a>
+                <a href="index.html#explore" class="pv-dropdown-item">IQF Grains</a>
+                <a href="index.html#explore" class="pv-dropdown-item">IQF Rice</a>
+                <a href="index.html#explore" class="pv-dropdown-item">IQF Blends</a>
+                <div class="pv-dropdown-divider"></div>
+                <a href="index.html#explore" class="pv-dropdown-item" style="color: var(--pv-sky);">
+                  <span>All IQF Solutions</span>
+                  <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+                </a>
+              </div>
+            </li>
+
+            <li class="pv-nav-item"><a href="puravida-innovate.html" class="pv-nav-link">Innovate With Us</a></li>
+            <li class="pv-nav-item"><a href="index.html#insights" class="pv-nav-link">Knowledge Center</a></li>
+          </ul>
+        </nav>
+
+        <!-- Action Button -->
+        <div class="pv-header-actions">
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="pv-btn pv-btn-primary pv-btn-sm">Contact Us</a>
+          <button class="pv-mobile-toggle" onclick="toggleMenu()" aria-label="Open Navigation Menu">
+            <span class="material-symbols-outlined" style="font-size: 24px;">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="pv-mobile-menu" id="pvMobileMenu">
+    <a href="puravida-about.html" class="pv-nav-link" onclick="toggleMenu()">About Us</a>
+    
+    <div class="pv-mobile-accordion">
+      <div class="pv-mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+        <span>IQF Products</span>
+        <span class="material-symbols-outlined">expand_more</span>
+      </div>
+      <div class="pv-mobile-accordion-content" id="mobileIqfMenu">
+        <a href="puravida-beans.html" class="active" onclick="toggleMenu()">• IQF Beans (Current)</a>
+        <a href="puravida-pasta.html" onclick="toggleMenu()">• IQF Pasta (6 Items)</a>
+        <a href="index.html#explore" onclick="toggleMenu()">• IQF Lentils</a>
+        <a href="index.html#explore" onclick="toggleMenu()">• IQF Grains</a>
+        <a href="index.html#explore" onclick="toggleMenu()">• IQF Rice</a>
+        <a href="index.html#explore" onclick="toggleMenu()">• IQF Blends</a>
+      </div>
+    </div>
+
+    <a href="puravida-innovate.html" class="pv-nav-link" onclick="toggleMenu()">Innovate With Us</a>
+    <a href="index.html#insights" class="pv-nav-link" onclick="toggleMenu()">Knowledge Center</a>
+    <a href="javascript:void(0)" onclick="openModal('contactModal'); toggleMenu()" class="pv-btn pv-btn-primary" style="margin-top: 10px;">Contact Us</a>
+  </div>
+
+  <!-- =============================================================
+       PAGE HEADER / HERO BANNER
+  ============================================================== -->
+  <section class="beans-page-header">
+    <div class="pv-container">
+      <!-- Breadcrumbs -->
+      <div class="beans-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html#explore">Products</a>
+        <span>/</span>
+        <span style="color: var(--pv-navy);">IQF Beans</span>
+      </div>
+
+      <h1 class="beans-header-title">
+        Bulk IQF Beans &amp; Pulses
+      </h1>
+
+      <!-- Controls: Filters & Search Bar -->
+      <div class="beans-controls-bar">
+        <div class="beans-pills-list">
+          <button class="beans-pill active" onclick="filterCategory('all', this)">All Beans (19)</button>
+          <button class="beans-pill" onclick="filterCategory('Classic & Black Beans', this)">Classic &amp; Black</button>
+          <button class="beans-pill" onclick="filterCategory('Kidney & Cannellini', this)">Kidney &amp; Cannellini</button>
+          <button class="beans-pill" onclick="filterCategory('White & Lima Beans', this)">White &amp; Lima</button>
+          <button class="beans-pill" onclick="filterCategory('Peas & Splits', this)">Split Peas</button>
+          <button class="beans-pill" onclick="filterCategory('Specialty & Asian Pulses', this)">Specialty Pulses</button>
+        </div>
+
+        <div class="beans-search-wrap">
+          <span class="material-symbols-outlined beans-search-icon">search</span>
+          <input type="text" id="beanSearchInput" class="beans-search-input" placeholder="Search beans by name..." oninput="handleSearch(this.value)" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       CATALOG SECTION: SALAD STUDIO 2-COLUMN MASTER-DETAIL
+  ============================================================== -->
+  <section class="beans-catalog-section">
+    <div class="pv-container">
+      <div class="beans-catalog-layout">
+        
+        <!-- =========================================
+             LEFT COLUMN: STICKY DETAIL SUMMARY CARD
+        ========================================== -->
+        <aside class="beans-detail-col">
+          <div class="beans-detail-card" id="detailCard">
+            <!-- Product Image Display -->
+            <div class="detail-img-box">
+              <img id="detailImg" src="Assets/Image/beans/black_beans.jpg" alt="IQF Black Beans" />
+              <span class="detail-badge-corner" id="detailCornerBadge">
+                <span class="material-symbols-outlined" style="font-size: 14px;">check_circle</span>
+                IQF Cooked
+              </span>
+            </div>
+
+            <div class="detail-category-eyebrow" id="detailCategory">Classic &amp; Black Beans</div>
+            <h2 class="detail-title" id="detailTitle">IQF Black Beans</h2>
+            <div class="detail-subtitle" id="detailSubtitle">Black Turtle Beans • Whole Cooked Legume</div>
+            <p class="detail-desc" id="detailDesc">
+              Black Beans, also known as Black Turtle Beans, are a staple legume with an earthy flavor, tender skin, and smooth creamy texture when cooked. Pre-cooked and individually quick-frozen for effortless portion control and rapid integration into commercial food formulations.
+            </p>
+
+            <!-- Key Specifications Table -->
+            <div class="detail-section-label">
+              <span class="material-symbols-outlined" style="font-size: 16px;">tune</span>
+              Commercial Specifications
+            </div>
+            <table class="detail-specs-table">
+              <tbody>
+                <tr>
+                  <td class="spec-label">Processing</td>
+                  <td class="spec-value" id="specCook">100% Fully Cooked, IQF</td>
+                </tr>
+                <tr>
+                  <td class="spec-label">Pack Formats</td>
+                  <td class="spec-value" id="specPack">45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)</td>
+                </tr>
+                <tr>
+                  <td class="spec-label">Shelf Life</td>
+                  <td class="spec-value" id="specShelf">24 Months at -18°C / 0°F</td>
+                </tr>
+                <tr>
+                  <td class="spec-label">Quality Standards</td>
+                  <td class="spec-value" id="specCerts">Non-GMO, Kosher, SQF Level 2</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Nutritional Highlights -->
+            <div class="detail-section-label">
+              <span class="material-symbols-outlined" style="font-size: 16px;">health_and_safety</span>
+              Key Nutritional Attributes
+            </div>
+            <div class="detail-nutrients-row" id="detailNutrients">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Applications -->
+            <div class="detail-section-label">
+              <span class="material-symbols-outlined" style="font-size: 16px;">restaurant</span>
+              Culinary Applications
+            </div>
+            <div class="detail-nutrients-row" id="detailTags">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="detail-actions-group">
+              <button type="button" class="pv-btn pv-btn-primary" onclick="openSampleForActiveBean()">
+                <span>Request Sample of This Bean</span>
+                <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+              </button>
+              <button type="button" class="pv-btn pv-btn-outline" onclick="openModal('contactModal')">
+                <span>Inquire Bulk Truckload / Tote</span>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- =========================================
+             RIGHT COLUMN: PRODUCT CARDS GRID
+        ========================================== -->
+        <main class="beans-grid-col">
+          <div class="beans-grid" id="beansGrid">
+            <!-- Rendered dynamically by JavaScript -->
+          </div>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       BOTTOM CTA BANNER
+  ============================================================== -->
+  <section class="beans-bottom-cta">
+    <div class="pv-container">
+      <div class="beans-bottom-cta-inner">
+        <div>
+          <h2>Need a Custom Cook Level or Proprietary Blend?</h2>
+          <p>
+            Our culinary R&amp;D scientists and food engineers work with food manufacturers to calibrate moisture content, tenderness, and custom multi-pulse blends for retort, frozen meals, and high-speed filling lines.
+          </p>
+        </div>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="puravida-innovate.html" class="pv-btn pv-btn-sky">Innovate With Us</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')" class="pv-btn pv-btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">Talk to an Expert</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       FOOTER
+  ============================================================== -->
+  <footer class="pv-footer">
+    <div class="pv-container">
+      <div class="pv-footer-grid">
+        
+        <!-- Col 1: Brand -->
+        <div class="pv-footer-col">
+          <a href="index.html" class="pv-logo" style="margin-bottom: 20px;" aria-label="Homepage">
+            <img src="Assets/Image/logo%20colors.svg" alt="Seenergy Foods" style="filter: brightness(0) invert(1);" />
+          </a>
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.6; max-width: 320px;">
+            Making wholesome, plant-based ingredients more accessible, convenient, and consistent across North America since 1994.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="pv-footer-col">
+          <h4>Navigation</h4>
+          <ul class="pv-footer-links">
+            <li><a href="puravida-about.html">About Us</a></li>
+            <li><a href="puravida-beans.html" style="color: var(--pv-sky); font-weight: 600;">IQF Beans Portfolio</a></li>
+            <li><a href="puravida-pasta.html">IQF Pasta Solutions</a></li>
+            <li><a href="index.html#explore">All IQF Products</a></li>
+            <li><a href="puravida-innovate.html">Innovate With Us</a></li>
+            <li><a href="index.html#insights">Knowledge Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact -->
+        <div class="pv-footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="pv-footer-links">
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Commercial Inquiries</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('contactModal')">Request Sample Kit</a></li>
+            <li><a href="tel:18006097674">1-800-609-7674</a></li>
+            <li><a href="mailto:sales@seenergyfoods.com">sales@seenergyfoods.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pv-footer-bottom">
+        <div>
+          &copy; 1994&ndash;2026 Seenergy Foods Limited. All Rights Reserved.
+        </div>
+        <div class="pv-footer-legal">
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="openModal('contactModal')">Terms of Supply</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================================
+       CONTACT / SAMPLE REQUEST MODAL
+  ============================================================== -->
+  <div class="pv-modal" id="contactModal" onclick="checkModalBackdrop(event, 'contactModal')">
+    <div class="pv-modal-card">
+      <div class="pv-modal-close" onclick="closeModal('contactModal')">&times;</div>
+      
+      <div style="margin-bottom: 20px;">
+        <div class="pv-modal-eyebrow" style="margin-bottom: 6px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--pv-sky);">
+          <span class="material-symbols-outlined" style="font-size: 16px;">inventory_2</span>
+          Sample Request &amp; Commercial Inquiry
+        </div>
+        <h2 style="font-size: 1.5rem; line-height: 1.2;">Talk with Our Ingredient Specialists</h2>
+        <p style="font-size: 0.88rem; color: var(--pv-text-muted); margin-top: 6px;">
+          Connect directly with Seenergy Foods to request product samples, spec sheets, custom formulations, or bulk truckload availability.
+        </p>
+      </div>
+
+      <div id="contactModalFeedback" style="display:none; padding: 12px 16px; border-radius: var(--radius-sm); margin-bottom: 16px; font-size: 0.875rem;"></div>
+
+      <form id="contactForm" onsubmit="handleContactSubmit(event)">
+        <div class="pv-form-row">
+          <div class="pv-form-group">
+            <label>Full Name *</label>
+            <input type="text" name="fullName" class="pv-form-control" placeholder="e.g. John Doe" required />
+          </div>
+          <div class="pv-form-group">
+            <label>Company Name *</label>
+            <input type="text" name="companyName" class="pv-form-control" placeholder="e.g. Acme Foods Ltd." required />
+          </div>
+        </div>
+
+        <div class="pv-form-row">
+          <div class="pv-form-group">
+            <label>Work Email *</label>
+            <input type="email" name="workEmail" class="pv-form-control" placeholder="name@company.com" required />
+          </div>
+          <div class="pv-form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" class="pv-form-control" placeholder="+1 (555) 000-0000" />
+          </div>
+        </div>
+
+        <div class="pv-form-group">
+          <label>Product of Interest</label>
+          <input type="text" id="modalProductInput" name="productInterest" class="pv-form-control" value="IQF Black Beans" />
+        </div>
+
+        <div class="pv-form-row">
+          <div class="pv-form-group">
+            <label>Inquiry Type</label>
+            <select name="inquiryType" class="pv-form-control">
+              <option value="samples">Request Lab/Bench Samples</option>
+              <option value="pricing">Request Volume / Truckload Pricing</option>
+              <option value="custom">Custom Blend / Formulation R&amp;D</option>
+              <option value="audit">Quality Audit / SQF Documentation</option>
+            </select>
+          </div>
+          <div class="pv-form-group">
+            <label>Annual Volume Estimate</label>
+            <select name="volume" class="pv-form-control">
+              <option value="trial">Sample / Trial Run (< 5,000 lbs)</option>
+              <option value="ltl">LTL Pallet Shipments (5k - 40k lbs)</option>
+              <option value="ftl">Full Truckloads (40,000+ lbs)</option>
+              <option value="contract">Multi-Truckload Recurring Contract</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pv-form-group">
+          <label>Project Details or Recipe Specifications</label>
+          <textarea name="notes" rows="3" class="pv-form-control" placeholder="Tell us about your packaging preference, delivery destination, target texture, or launch timing..."></textarea>
+        </div>
+
+        <button type="submit" class="pv-btn pv-btn-primary" style="width: 100%; margin-top: 10px;">
+          <span>Submit Request</span>
+          <span class="material-symbols-outlined" style="font-size: 18px;">send</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =============================================================
+       SCRIPTS & BEANS DATABASE
+  ============================================================== -->
+  <script>
+    // Full Seenergy Foods IQF Beans Database (19 Products)
+    const BEANS_DATA = [
+      {
+        id: "black-beans",
+        name: "IQF Black Beans",
+        category: "Classic & Black Beans",
+        subname: "Black Turtle Beans • Whole Cooked Legume",
+        image: "Assets/Image/beans/black_beans.jpg",
+        desc: "Black Beans, also known as Black Turtle Beans, are a staple legume with an earthy flavor, tender skin, and smooth creamy texture when cooked. Pre-cooked and individually quick-frozen for effortless portion control and rapid integration into commercial food formulations with zero defrost weeping.",
+        nutrition: ["Plant Protein", "Dietary Fiber", "Iron", "Potassium"],
+        tags: ["Burrito Bowls", "Soups & Chilis", "Salad Bars", "Veggie Patties", "Quesadillas"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF/GFSI Certified, Organic available"
+      },
+      {
+        id: "garbanzo-beans",
+        name: "IQF Garbanzo Beans (Chickpeas)",
+        category: "Classic & Black Beans",
+        subname: "Whole Golden Chickpeas • Al Dente Bite",
+        image: "Assets/Image/beans/garbanzo_beans.jpg",
+        desc: "Firm, nutty, and buttery whole chickpeas cooked to the perfect al dente bite before individual quick-freezing. Maintains structural integrity without bursting in hot holding, chilled dressings, or high-speed industrial blending.",
+        nutrition: ["High Folate", "Plant Protein", "Dietary Fiber", "Complex Carbohydrates"],
+        tags: ["Hummus Bases", "Mediterranean Salads", "Grain Bowls", "Curries", "Snack Roasting"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Level 2, Organic available"
+      },
+      {
+        id: "pinto-beans",
+        name: "IQF Pinto Beans",
+        category: "Classic & Black Beans",
+        subname: "Speckled Creamy Legume • Rich Savory Texture",
+        image: "Assets/Image/beans/pinto_beans.jpg",
+        desc: "Classic pinto beans with distinctive speckled appearance that turns into an appetizing creamy pink-brown tone. Rich, savory, and tender with robust texture suitable for heavy sauces, retorts, and skillet assemblies.",
+        nutrition: ["Dietary Fiber", "Plant Protein", "Thiamin", "Magnesium"],
+        tags: ["Chili Con Carne", "Refried Beans", "Mexican Bowls", "Stews", "Burritos"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF/GFSI Certified"
+      },
+      {
+        id: "red-kidney-beans",
+        name: "IQF Dark Red Kidney Beans",
+        category: "Kidney & Cannellini",
+        subname: "Mahogany Red Beans • Firm Skin & Creamy Interior",
+        image: "Assets/Image/beans/red_kidney_beans.jpg",
+        desc: "Bold, mahogany-colored kidney beans with a robust skin and creamy, hearty interior. Exceptional visual appeal and hold their shape exceptionally well under thermal processing, canning, and high-heat foodservice cooking.",
+        nutrition: ["High Antioxidants", "Dietary Fiber", "Iron", "Plant Protein"],
+        tags: ["Traditional Chili", "Creole Red Beans & Rice", "Three-Bean Salads", "Minestrone"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF/GFSI Certified"
+      },
+      {
+        id: "light-red-kidney-beans",
+        name: "IQF Light Red Kidney Beans",
+        category: "Kidney & Cannellini",
+        subname: "Delicate Rose-Pink Kidney Beans • Tender Bite",
+        image: "Assets/Image/beans/light_red_kidney_beans.jpg",
+        desc: "A lighter rose-pink variation of the kidney bean, prized for its delicate appearance and tender bite. Blends harmoniously into multi-bean blends and delicate pasta soups without overpowering the color palette of your recipe.",
+        nutrition: ["Complex Carbohydrates", "Dietary Fiber", "Iron", "Zinc"],
+        tags: ["Pasta e Fagioli", "Cold Deli Salads", "Bean Medleys", "Grain Bowls"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Level 2"
+      },
+      {
+        id: "white-kidney-beans",
+        name: "IQF White Kidney Beans (Cannellini)",
+        category: "Kidney & Cannellini",
+        subname: "Italian Cannellini • Silky Melt-In-Your-Mouth Texture",
+        image: "Assets/Image/beans/white_kidney_beans.jpg",
+        desc: "Large, elegant Italian-style white kidney beans offering a silky, melt-in-your-mouth texture with a subtle nutty taste. Absorbs dressings, broths, and aromatics flawlessly without breaking down.",
+        nutrition: ["Low Glycemic Index", "Soluble Fiber", "Resistant Starch", "Plant Protein"],
+        tags: ["Tuscan Soups", "Cassoulet", "White Bean Purees", "Pasta Primavera", "Dips"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF/GFSI Certified"
+      },
+      {
+        id: "great-northern-beans",
+        name: "IQF Great Northern Beans",
+        category: "White & Lima Beans",
+        subname: "Medium Oval White Beans • Flavor Absorbing Profile",
+        image: "Assets/Image/beans/great_northern_beans.jpg",
+        desc: "Medium-sized white beans with a delicate, mild flavor and soft texture. Highly absorbent, allowing flavors of broths, garlic, and herbs to permeate through every bean while maintaining clean plating presentation.",
+        nutrition: ["High Protein", "Fat-Free", "Cholesterol-Free", "Iron"],
+        tags: ["White Chicken Chili", "French Bistro Casseroles", "Baked Beans", "Hearty Stews"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      },
+      {
+        id: "navy-beans",
+        name: "IQF Navy Beans",
+        category: "White & Lima Beans",
+        subname: "Small Pea Beans • The Definitive Baked Bean Standard",
+        image: "Assets/Image/beans/navy_beans.jpg",
+        desc: "Small, oval white beans also known as pea beans. Cooked to creamy tenderness while retaining a tidy uniform shape. Renowned as the definitive ingredient for classic baked beans, condensed soups, and clean-label sauce thickeners.",
+        nutrition: ["Copper", "Folate", "Manganese", "High Fiber"],
+        tags: ["Boston Baked Beans", "Condensed Soups", "Pie Fillings", "Clean-Label Purees"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Level 2"
+      },
+      {
+        id: "white-beans",
+        name: "IQF White Beans",
+        category: "White & Lima Beans",
+        subname: "All-Purpose Smooth White Beans • Neutral Binder",
+        image: "Assets/Image/beans/white_beans.jpg",
+        desc: "Standard clean-label all-purpose white beans with mild profile and neutral color. Ideal foundation for white bean burger binders, sauces, and customized pulse formulations.",
+        nutrition: ["Dietary Fiber", "Plant Protein", "Low Sodium"],
+        tags: ["Plant-Based Burgers", "Dairy Alternatives", "Ready-Meal Trays", "Sauces"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF/GFSI Certified"
+      },
+      {
+        id: "baby-white-lima",
+        name: "IQF Baby White Lima Beans",
+        category: "White & Lima Beans",
+        subname: "Small Butter Beans • Pale Ivory Tender Sweetness",
+        image: "Assets/Image/beans/baby_white_lima.jpg",
+        desc: "Small, pale flat beans with a tender, buttery sweetness. Far milder and creamier than standard beans, making them appealing across broad consumer demographics and skillet meals.",
+        nutrition: ["Dietary Fiber", "Potassium", "Plant Protein", "Iron"],
+        tags: ["Succotash", "Southern Sides", "Vegetable Medleys", "Skillet Meals"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      },
+      {
+        id: "large-white-lima",
+        name: "IQF Large White Lima Beans",
+        category: "White & Lima Beans",
+        subname: "Broad Butter Beans • Velvety Gourmet Presentation",
+        image: "Assets/Image/beans/large_white_lima.jpg",
+        desc: "Broad, flat butter beans with a velvety, rich mouthfeel and subtle vegetal sweetness. Provides substantial bite and artisanal plate presentation for premium retail and foodservice programs.",
+        nutrition: ["Rich Minerals", "Magnesium", "Dietary Fiber", "Iron"],
+        tags: ["Gigantes Plaki", "Spanish Tapas", "Braised Entrees", "Premium Frozen Bowls"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF/GFSI Certified"
+      },
+      {
+        id: "black-eyed-peas",
+        name: "IQF Black Eyed Peas",
+        category: "Peas & Splits",
+        subname: "Iconic Cowpeas • Distinctive Black Eye & Savory Bite",
+        image: "Assets/Image/beans/black_eyed_peas.jpg",
+        desc: "Cream-colored legumes highlighted by a distinctive black speckle. Savory, distinctively earthy aroma with a dense, starchy bite that pairs well with leafy greens, grains, and smoky seasonings.",
+        nutrition: ["Vitamin A", "Folate", "Calcium", "Plant Protein"],
+        tags: ["Hoppin' John", "Southern Barbecue Sides", "Warm Salads", "Creole Stews"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Level 2"
+      },
+      {
+        id: "yellow-split-peas",
+        name: "IQF Yellow Split Peas",
+        category: "Peas & Splits",
+        subname: "Golden Field Pea Halves • Smooth & Comforting",
+        image: "Assets/Image/beans/yellow_split_peas.jpg",
+        desc: "Golden split field peas cooked until soft yet individually separable. Offers a warm yellow hue and mild sweet flavor that dissolves smoothly into thick comforting textures.",
+        nutrition: ["Dietary Fiber", "Zinc", "Potassium", "B Vitamins"],
+        tags: ["Yellow Pea Soup", "Dal Tadka", "Vegan Sauces", "Pulse Purees"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      },
+      {
+        id: "green-split-peas",
+        name: "IQF Green Split Peas",
+        category: "Peas & Splits",
+        subname: "Vibrant Emerald Halves • Sweet Earthy Depth",
+        image: "Assets/Image/beans/green_split_peas.jpg",
+        desc: "Vibrant emerald green split peas with an earthy, sweet vegetal flavor profile. Quick to reconstitute and delivers rich color and thick consistency to culinary formulations.",
+        nutrition: ["Plant Protein", "Dietary Fiber", "Iron", "B Vitamins"],
+        tags: ["Split Pea Soup", "Savory Dips", "Pot Pies", "Baby Food Bases"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      },
+      {
+        id: "garbanzo-beans-splits",
+        name: "IQF Garbanzo Beans Splits (Chana Dal)",
+        category: "Peas & Splits",
+        subname: "De-Hulled Split Chickpeas • Firm Texture & Quick Dispersion",
+        image: "Assets/Image/beans/garbanzo_beans_splits.jpg",
+        desc: "De-hulled, split chickpea halves (chana dal) offering firm texture and nutty depth. Fast-cooking, easily dispersed across grain blends, soup bowls, and bakery inclusions.",
+        nutrition: ["High Fiber", "Plant Protein", "Low Glycemic Index"],
+        tags: ["Grain & Pulse Blends", "Indian Curries", "Savory Snack Bars", "Bakery Inclusions"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      },
+      {
+        id: "adzuki-beans",
+        name: "IQF Adzuki Beans",
+        category: "Specialty & Asian Pulses",
+        subname: "Japanese Ruby Red Pulses • Subtle Sweetness & High Digestibility",
+        image: "Assets/Image/beans/adzuki_beans.jpg",
+        desc: "Compact, dark ruby-red Japanese pulses with a distinctive white seam. Celebrated for their subtle sweetness, nutty profile, and non-bloating digestibility in sweet and savory applications.",
+        nutrition: ["Abundant Antioxidants", "Potassium", "Zinc", "Dietary Fiber"],
+        tags: ["Asian Desserts", "Matcha Pairings", "Macrobiotic Bowls", "Fusion Salads"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Level 2"
+      },
+      {
+        id: "mung-beans",
+        name: "IQF Mung Beans",
+        category: "Specialty & Asian Pulses",
+        subname: "Whole Olive-Green Pulses • Tender Clean Flavor",
+        image: "Assets/Image/beans/mung_beans.jpg",
+        desc: "Small, olive-green whole pulses widely utilized in Asian and Ayurvedic cuisines. Mild, clean flavor with tender skin that holds shape cleanly in stir-fries, porridges, and grain bowls.",
+        nutrition: ["Essential Amino Acids", "Antioxidants", "Digestive Enzymes"],
+        tags: ["Sprouted Grain Mixes", "Asian Stir-Fries", "Mung Bean Patties", "Breakfast Porridges"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      },
+      {
+        id: "pink-beans",
+        name: "IQF Pink Beans",
+        category: "Specialty & Asian Pulses",
+        subname: "Habichuelas Rosadas • Approachable Delicate Skin",
+        image: "Assets/Image/beans/pink_beans.jpg",
+        desc: "Smooth, pale pink oval legumes with an approachable, mild flavor and delicate skin. Popular in Caribbean, Puerto Rican, and South American recipes for stews and rice dishes.",
+        nutrition: ["Dietary Fiber", "Iron", "Potassium", "Plant Protein"],
+        tags: ["Habichuelas Guisadas", "Arroz con Habichuelas", "Barbecue Sides", "Chili Bases"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Level 2"
+      },
+      {
+        id: "small-red-beans",
+        name: "IQF Small Red Beans",
+        category: "Specialty & Asian Pulses",
+        subname: "Central American Red Beans • Dense Earthy Texture",
+        image: "Assets/Image/beans/small_red_beans.jpg",
+        desc: "Compact, intensely colored dark red beans with a firmer bite and robust earthy character that maintains toothsome texture even in extended simmer and retort applications.",
+        nutrition: ["Top Antioxidant Rating", "High Protein", "Soluble Fiber"],
+        tags: ["Gallo Pinto", "Red Beans & Rice", "Caribbean Stews", "Frijoles Refritos"],
+        pack: "45 lbs boxes, 1,500 lbs bulk totes, custom bag sizes (min 6 lbs)",
+        shelfLife: "24 Months Frozen (-18°C / 0°F)",
+        cookLevel: "100% Fully Cooked, Ready-to-Eat",
+        certs: "Non-GMO, Kosher, SQF Certified"
+      }
+    ];
+
+    let currentSelectedId = "black-beans";
+    let currentFilter = "all";
+    let searchQuery = "";
+
+    // DOM Elements
+    const gridEl = document.getElementById("beansGrid");
+    const detailImg = document.getElementById("detailImg");
+    const detailCategory = document.getElementById("detailCategory");
+    const detailTitle = document.getElementById("detailTitle");
+    const detailSubtitle = document.getElementById("detailSubtitle");
+    const detailDesc = document.getElementById("detailDesc");
+    const detailNutrients = document.getElementById("detailNutrients");
+    const detailTags = document.getElementById("detailTags");
+    const specCook = document.getElementById("specCook");
+    const specPack = document.getElementById("specPack");
+    const specShelf = document.getElementById("specShelf");
+    const specCerts = document.getElementById("specCerts");
+    const modalProductInput = document.getElementById("modalProductInput");
+
+    // Initialize Grid & Active Item
+    function initCatalog() {
+      renderGrid();
+      selectBean("black-beans", false);
+    }
+
+    // Render Product Cards Grid
+    function renderGrid() {
+      gridEl.innerHTML = "";
+      
+      const filtered = BEANS_DATA.filter(bean => {
+        const matchesCategory = currentFilter === "all" || bean.category === currentFilter;
+        const matchesSearch = !searchQuery || 
+          bean.name.toLowerCase().includes(searchQuery) ||
+          bean.subname.toLowerCase().includes(searchQuery) ||
+          bean.desc.toLowerCase().includes(searchQuery) ||
+          bean.tags.some(t => t.toLowerCase().includes(searchQuery));
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        gridEl.innerHTML = `
+          <div class="beans-no-results">
+            <span class="material-symbols-outlined" style="font-size: 36px; margin-bottom: 8px;">search_off</span>
+            <h3 style="font-size: 1.15rem; margin-bottom: 6px;">No IQF Beans found matching "${searchQuery}"</h3>
+            <p style="font-size: 0.88rem;">Try clearing your search or selecting a different category.</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(bean => {
+        const isSelected = bean.id === currentSelectedId;
+        const card = document.createElement("div");
+        card.className = `bean-card ${isSelected ? 'is-selected' : ''}`;
+        card.setAttribute("data-id", bean.id);
+        card.onclick = () => selectBean(bean.id, true);
+
+        card.innerHTML = `
+          <div class="bean-card-img-box">
+            <img src="${bean.image}" alt="${bean.name}" loading="lazy" />
+          </div>
+          <div class="bean-card-content">
+            <div class="bean-card-category">${bean.category}</div>
+            <h3 class="bean-card-title">${bean.name}</h3>
+            <div class="bean-card-format">${bean.subname}</div>
+            <div class="bean-card-footer">
+              <span class="bean-card-tag">IQF Ready</span>
+              <div class="bean-card-selector">
+                <span class="material-symbols-outlined" style="font-size: 16px;">check</span>
+              </div>
+            </div>
+          </div>
+        `;
+        gridEl.appendChild(card);
+      });
+    }
+
+    // Select Bean and Update Detail Sidebar
+    function selectBean(id, scrollOnMobile = true) {
+      const bean = BEANS_DATA.find(b => b.id === id);
+      if (!bean) return;
+
+      currentSelectedId = id;
+
+      // Update card selections in grid
+      document.querySelectorAll(".bean-card").forEach(c => {
+        if (c.getAttribute("data-id") === id) {
+          c.classList.add("is-selected");
+        } else {
+          c.classList.remove("is-selected");
+        }
+      });
+
+      // Animate sidebar update with slight fade
+      const detailCard = document.getElementById("detailCard");
+      detailCard.style.opacity = "0.6";
+
+      setTimeout(() => {
+        detailImg.src = bean.image;
+        detailImg.alt = bean.name;
+        detailCategory.textContent = bean.category;
+        detailTitle.textContent = bean.name;
+        detailSubtitle.textContent = bean.subname;
+        detailDesc.textContent = bean.desc;
+
+        // Render Nutrients
+        detailNutrients.innerHTML = bean.nutrition.map(n => `<span class="nutrient-chip">${n}</span>`).join("");
+        
+        // Render Tags
+        detailTags.innerHTML = bean.tags.map(t => `<span class="nutrient-chip" style="background:#FFFFFF;">${t}</span>`).join("");
+
+        // Render Specs
+        specCook.textContent = bean.cookLevel;
+        specPack.textContent = bean.pack;
+        specShelf.textContent = bean.shelfLife;
+        specCerts.textContent = bean.certs;
+
+        // Update modal input
+        if (modalProductInput) {
+          modalProductInput.value = bean.name;
+        }
+
+        detailCard.style.opacity = "1";
+      }, 120);
+
+      // Scroll to detail on small devices with header offset
+      if (scrollOnMobile && window.innerWidth < 900) {
+        const headerOffset = 76;
+        const cardPos = detailCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: Math.max(0, cardPos), behavior: 'smooth' });
+      }
+    }
+
+    // Category Filter
+    function filterCategory(cat, btn) {
+      currentFilter = cat;
+      document.querySelectorAll(".beans-pill").forEach(p => p.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+      renderGrid();
+    }
+
+    // Search Filter
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      renderGrid();
+    }
+
+    // Quick Sample for Selected Bean
+    function openSampleForActiveBean() {
+      const bean = BEANS_DATA.find(b => b.id === currentSelectedId);
+      if (bean && modalProductInput) {
+        modalProductInput.value = bean.name;
+      }
+      openModal('contactModal');
+    }
+
+    // Mobile Navigation & Modals
+    function toggleMenu() {
+      document.getElementById('pvMobileMenu').classList.toggle('open');
+    }
+
+    function toggleMobileAccordion(el) {
+      const content = document.getElementById('mobileIqfMenu');
+      if (content.style.display === 'none') {
+        content.style.display = 'flex';
+      } else {
+        content.style.display = 'none';
+      }
+    }
+
+    function openModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function checkModalBackdrop(e, id) {
+      if (e.target.id === id) closeModal(id);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('contactModalFeedback');
+      if (feedback) {
+        feedback.style.display = 'block';
+        feedback.style.backgroundColor = '#def7ec';
+        feedback.style.color = '#03543f';
+        feedback.innerHTML = `<strong>Request Received!</strong> Thank you for your inquiry about <em>${modalProductInput.value}</em>. A Seenergy culinary specialist will confirm tracking within 24 hours.`;
+      }
+      setTimeout(() => {
+        closeModal('contactModal');
+        if (feedback) feedback.style.display = 'none';
+        e.target.reset();
+      }, 3000);
+    }
+
+    // Header scroll elevation
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('pvHeader');
+      if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+      }
+    });
+
+    // Start
+    document.addEventListener("DOMContentLoaded", initCatalog);
+  </script>
+</body>
+</html>
