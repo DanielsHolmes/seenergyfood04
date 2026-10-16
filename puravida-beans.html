@@ -62,7 +62,6 @@
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      overflow-x: clip;
       width: 100%;
       max-width: 100%;
     }
@@ -72,7 +71,6 @@
       color: var(--pv-text);
       background-color: #FAF8F5;
       line-height: 1.6;
-      overflow-x: clip;
       width: 100%;
       max-width: 100%;
       min-height: 100vh;
@@ -539,27 +537,31 @@
       display: grid;
       grid-template-columns: 390px minmax(0, 1fr);
       gap: 40px;
-      align-items: start;
+      position: relative;
       width: 100%;
       max-width: 100%;
     }
 
-    /* LEFT COLUMN: STICKY DETAIL CARD */
+    /* LEFT COLUMN: STICKY DETAIL CARD WRAPPER */
     .beans-detail-col {
-      position: sticky;
-      top: 96px;
-      align-self: start;
+      position: relative;
+      height: 100%;
       z-index: 10;
     }
 
-    .beans-detail-card {
+    .beans-detail-card,
+    #beans-detail-card {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 96px;
+      z-index: 10;
       background: #FFFFFF;
       border: 1.5px solid var(--pv-card-border);
       border-radius: var(--radius-xl);
       padding: 24px;
       box-shadow: var(--shadow-card);
-      transition: all 0.25s var(--ease-smooth);
-      max-height: calc(100vh - 120px);
+      transition: opacity 0.25s var(--ease-smooth);
+      max-height: calc(100vh - 116px);
       overflow-y: auto;
     }
 
@@ -873,8 +875,12 @@
         margin-bottom: 24px;
         width: 100%;
         max-width: 100%;
+        height: auto;
       }
-      .beans-detail-card {
+      .beans-detail-card,
+      #beans-detail-card {
+        position: relative;
+        top: 0;
         max-height: none;
         padding: 22px 18px;
       }
@@ -948,7 +954,8 @@
       .bean-card-selector .material-symbols-outlined {
         font-size: 15px !important;
       }
-      .beans-detail-card {
+      .beans-detail-card,
+      #beans-detail-card {
         padding: 16px 14px;
         border-radius: var(--radius-lg);
       }
@@ -1336,7 +1343,7 @@
              LEFT COLUMN: STICKY DETAIL SUMMARY CARD
         ========================================== -->
         <aside class="beans-detail-col">
-          <div class="beans-detail-card" id="detailCard">
+          <div class="beans-detail-card" id="beans-detail-card">
             <!-- Product Image Display -->
             <div class="detail-img-box">
               <img id="detailImg" src="Assets/Image/beans/black_beans.jpg" alt="IQF Black Beans" />
@@ -1949,8 +1956,8 @@
       });
 
       // Animate sidebar update with slight fade
-      const detailCard = document.getElementById("detailCard");
-      detailCard.style.opacity = "0.6";
+      const detailCard = document.getElementById("beans-detail-card") || document.getElementById("detailCard");
+      if (detailCard) detailCard.style.opacity = "0.6";
 
       setTimeout(() => {
         detailImg.src = bean.image;
@@ -1977,11 +1984,11 @@
           modalProductInput.value = bean.name;
         }
 
-        detailCard.style.opacity = "1";
+        if (detailCard) detailCard.style.opacity = "1";
       }, 120);
 
       // Scroll to detail on small devices with header offset
-      if (scrollOnMobile && window.innerWidth < 900) {
+      if (scrollOnMobile && window.innerWidth < 900 && detailCard) {
         const headerOffset = 76;
         const cardPos = detailCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         window.scrollTo({ top: Math.max(0, cardPos), behavior: 'smooth' });
